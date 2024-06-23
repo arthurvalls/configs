@@ -15,3 +15,7 @@ move `.tmTheme` into
 run the script
 
 	./crimson_terminal.sh
+
+# useful link
+
+to customize and create new themes click [here](https://terminal.sexy/)
