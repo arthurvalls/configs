@@ -1,16 +1,17 @@
 # qtcreator
 
-move .xml file into the 
+move `.xml` file into 
+
 	.config/QtProject/qtcreator/styles
-dir
 
 # sublime
 
-move the .tmTheme into the
+move `.tmTheme` into 
+
 	.config/sublime-text/Packages
-dir
 
 # gnome
 
 run the script
+
 	./crimson_terminal.sh
