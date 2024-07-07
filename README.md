@@ -12,7 +12,15 @@ move `.tmTheme` into
 
 # gnome
 
-run the script
+export current themes:
+
+	dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf
+
+import themes from file:
+
+	dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
+
+another option -> run the script
 
 	./crimson_terminal.sh
 
