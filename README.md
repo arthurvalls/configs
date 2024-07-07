@@ -24,6 +24,11 @@ another option -> run the script
 
 	./crimson_terminal.sh
 
+
+# fonts
+
+useful fonts inside font **folder**
+
 # useful link
 
 to customize and create new themes click [here](https://terminal.sexy/)
