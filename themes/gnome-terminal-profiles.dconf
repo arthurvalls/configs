@@ -1,0 +1,111 @@
+[/]
+default='64305153-4cda-41aa-956a-e51d0b61ea0a'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '0c5c348d-a2ac-4ed9-b10d-d2b726926ae5', '1513b87a-8767-48b2-8fc6-8cde24e0a0b7', '2ce0f547-7d7c-42d8-88aa-bfc24cf75b9d', '75c0cab6-d0b6-4e8a-a2d8-d310853be678', '893ba9bf-626f-4a03-9be7-74cb3d8819bd', '64305153-4cda-41aa-956a-e51d0b61ea0a']
+
+[:0c5c348d-a2ac-4ed9-b10d-d2b726926ae5]
+font='FreeMono 12'
+use-system-font=false
+visible-name='monaco'
+
+[:1513b87a-8767-48b2-8fc6-8cde24e0a0b7]
+audible-bell=false
+background-color='rgb(253,246,227)'
+cursor-shape='underline'
+font='Monospace 17'
+foreground-color='rgb(101,123,131)'
+use-system-font=true
+use-theme-colors=true
+visible-name='profile2'
+
+[:2ce0f547-7d7c-42d8-88aa-bfc24cf75b9d]
+allow-bold=true
+audible-bell=false
+background-color='#232325253737'
+bold-color='#ECECF0F0FEFE'
+bold-color-same-as-fg=true
+cursor-background-color='#ECECF0F0FEFE'
+cursor-colors-set=true
+cursor-foreground-color='#232325253737'
+cursor-shape='underline'
+font='IBM Plex Mono 17'
+foreground-color='#ECECF0F0FEFE'
+palette=['#030307073C3C', '#C6C600004A4A', '#ACACF1F15757', '#FEFECDCD5E5E', '#52525F5FB8B8', '#98986F6F8282', '#969687876363', '#ECECF0F0FCFC', '#6C6C5B5B3030', '#DADA4B4B8A8A', '#DBDBFFFFA9A9', '#FEFEE6E6A9A9', '#B2B2BEBEFAFA', '#FDFDA5A5CDCD', '#A5A5BDBD8686', '#F6F6FFFFECEC']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Fishtank'
+
+[:64305153-4cda-41aa-956a-e51d0b61ea0a]
+allow-bold=true
+audible-bell=false
+background-color='#0c0c0c'
+bold-color='#c4c4c4'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cursor-background-color='#EBEBEEEEF9F9'
+cursor-colors-set=true
+cursor-foreground-color='#0D0D10101B1B'
+cursor-shape='underline'
+font='Roboto Mono 14'
+foreground-color='rgb(255,255,255)'
+palette=['rgb(0,0,0)', 'rgb(245,35,100)', 'rgb(255,255,255)', 'rgb(249,19,108)', 'rgb(77,60,60)', 'rgb(255,255,255)', 'rgb(255,255,255)', 'rgb(220,227,233)', 'rgb(240,183,201)', 'rgb(255,255,255)', 'rgb(149,200,82)', 'rgb(123,176,29)', 'rgb(203,156,232)', 'rgb(235,84,134)', 'rgb(232,49,95)', 'rgb(150,192,102)']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='lazy_crimson'
+
+[:75c0cab6-d0b6-4e8a-a2d8-d310853be678]
+allow-bold=true
+audible-bell=false
+background-color='#0D0D10101B1B'
+bold-color='#EBEBEEEEF9F9'
+bold-color-same-as-fg=true
+cursor-background-color='#EBEBEEEEF9F9'
+cursor-colors-set=true
+cursor-foreground-color='#0D0D10101B1B'
+cursor-shape='underline'
+font='IBM Plex Mono 17'
+foreground-color='#EBEBEEEEF9F9'
+palette=['rgb(0,0,9)', 'rgb(187,79,108)', 'rgb(114,204,174)', 'rgb(198,94,61)', 'rgb(88,182,202)', 'rgb(100,136,196)', 'rgb(141,132,198)', 'rgb(133,136,147)', 'rgb(70,74,81)', 'rgb(238,130,159)', 'rgb(165,255,225)', 'rgb(249,145,112)', 'rgb(139,233,253)', 'rgb(151,187,247)', 'rgb(192,183,249)', 'rgb(255,255,255)']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Gooey'
+
+[:893ba9bf-626f-4a03-9be7-74cb3d8819bd]
+audible-bell=false
+background-color='rgb(29,29,29)'
+bold-color='rgb(255,255,255)'
+bold-color-same-as-fg=false
+bold-is-bright=true
+cursor-colors-set=true
+cursor-foreground-color='rgb(170,170,170)'
+cursor-shape='underline'
+foreground-color='rgb(170,170,170)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(29,29,29)'
+palette=['rgb(29,29,29)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,190,0)', 'rgb(0,0,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+use-theme-colors=false
+visible-name='arthur_theme'
+
+[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=false
+background-color='rgb(21,20,27)'
+bold-color='rgb(237,236,238)'
+bold-color-same-as-fg=false
+bold-is-bright=false
+cursor-background-color='rgb(162,119,255)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(162,119,255)'
+cursor-shape='underline'
+font='Monospace 14'
+foreground-color='rgb(237,236,238)'
+highlight-background-color='rgb(162,119,255)'
+highlight-colors-set=true
+palette=['rgb(17,15,24)', 'rgb(255,103,103)', 'rgb(97,255,202)', 'rgb(255,202,133)', 'rgb(162,119,255)', 'rgb(162,119,255)', 'rgb(97,255,202)', 'rgb(237,236,238)', 'rgb(109,109,109)', 'rgb(255,202,133)', 'rgb(162,119,255)', 'rgb(255,202,133)', 'rgb(162,119,255)', 'rgb(162,119,255)', 'rgb(97,255,202)', 'rgb(237,236,238)']
+use-system-font=false
+use-theme-colors=false
+visible-name='Aura Theme'
