@@ -13,6 +13,8 @@ Plug 'sheerun/vim-polyglot' " Syntax highlighting
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto-completion
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
+
 
 call plug#end()
 
@@ -62,3 +64,7 @@ nnoremap <C-p> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-f> :Rg<CR>
 nnoremap <C-l> :BLines<CR>
+
+let g:auto_pairs_map_keys = 0
+let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
+
