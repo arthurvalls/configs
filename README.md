@@ -1,34 +1,7 @@
-# qtcreator
+# Gogh
 
-move `.xml` file into 
+Currently using `gogh`'s theme **Breadog**
 
-	.config/QtProject/qtcreator/styles
+to alter theme just use this command:
+	bash -c "$(wget -qO- https://git.io/vQgMr)"
 
-# sublime
-
-move `.tmTheme` into 
-
-	.config/sublime-text/Packages
-
-# gnome
-
-export current themes:
-
-	dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf
-
-import themes from file:
-
-	dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
-
-another option -> run the script
-
-	./crimson_terminal.sh
-
-
-# fonts
-
-useful fonts inside font **folder**
-
-# useful link
-
-to customize and create new themes click [here](https://terminal.sexy/)
