@@ -53,7 +53,7 @@ set hlsearch " Highlight search results
 set incsearch " Incremental search
 
 " Configure coc.nvim for Rust
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-rust-analyzer']
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-rust-analyzer', 'coc-pyright']
 
 " fzf settings
 " Optional: Use ripgrep if installed for faster searching
