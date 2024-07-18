@@ -67,4 +67,4 @@ nnoremap <C-l> :BLines<CR>
 
 let g:auto_pairs_map_keys = 0
 let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
-
+set mouse=a
