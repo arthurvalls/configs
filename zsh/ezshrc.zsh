@@ -214,5 +214,6 @@ corona() {
 alias sentinela="sudo docker start sentinela && sudo docker exec -it sentinela zsh"
 alias dev="sudo docker start dev && sudo docker exec -it dev zsh"
 alias dev_tc="sudo docker start dev_tc && sudo docker exec -it dev_tc zsh"
-
+alias empty='empty_file() { cat /dev/null > "$1"; }; empty_file' 
+alias lsdd='ls -d */'
 source $HOME/.cargo/env
