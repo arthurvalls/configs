@@ -14,7 +14,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto-completion
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
-
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
 
 call plug#end()
 
@@ -65,6 +65,15 @@ nnoremap <C-b> :Buffers<CR>
 nnoremap <C-f> :Rg<CR>
 nnoremap <C-l> :BLines<CR>
 
+" Disable auto-pairs mapping of keys
 let g:auto_pairs_map_keys = 0
 let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
+
+" vim-visual-multi settings
+let g:VM_maps = {}
+let g:VM_maps['Find Under'] = '<C-d>'
+let g:VM_maps['Find Subword Under'] = '<C-d>'
+
+" Enable mouse support
 set mouse=a
+
