@@ -12,7 +12,7 @@ export ZSH=$HOME/.config/ezsh/oh-my-zsh
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-ZSH_THEME="simple"
+ZSH_THEME="theunraveler"
 
 POWERLEVEL9K_OS_ICON_BACKGROUND="white"
 POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
