@@ -12,4 +12,6 @@
 
 	pip install black
 
+# install ripgrep (for faster line searching)
 
+	cargo install ripgrep
