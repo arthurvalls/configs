@@ -1,4 +1,6 @@
 " General settings
+set mouse=a
+set signcolumn=no
 set clipboard=unnamedplus
 let g:coc_disable_startup_warning = 1
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
@@ -73,7 +75,3 @@ let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
 let g:VM_maps = {}
 let g:VM_maps['Find Under'] = '<C-d>'
 let g:VM_maps['Find Subword Under'] = '<C-d>'
-
-" Enable mouse support
-set mouse=a
-
