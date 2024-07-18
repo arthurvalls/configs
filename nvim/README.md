@@ -1,3 +1,10 @@
+# to install neovim
+
+follow the tutorial here:
+
+	https://github.com/neovim/neovim
+
+
 # to install auto formatters
 
 # C/C++

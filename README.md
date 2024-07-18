@@ -1,6 +1,6 @@
 # Gogh
 
-Currently using `gogh`'s theme **Breadog**
+Currently using `gogh`'s theme **Paper**
 
 to alter theme just use this command:
 
