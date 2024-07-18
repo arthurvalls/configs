@@ -1,0 +1,12 @@
+[user]
+	name = Arthur Valls
+	email = arthur.valls@mettainnovations.com.br
+[core]
+	editor = gedit
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[submodule]
+	recurse = true

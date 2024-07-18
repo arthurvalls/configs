@@ -1,0 +1,68 @@
+{
+  "python.formatting.provider": "black",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "c",
+    "cpp",
+    "rust",
+    "julia"
+  ],
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": [
+        "compile_flags.txt",
+        "compile_commands.json",
+        ".git/"
+      ],
+      "filetypes": [
+        "c",
+        "cpp",
+        "objc",
+        "objcpp"
+      ]
+    },
+    "rust-analyzer": {
+      "command": "rust-analyzer",
+      "filetypes": [
+        "rust"
+      ],
+      "rootPatterns": [
+        "Cargo.toml",
+        "rust-project.json"
+      ],
+      "settings": {
+        "rust-analyzer": {}
+      }
+    },
+    "julia": {
+      "command": "julia",
+      "args": [
+        "--startup-file=no",
+        "--history-file=no",
+        "-e",
+        "using LanguageServer; using Pkg; import StaticLint; import SymbolServer; env_path = dirname(Pkg.Types.Context().env.project_file); server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path); server.run()"
+      ],
+      "filetypes": [
+        "julia"
+      ],
+      "rootPatterns": [
+        "Project.toml",
+        "Manifest.toml"
+      ]
+    }
+  },
+  "coc.preferences.formatOnSave": true,
+  "clang-format.executable": "clang-format",
+  "rust-analyzer.rustfmt.overrideCommand": [
+    "rustfmt",
+    "--emit=stdout"
+  ],
+  "juliaformatter": {
+    "executablePath": "julia",
+    "args": [
+      "-e",
+      "using JuliaFormatter; format_text(read(stdin, String))"
+    ]
+  }
+}
