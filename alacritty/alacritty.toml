@@ -1,10 +1,9 @@
 import = [
-  #  "~/.config/alacritty/gruvbox_medium_dark.toml"
+    "~/.config/alacritty/gruvbox_medium_dark.toml"
   # "~/.config/alacritty/gruvbox_dark.toml"
   #  "~/.config/alacritty/solarized_light.toml"
-  "~/.config/alacritty/everforest_dark.toml"
-
-
+  #  "~/.config/alacritty/everforest_dark.toml"
+  # "~/.config/alacritty/remedy_dark.toml"
 ]
 
 [window]
@@ -20,7 +19,8 @@ size = 16.0
 
 [font.normal]
 # family = "Hasklug Nerd Font Mono"
-family = "GeistMono NFM"
+#family = "GeistMono NFM"
+family = "Noto Sans Mono"
 # family = "FantasqueSansM Nerd Font Mono"
 style = "Regular"
 
