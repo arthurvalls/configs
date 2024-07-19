@@ -1,15 +1,16 @@
 import = [
-    "~/.config/alacritty/gruvbox_medium_dark.toml"
+  # "~/.config/alacritty/gruvbox_medium_dark.toml"
   # "~/.config/alacritty/gruvbox_dark.toml"
   #  "~/.config/alacritty/solarized_light.toml"
   #  "~/.config/alacritty/everforest_dark.toml"
   # "~/.config/alacritty/remedy_dark.toml"
+  "~/.config/alacritty/jonhoo.toml"
 ]
 
 [window]
 decorations = "None"
 opacity = 0.95
-dimensions = {columns = 80, lines = 35}
+dimensions = {columns = 100, lines = 35}
 [window.padding]
 x = 10
 y = 10

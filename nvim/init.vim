@@ -17,6 +17,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
+Plug 'vim-airline/vim-airline' " Status/tabline
+Plug 'vim-airline/vim-airline-themes' " Airline themes
+Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 call plug#end()
 
 " Enable syntax highlighting
@@ -40,14 +43,12 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Map Ctrl+A to move to the beginning of the line
 nnoremap <C-A> ^
+vnoremap <C-A> ^
+inoremap <C-A> <C-O>^
 
 " Map Ctrl+S to move to the end of the line
 nnoremap <C-S> $
-
-" Map Ctrl+A to move to the beginning of the line in insert mode
-inoremap <C-A> <C-O>^
-
-" Map Ctrl+S to move to the end of the line in insert mode
+vnoremap <C-S> $
 inoremap <C-S> <C-O>$
 
 " Show file in status line
@@ -86,3 +87,45 @@ let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
 let g:VM_maps = {}
 let g:VM_maps['Find Under'] = '<C-d>'
 let g:VM_maps['Find Subword Under'] = '<C-d>'
+
+" vim-airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#default#section_truncate_width = {
+\   'b': 40,
+\   'x': 40,
+\   'y': 40,
+\   'z': 40,
+\}
+
+let g:airline#extensions#default#layout = [
+\ [ 'a', 'b', 'c' ],
+\ [ 'z' ]
+\]
+
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#left = [ ]
+let g:airline#extensions#tabline#right = [ ]
+let g:airline_powerline_fonts = 1
+"let g:airline_section_a = ''
+"let g:airline_section_b = ''
+"let g:airline_section_c = '%f'
+
+let g:airline_section_x = ''
+
+let g:airline_section_y = ''
+let g:airline_section_z = ''
+
+" ale settings
+let g:ale_linters_explicit = 1
+let g:ale_linters = {
+\   'python': ['flake8', 'mypy'],
+\   'javascript': ['eslint'],
+\   'rust': ['cargo'],
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
+\   'python': ['autopep8'],
+\}
+let g:ale_fix_on_save = 1
