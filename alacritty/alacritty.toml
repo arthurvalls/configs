@@ -39,3 +39,6 @@ save_to_clipboard = true
 
 [shell]
 program = "tmux"
+
+[scrolling]
+history = 10000
