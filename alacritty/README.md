@@ -17,3 +17,7 @@ install using:
 also create this config file:
 
 	cp .tmux.conf ~/.tmux.conf
+
+tmux shortcuts:
+
+	https://linuxize.com/post/getting-started-with-tmux/
