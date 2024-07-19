@@ -15,7 +15,7 @@ import = [
 [window]
 decorations = "None"
 opacity = 0.95
-
+dimensions = {columns = 80, lines = 35}
 [window.padding]
 x = 10
 y = 10
@@ -34,3 +34,5 @@ blinking = "Never"
 [selection]
 save_to_clipboard = true
 
+[shell]
+program = "tmux"
