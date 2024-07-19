@@ -17,7 +17,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
-
 call plug#end()
 
 " Enable syntax highlighting
@@ -38,6 +37,18 @@ inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Map Ctrl+A to move to the beginning of the line
+nnoremap <C-A> ^
+
+" Map Ctrl+S to move to the end of the line
+nnoremap <C-S> $
+
+" Map Ctrl+A to move to the beginning of the line in insert mode
+inoremap <C-A> <C-O>^
+
+" Map Ctrl+S to move to the end of the line in insert mode
+inoremap <C-S> <C-O>$
 
 " Show file in status line
 set laststatus=2
