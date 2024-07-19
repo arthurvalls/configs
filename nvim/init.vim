@@ -20,6 +20,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
 Plug 'vim-airline/vim-airline' " Status/tabline
 Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
+Plug 'pangloss/vim-javascript' " JavaScript syntax highlighting
 call plug#end()
 
 " Enable syntax highlighting

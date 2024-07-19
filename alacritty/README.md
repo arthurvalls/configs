@@ -6,8 +6,8 @@ install using:
 
 **REMEMBER** to use the final instructions to build desktop app
 
-**REMEMBER 2!!**: copy files into this location (create dir if it doesnt exist): 
-	
+**REMEMBER 2!!**: copy files into this location (create dir if it doesnt exist):
+
 	~/.config/alacritty/
 
 # installing tmux
@@ -18,6 +18,10 @@ also create this config file:
 
 	cp .tmux.conf ~/.tmux.conf
 
-tmux shortcuts:
+# tmux shortcuts:
 
 	https://linuxize.com/post/getting-started-with-tmux/
+
+# remember
+
+	tmux source ~/.tmux.conf

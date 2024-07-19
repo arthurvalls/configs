@@ -217,3 +217,4 @@ alias dev_tc="sudo docker start dev_tc && sudo docker exec -it dev_tc zsh"
 alias empty='empty_file() { cat /dev/null > "$1"; }; empty_file' 
 alias lsdd='ls -d */'
 source $HOME/.cargo/env
+tmux source ~/.tmux.conf
