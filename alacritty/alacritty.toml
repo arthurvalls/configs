@@ -19,7 +19,7 @@ style = "Regular"
 
 [window]
 decorations = "None"
-opacity = 0.95
+opacity = 0.99
 dimensions = {columns = 90, lines = 20}
 resize_increments = true
 

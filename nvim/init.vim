@@ -6,6 +6,9 @@ let g:coc_disable_startup_warning = 1
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 set guicursor+=n:hor20-Cursor/lCursor
 
+" remap esc
+inoremap j<Space> <Esc>
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
