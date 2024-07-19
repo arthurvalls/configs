@@ -7,16 +7,8 @@ import = [
   "~/.config/alacritty/jonhoo.toml"
 ]
 
-[window]
-decorations = "None"
-opacity = 0.95
-dimensions = {columns = 100, lines = 35}
-[window.padding]
-x = 10
-y = 10
-
 [font]
-size = 16.0
+size = 14.0
 
 [font.normal]
 # family = "Hasklug Nerd Font Mono"
@@ -24,6 +16,19 @@ size = 16.0
 family = "Noto Sans Mono"
 # family = "FantasqueSansM Nerd Font Mono"
 style = "Regular"
+
+[window]
+decorations = "None"
+opacity = 0.95
+dimensions = {columns = 90, lines = 20}
+resize_increments = true
+
+[window.position]
+x = 400
+y = 200
+[window.padding]
+x = 5
+y = 10
 
 [cursor.style]
 shape = "Underline"
