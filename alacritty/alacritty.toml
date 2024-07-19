@@ -1,0 +1,36 @@
+import = [
+  # Uncomment the flavour you want below:
+  # "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+  # "~/.config/alacritty/tokyo-night.toml"
+  # "~/.config/alacritty/tokyo-night-storm.toml"
+  # "~/.config/alacritty/tokyonight_day.toml"
+  # "~/.config/alacritty/tokyonight_moon.toml"
+  # "~/.config/alacritty/tokyonight_night.toml"
+  "~/.config/alacritty/gruvbox_medium_dark.toml"
+]
+
+[window]
+decorations = "None"
+opacity = 0.95
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "FantasqueSansM Nerd Font Mono"
+style = "Regular"
+
+[cursor.style]
+shape = "Underline"
+blinking = "Never"
+
+[selection]
+save_to_clipboard = true
+
