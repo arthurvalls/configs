@@ -65,4 +65,10 @@
       "using JuliaFormatter; format_text(read(stdin, String))"
     ]
   }
+  {,
+  "suggest.noselect": true,
+  "suggest.triggerAfterInsertEnter": true,
+  "diagnostic.enable": true
+}
+
 }

@@ -85,8 +85,8 @@ endif
 " Optional: Keybindings for fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
-nnoremap <C-f> :Rg<CR>
-nnoremap <C-l> :BLines<CR>
+nnoremap <C-A-f> :Rg<CR>
+nnoremap <C-f> :Lines<CR>
 
 " Disable auto-pairs mapping of keys
 let g:auto_pairs_map_keys = 0
@@ -96,6 +96,7 @@ let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
 let g:VM_maps = {}
 let g:VM_maps['Find Under'] = '<C-d>'
 let g:VM_maps['Find Subword Under'] = '<C-d>'
+let g:VM_maps["Exit"] = '<C-C>'   " quit VM
 
 " vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
