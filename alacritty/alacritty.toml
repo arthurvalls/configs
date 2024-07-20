@@ -18,10 +18,11 @@ family = "Noto Sans Mono"
 style = "Regular"
 
 [window]
-decorations = "None"
+decorations = "Full" # Change to None if your feeling edgy
 opacity = 0.99
-dimensions = {columns = 90, lines = 20}
+dimensions = {columns = 90, lines = 25}
 resize_increments = true
+dynamic_padding = true
 
 [window.position]
 x = 400
