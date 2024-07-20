@@ -42,3 +42,6 @@ program = "tmux"
 
 [scrolling]
 history = 10000
+
+[keyboard]
+bindings = [{key = "Q", mods = "Control", action = "None"}]

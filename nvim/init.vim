@@ -7,7 +7,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 set guicursor+=n:hor20-Cursor/lCursor
 
 " remap esc
-inoremap j<Space> <Esc>
+inoremap kl <Esc>
+
+set timeoutlen=500
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
@@ -24,6 +26,7 @@ Plug 'vim-airline/vim-airline' " Status/tabline
 Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 Plug 'pangloss/vim-javascript' " JavaScript syntax highlighting
+Plug 'chaoren/vim-wordmotion'
 call plug#end()
 
 " Enable syntax highlighting
