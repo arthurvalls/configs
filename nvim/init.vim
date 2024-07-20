@@ -7,7 +7,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 set guicursor+=n:hor20-Cursor/lCursor
 
 " remap esc
-inoremap kl <Esc>
+inoremap ;; <Esc>
+vnoremap ;; <Esc>
+cnoremap ;; <Esc>
 
 set timeoutlen=500
 
