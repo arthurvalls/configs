@@ -29,6 +29,7 @@ Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 Plug 'pangloss/vim-javascript' " JavaScript syntax highlighting
 Plug 'chaoren/vim-wordmotion'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " Enable syntax highlighting
@@ -141,3 +142,7 @@ let g:ale_fixers = {
 \   'python': ['autopep8'],
 \}
 let g:ale_fix_on_save = 1
+
+let g:NERDCompactSexyComs = 1
+
+let g:NERDCommentEMptyLines = 1

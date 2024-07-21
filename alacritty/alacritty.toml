@@ -19,11 +19,11 @@ style = "Regular"
 
 [window]
 decorations = "Full" # Change to None if your feeling edgy
-opacity = 0.99
+opacity = 0.95
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
-
+blur = true
 [window.position]
 x = 400
 y = 200
