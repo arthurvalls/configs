@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme version="1.0" name="Dark (Arthur)">
+  <style name="Text" foreground="#aaaaaa" background="#1d1d1d"/>
+  <style name="Link" foreground="#00ff7f" background="#1d1d1d"/>
+  <style name="Selection" foreground="#e5e5e5" background="#1d1d1d"/>
+  <style name="LineNumber" foreground="#ffffff" background="#1d1d1d"/>
+  <style name="SearchResult" background="#1d1d1d"/>
+  <style name="SearchResultAlt1" foreground="#aaaaff" background="#1d1d1d"/>
+  <style name="SearchResultAlt2" foreground="#ffaaaa" background="#1d1d1d"/>
+  <style name="SearchScope" background="#1d1d1d"/>
+  <style name="Parentheses" foreground="#ff5555" background="#1d1d1d"/>
+  <style name="ParenthesesMismatch" background="#1d1d1d"/>
+  <style name="AutoComplete" foreground="#5500ff" background="#1d1d1d"/>
+  <style name="CurrentLine" background="#1d1d1d"/>
+  <style name="CurrentLineNumber" foreground="#aaaaaa" background="#1d1d1d" bold="true"/>
+  <style name="Occurrences" background="#1d1d1d"/>
+  <style name="Occurrences.Unused" background="#1d1d1d" underlineColor="#808000" underlineStyle="SingleUnderline"/>
+  <style name="Occurrences.Rename" foreground="#ffaaaa" background="#1d1d1d"/>
+  <style name="Number" foreground="#ff3168" background="#1d1d1d"/>
+  <style name="String" foreground="#ff3168" background="#1d1d1d"/>
+  <style name="Type" foreground="#ffffff" background="#1d1d1d"/>
+  <style name="Local" background="#1d1d1d"/>
+  <style name="Parameter" foreground="#ff709b" background="#1d1d1d"/>
+  <style name="Global" background="#1d1d1d"/>
+  <style name="Field" background="#1d1d1d"/>
+  <style name="Static" foreground="#55ff55" background="#1d1d1d" italic="true"/>
+  <style name="VirtualMethod" background="#1d1d1d" italic="true"/>
+  <style name="Function" background="#1d1d1d"/>
+  <style name="Keyword" foreground="#ff2558" background="#1d1d1d"/>
+  <style name="PrimitiveType" foreground="#ffac47" background="#1d1d1d"/>
+  <style name="Operator" foreground="#aaaaaa" background="#1d1d1d"/>
+  <style name="Overloaded Operator" background="#1d1d1d"/>
+  <style name="Punctuation" background="#1d1d1d"/>
+  <style name="Preprocessor" foreground="#e0d8ff" background="#1d1d1d"/>
+  <style name="Label" foreground="#ff2558" background="#1d1d1d"/>
+  <style name="Comment" foreground="#55ffff" background="#1d1d1d"/>
+  <style name="Doxygen.Comment" foreground="#55ffff" background="#1d1d1d"/>
+  <style name="Doxygen.Tag" foreground="#00a0a0" background="#1d1d1d"/>
+  <style name="VisualWhitespace" foreground="#c0c0c0" background="#1d1d1d"/>
+  <style name="QmlLocalId" background="#1d1d1d" italic="true"/>
+  <style name="QmlExternalId" foreground="#aaaaff" background="#1d1d1d" italic="true"/>
+  <style name="QmlTypeId" foreground="#55ff55" background="#1d1d1d"/>
+  <style name="QmlRootObjectProperty" background="#1d1d1d" italic="true"/>
+  <style name="QmlScopeObjectProperty" background="#1d1d1d" italic="true"/>
+  <style name="QmlExternalObjectProperty" foreground="#aaaaff" background="#1d1d1d" italic="true"/>
+  <style name="JsScopeVar" foreground="#8888ff" background="#1d1d1d" italic="true"/>
+  <style name="JsImportVar" foreground="#8888ff" background="#1d1d1d" italic="true"/>
+  <style name="JsGlobalVar" foreground="#8888ff" background="#1d1d1d" italic="true"/>
+  <style name="QmlStateName" background="#1d1d1d" italic="true"/>
+  <style name="Binding" foreground="#ff5555" background="#1d1d1d"/>
+  <style name="DisabledCode" foreground="#777777" background="#1d1d1d"/>
+  <style name="AddedLine" foreground="#55ffff" background="#1d1d1d"/>
+  <style name="RemovedLine" foreground="#ff5555" background="#1d1d1d"/>
+  <style name="DiffFile" foreground="#55ff55" background="#1d1d1d"/>
+  <style name="DiffLocation" foreground="#ff2558" background="#1d1d1d"/>
+  <style name="DiffFileLine" foreground="#000000" background="#1d1d1d"/>
+  <style name="DiffContextLine" foreground="#000000" background="#1d1d1d"/>
+  <style name="DiffSourceLine" background="#1d1d1d"/>
+  <style name="DiffSourceChar" foreground="#000000" background="#1d1d1d"/>
+  <style name="DiffDestLine" background="#1d1d1d"/>
+  <style name="DiffDestChar" foreground="#000000" background="#1d1d1d"/>
+  <style name="LogChangeLine" foreground="#808000" background="#1d1d1d"/>
+  <style name="LogAuthorName" foreground="#ceffe5" background="#1d1d1d"/>
+  <style name="LogCommitDate" foreground="#00ff00" background="#1d1d1d"/>
+  <style name="LogCommitHash" foreground="#ff0000" background="#1d1d1d"/>
+  <style name="LogCommitSubject" foreground="#d6cf9a" background="#1d1d1d"/>
+  <style name="LogDecoration" foreground="#ff00ff" background="#1d1d1d"/>
+  <style name="Warning" background="#1d1d1d" underlineColor="#ffbe00" underlineStyle="SingleUnderline"/>
+  <style name="WarningContext" background="#1d1d1d" underlineColor="#ffbe00" underlineStyle="DotLine"/>
+  <style name="Error" background="#1d1d1d" underlineColor="#ff0000" underlineStyle="SingleUnderline"/>
+  <style name="ErrorContext" background="#1d1d1d" underlineColor="#ff0000" underlineStyle="DotLine"/>
+  <style name="Declaration" background="#1d1d1d" bold="true"/>
+  <style name="FunctionDefinition" background="#1d1d1d"/>
+  <style name="OutputArgument" background="#1d1d1d" italic="true"/>
+</style-scheme>
