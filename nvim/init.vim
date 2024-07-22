@@ -83,11 +83,30 @@ if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/"'
 endif
 
-" Optional: Keybindings for fzf
+" Define custom function for fzf search
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:' . reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+
+" Custom command for fzf search
+command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
+nnoremap <C-A-f> :Rg<CR>
+
+" Keybindings for fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
-nnoremap <C-A-f> :Rg<CR>
 nnoremap <C-f> :Lines<CR>
+
+" Initialize configuration dictionary
+let g:fzf_vim = {}
+
+" fzf layout settings
+let g:fzf_layout = { 'down': '~40%' }
 
 " Disable auto-pairs mapping of keys
 let g:auto_pairs_map_keys = 0
