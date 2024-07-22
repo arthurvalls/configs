@@ -5,8 +5,6 @@ set clipboard=unnamedplus
 let g:coc_disable_startup_warning = 1
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 set guicursor+=n:hor20-Cursor/lCursor
-" sliding windows
-nnoremap <C-w> :bnext<CR>
 " remap esc
 inoremap ;; <Esc>
 vnoremap ;; <Esc>

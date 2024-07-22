@@ -1,7 +1,6 @@
 {
   "python.formatting.provider": "black",
- "coc.preferences.formatOnType": true,
- "coc.preferences.formatOnSaveFiletypes": [
+  "coc.preferences.formatOnSaveFiletypes": [
     "python",
     "c",
     "cpp",
