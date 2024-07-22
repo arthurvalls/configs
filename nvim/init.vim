@@ -5,6 +5,9 @@ set clipboard=unnamedplus
 let g:coc_disable_startup_warning = 1
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 set guicursor+=n:hor20-Cursor/lCursor
+
+" slide
+nnoremap <C-w> :bnext<CR>
 " remap esc
 inoremap ;; <Esc>
 vnoremap ;; <Esc>
@@ -172,6 +175,14 @@ let g:NERDCommentEMptyLines = 1
 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-n> :NERDTree<CR>
-
+nnoremap <C-x> <C-w>w
 let g:NERDTreeFileLines = 1
+
+" Enable NERDTree
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+
+" Enable vim-devicons
+let g:webdevicons_enable_nerdtree = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
