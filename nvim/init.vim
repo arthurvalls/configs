@@ -5,7 +5,8 @@ set clipboard=unnamedplus
 let g:coc_disable_startup_warning = 1
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 set guicursor+=n:hor20-Cursor/lCursor
-
+" sliding windows
+nnoremap <C-w> :bnext<CR>
 " remap esc
 inoremap ;; <Esc>
 vnoremap ;; <Esc>
@@ -30,6 +31,10 @@ Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 Plug 'pangloss/vim-javascript' " JavaScript syntax highlighting
 Plug 'chaoren/vim-wordmotion'
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" always load this as the last one
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Enable syntax highlighting
@@ -166,3 +171,9 @@ let g:ale_fix_on_save = 1
 let g:NERDCompactSexyComs = 1
 
 let g:NERDCommentEMptyLines = 1
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTree<CR>
+
+let g:NERDTreeFileLines = 1
