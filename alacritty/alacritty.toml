@@ -1,25 +1,31 @@
 import = [
   # "~/.config/alacritty/gruvbox_medium_dark.toml"
   # "~/.config/alacritty/gruvbox_dark.toml"
-  #  "~/.config/alacritty/solarized_light.toml"
-  #  "~/.config/alacritty/everforest_dark.toml"
+  # "~/.config/alacritty/solarized_light.toml"
+  # "~/.config/alacritty/everforest_dark.toml"
   # "~/.config/alacritty/remedy_dark.toml"
-  "~/.config/alacritty/jonhoo.toml"
+  #   "~/.config/alacritty/jonhoo.toml"
+  #  "~/.config/alacritty/citylights.toml"
+  # "~/.config/alacritty/ayu-dark.toml"
+  # "~/.config/alacritty/blood_moon.toml"
+   "~/.config/alacritty/seashells.toml"
+
 ]
 
 [font]
-size = 14.0
+size = 15.0
 
 [font.normal]
 # family = "Hasklug Nerd Font Mono"
-#family = "GeistMono NFM"
-family = "Noto Sans Mono"
+# family = "GeistMono NFM"
+# family = "Noto Sans Mono"
+family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
 style = "Regular"
 
 [window]
 decorations = "Full" # Change to None if your feeling edgy
-opacity = 0.95
+opacity = 1.0
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true

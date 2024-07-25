@@ -153,7 +153,9 @@ let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
 
-let g:airline_theme='base16_atelier_plateau'
+" let g:airline_theme='base16_atelier_plateau'
+let g:airline_theme='luna'
+" let g:airline_theme='bubblegum'
 
 " ale settings
 let g:ale_linters_explicit = 1
