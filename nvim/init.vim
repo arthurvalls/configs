@@ -155,7 +155,7 @@ let g:airline_section_z = ''
 
 " let g:airline_theme='base16_atelier_plateau'
 " let g:airline_theme='luna'
-let g:airline_theme='deus'
+let g:airline_theme='minimalist'
 
 " ale settings
 let g:ale_linters_explicit = 1
