@@ -12,11 +12,13 @@ import = [
   # "~/.config/alacritty/xterm.toml"
   # "~/.config/alacritty/terminal_app.toml"
   # "~/.config/alacritty/full_white.toml"
-  "~/.config/alacritty/gruber_darker.toml"
+  # "~/.config/alacritty/gruber_darker.toml"
+   "~/.config/alacritty/custom_white.toml"
 ]
 
 [font]
-size = 14.0
+size = 15.0
+
 
 [font.normal]
 # family = "Hasklug Nerd Font Mono"
@@ -34,7 +36,7 @@ style="Regular"
 
 [window]
 decorations = "Full" # Change to None if your feeling edgy
-opacity = 1.0
+opacity = 0.95
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
@@ -47,7 +49,7 @@ x = 5
 y = 10
 
 [cursor.style]
-shape = "Underline"
+shape = "Block"
 blinking = "Never"
 
 [selection]
