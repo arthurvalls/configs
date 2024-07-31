@@ -1,8 +1,3 @@
-# Gogh
+# Extensions
 
-Currently using `gogh`'s theme **Paper**
-
-to alter theme just use this command:
-
-	bash -c "$(wget -qO- https://git.io/vQgMr)"
-
+Current gnome extensions being used are **Dash To Panel** and **Resource Monitor**.
