@@ -4,7 +4,8 @@ set signcolumn=no
 set clipboard=unnamedplus
 let g:coc_disable_startup_warning = 1
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-set guicursor+=n:hor20-Cursor/lCursor
+" set guicursor+=n:hor20-Cursor/lCursor
+set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 
 " slide
 nnoremap <C-w> :bnext<CR>

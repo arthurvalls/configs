@@ -24,9 +24,10 @@ size = 15.0
 # family = "Hasklug Nerd Font Mono"
 # family = "GeistMono NFM"
 # family = "Noto Sans Mono"
-family = "ZedMono Nerd Font"
+# family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
+family = "SF Mono"
 style = "Regular"
 
 
@@ -36,7 +37,7 @@ style="Regular"
 
 [window]
 decorations = "Full" # Change to None if your feeling edgy
-opacity = 0.95
+opacity = 0.97
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
