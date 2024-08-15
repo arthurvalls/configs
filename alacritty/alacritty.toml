@@ -4,7 +4,7 @@ import = [
   # "~/.config/alacritty/solarized_light.toml"
   # "~/.config/alacritty/everforest_dark.toml"
   # "~/.config/alacritty/remedy_dark.toml"
-  # "~/.config/alacritty/jonhoo.toml"
+   "~/.config/alacritty/jonhoo.toml"
   # "~/.config/alacritty/citylights.toml"
   # "~/.config/alacritty/ayu-dark.toml"
   # "~/.config/alacritty/blood_moon.toml"
@@ -12,12 +12,12 @@ import = [
   # "~/.config/alacritty/xterm.toml"
   # "~/.config/alacritty/terminal_app.toml"
   # "~/.config/alacritty/full_white.toml"
-  # "~/.config/alacritty/gruber_darker.toml"
-   "~/.config/alacritty/custom_white.toml"
+  #  "~/.config/alacritty/gruber_darker.toml"
+  # "~/.config/alacritty/custom_white.toml"
 ]
 
 [font]
-size = 15.0
+size = 18.0
 
 
 [font.normal]
@@ -27,7 +27,8 @@ size = 15.0
 # family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
-family = "SF Mono"
+# family = "SF Mono"
+family = "Ubuntu Mono"
 style = "Regular"
 
 
@@ -36,8 +37,9 @@ style="Regular"
 
 
 [window]
-decorations = "Full" # Change to None if your feeling edgy
-opacity = 0.97
+decorations = "None" # Change to None if your feeling edgy
+# opacity = 0.97
+opacity = 1.00
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
