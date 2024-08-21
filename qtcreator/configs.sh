@@ -36,5 +36,13 @@ for file in qtconfig/*.css; do
   fi
 done
 
+for file in qtconfig/*.creatortheme; do
+  # Check if file exists
+  if [ -f "$file" ]; then
+    # Copy to user's Qt Creator styles directory
+    cp -v "$file" ~/.config/QtProject/qtcreator/themes/
+  fi
+done
+
 echo "Copy completed!"
 
