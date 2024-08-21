@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/challenger_deep.toml"
+  "~/.config/alacritty/themes/jonhoo.toml"
 ]
 
 [font]
@@ -7,11 +7,11 @@ size = 17.0
 
 
 [font.normal]
-# family = "Hasklug Nerd Font Mono"
+family = "Hasklug Nerd Font Mono"
 # family = "GeistMono NFM"
 # family = "Noto Sans Mono"
 # family = "ZedMono Nerd Font"
- family = "FantasqueSansM Nerd Font Mono"
+# family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
 # family = "SF Mono"
 # family = "Ubuntu Mono"
