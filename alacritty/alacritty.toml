@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/jonhoo.toml"
+  "~/.config/alacritty/themes/gruber_darker.toml"
 ]
 
 [font]
@@ -7,9 +7,9 @@ size = 17.0
 
 
 [font.normal]
-family = "Hasklug Nerd Font Mono"
-# family = "GeistMono NFM"
-# family = "Noto Sans Mono"
+# family = "Hasklug Nerd Font Mono"
+family = "GeistMono NFM"
+#family = "Noto Sans Mono"
 # family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
