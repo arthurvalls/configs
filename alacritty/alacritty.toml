@@ -1,9 +1,9 @@
 import = [
-  "~/.config/alacritty/themes/osaka.toml"
+  "~/.config/alacritty/themes/catppuccin_mocha.toml"
 ]
 
 [font]
-size = 15.0
+size = 17.0
 
 
 [font.normal]
@@ -13,8 +13,8 @@ size = 15.0
 # family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
-family = "SF Mono"
-# family = "Ubuntu Mono"
+# family = "SF Mono"
+family = "Ubuntu Mono"
 # family = "Google Sans Mono"
 # family = "Gitlab Mono"
 style = "Regular"
