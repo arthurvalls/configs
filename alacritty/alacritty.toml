@@ -1,21 +1,22 @@
 import = [
-  "~/.config/alacritty/themes/gruber_darker.toml"
+  "~/.config/alacritty/themes/solarized_osaka.toml"
 ]
 
 [font]
-size = 17.0
+size = 15.0
 
 
 [font.normal]
 # family = "Hasklug Nerd Font Mono"
-family = "GeistMono NFM"
-#family = "Noto Sans Mono"
+# family = "GeistMono NFM"
+# family = "Noto Sans Mono"
 # family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
-# family = "SF Mono"
+family = "SF Mono"
 # family = "Ubuntu Mono"
 # family = "Google Sans Mono"
+# family = "Gitlab Mono"
 style = "Regular"
 
 
@@ -26,7 +27,7 @@ style="Regular"
 [window]
 decorations = "None" # Change to None if your feeling edgy
 # opacity = 0.97
-opacity = 1.00
+opacity = 0.9
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
