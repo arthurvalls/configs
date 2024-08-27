@@ -1,4 +1,4 @@
-" General settings
+"General settings
 set mouse=a
 set signcolumn=no
 set clipboard=unnamedplus
@@ -33,6 +33,7 @@ Plug 'vim-airline/vim-airline' " Status/tabline
 Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 Plug 'pangloss/vim-javascript' " JavaScript syntax highlighting
+Plug 'github/copilot.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
