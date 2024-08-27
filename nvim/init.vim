@@ -27,6 +27,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
+Plug 'fatih/vim-go'
+Plug 'charlespascoe/vim-go-syntax'
 Plug 'vim-airline/vim-airline' " Status/tabline
 Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine

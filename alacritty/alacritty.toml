@@ -3,7 +3,7 @@ import = [
 ]
 
 [font]
-size = 17.0
+size = 16.0
 
 
 [font.normal]
@@ -14,9 +14,10 @@ size = 17.0
 # family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
 # family = "SF Mono"
-family = "Ubuntu Mono"
+# family = "Ubuntu Mono"
 # family = "Google Sans Mono"
 # family = "Gitlab Mono"
+family = "IBM PlexMono"
 style = "Regular"
 
 
@@ -26,8 +27,7 @@ style="Regular"
 
 [window]
 decorations = "None" # Change to None if your feeling edgy
-# opacity = 0.97
-opacity = 0.9
+opacity = 0.94
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true

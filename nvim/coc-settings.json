@@ -22,6 +22,11 @@
         "objcpp"
       ]
     },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
     "rust-analyzer": {
       "command": "rust-analyzer",
       "filetypes": [
