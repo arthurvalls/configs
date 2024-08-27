@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/aura.toml"
+  "~/.config/alacritty/themes/rose-pine.toml",
 ]
 
 [font]
@@ -8,7 +8,7 @@ size = 16.0
 
 [font.normal]
 # family = "Hasklug Nerd Font Mono"
-# family = "GeistMono NFM"
+family = "GeistMono NFM"
 # family = "Noto Sans Mono"
 # family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
@@ -17,7 +17,7 @@ size = 16.0
 # family = "Ubuntu Mono"
 # family = "Google Sans Mono"
 # family = "Gitlab Mono"
-family = "IBM PlexMono"
+# family = "IBM PlexMono"
 style = "Regular"
 
 

@@ -26,6 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto-completion
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'rose-pine/neovim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
 Plug 'fatih/vim-go'
 Plug 'charlespascoe/vim-go-syntax'
