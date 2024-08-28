@@ -6,6 +6,10 @@
     "cpp",
     "rust",
     "julia"
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact",
   ],
   "languageserver": {
     "clangd": {
