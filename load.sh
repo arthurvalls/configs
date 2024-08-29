@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Define source and destination directories
-NvimSrc="/configs/nvim"
-AlacrittySrc="/configs/alacritty"
-TmuxSrc="/configs/alacritty/.tmux.conf"
-ZshSrc="/configs/zsh/ezshrc.zsh"
+NvimSrc="/home/arthur/configs/nvim"
+AlacrittySrc="/home/arthur/configs/alacritty"
+TmuxSrc="/home/arthur/configs/alacritty/.tmux.conf"
+ZshSrc="/home/arthur/configs/zsh/ezshrc.zsh"
 
 NvimDest="$HOME/.config/nvim"
 AlacrittyDest="$HOME/.config/alacritty"
@@ -25,7 +25,7 @@ fi
 
 # Copy Alacritty configuration files
 if [ -d "$AlacrittySrc" ]; then
-    cp "$AlacrittySrc"/* "$AlacrittyDest/"
+    cp -r "$AlacrittySrc"/* "$AlacrittyDest/"
 else
     echo "Alacritty source directory does not exist: $AlacrittySrc"
 fi
