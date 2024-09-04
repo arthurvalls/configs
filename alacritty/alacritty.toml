@@ -1,15 +1,15 @@
 import = [
-  "~/.config/alacritty/themes/rose-pine.toml",
+  "~/.config/alacritty/themes/coolnight.toml",
 ]
 
 [font]
-size = 16.0
+size = 18.0
 
 
 [font.normal]
 # family = "Hasklug Nerd Font Mono"
 # family = "GeistMono NF"
-# family = "Noto Sans Mono"
+family = "Noto Sans Mono"
 # family = "ZedMono Nerd Font"
 # family = "FantasqueSansM Nerd Font Mono"
 # family = "Perfect DOS VGA 437"
@@ -17,7 +17,8 @@ size = 16.0
 # family = "Ubuntu Mono"
 # family = "Google Sans Mono"
 # family = "Gitlab Mono"
-family = "IBM PlexMono"
+# family = "IBM PlexMono"
+# family = "JetBrains Mono"
 style = "Regular"
 
 
@@ -26,8 +27,8 @@ style="Regular"
 
 
 [window]
-decorations = "None" # Change to None if your feeling edgy
-opacity = 0.94
+decorations = "Full" # Change to None if your feeling edgy
+opacity = 0.95
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
