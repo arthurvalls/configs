@@ -1,4 +1,4 @@
-"General settings
+" General settings
 set mouse=a
 set signcolumn=no
 set clipboard=unnamedplus
@@ -38,7 +38,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'craftzdog/solarized-osaka.nvim'
-Plug 'lambdalisue/vim-glyph-palette'
+" Plug 'lambdalisue/vim-glyph-palette'
 " always load this as the last one
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -194,30 +194,6 @@ let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-
-
-let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
-
-let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
-
-let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
-
-let g:WebDevIconsDefaultFolderSymbolColor = s:beige " sets the color for folders that did not match any rule
-let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
-
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
-augroup my-glyph-palette
-	  autocmd!
-	  autocmd FileType fern call glyph_palette#apply()
-	  autocmd FileType nerdtree call glyph_palette#apply()
-	  autocmd FileType startify call glyph_palette#apply()
-	augroup END
-
 " colorscheme solarized-osaka
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme solarized-osaka-moon
