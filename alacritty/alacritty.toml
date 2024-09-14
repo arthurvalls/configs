@@ -1,12 +1,12 @@
 import = [
-  "~/.config/alacritty/themes/solarized_osaka.toml",
+  "~/.config/alacritty/themes/gruvbox_dark.toml",
 ]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 17.0
+size = 15.0
 
 
 [font.normal]
