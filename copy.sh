@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Copy Neovim configuration files
-cp ~/.config/nvim/* /home/arthur/configs/nvim/
+cp ~/.config/nvim/* /home/arthurvalls/configs/nvim/
 
 # Copy Alacritty configuration files
-cp -r ~/.config/alacritty/* /home/arthur/configs/alacritty/
+cp -r ~/.config/alacritty/* /home/arthurvalls/configs/alacritty/
 
 # Copy tmux configuration file to Alacritty directory
-cp ~/.tmux.conf /home/arthur/configs/alacritty/.tmux.conf
+cp ~/.tmux.conf /home/arthurvalls/configs/alacritty/.tmux.conf
 
 # Copy Zsh configuration file
-cp ~/.config/ezsh/ezshrc.zsh /home/arthur/configs/zsh/
+cp ~/.config/ezsh/ezshrc.zsh /home/arthurvalls/configs/zsh/
 
 # Copy qtcreator configurations
-cp -r ~/workspace/scripts/* /home/arthur/configs/qtcreator/
+cp -r ~/workspace/scripts/* /home/arthurvalls/configs/qtcreator/
 
 echo "Configuration files have been copied successfully."

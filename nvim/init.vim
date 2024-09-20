@@ -25,6 +25,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Plug 'jiangmiao/auto-pairs'
 Plug 'rose-pine/neovim'
+Plug 'navarasu/onedark.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
 Plug 'fatih/vim-go'
@@ -195,7 +196,9 @@ let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-
-" colorscheme solarized-osaka
-colorscheme gruvbox
-" colorscheme solarized-osaka-moon
+" Vim
+let g:onedark_config = {
+    \ 'style': 'darker',
+    \ 'transparent': v:true,
+\}
+colorscheme onedark

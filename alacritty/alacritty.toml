@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/gruvbox_dark.toml",
+  "~/.config/alacritty/themes/one_dark.toml",
 ]
 
 [env]
@@ -10,7 +10,7 @@ size = 15.0
 
 
 [font.normal]
-family = "Fira Code Nerd Font Mono"
+family = "SF Mono"
 style = "Regular"
 
 
@@ -19,7 +19,7 @@ style="Regular"
 
 
 [window]
-decorations = "Full" # Change to None if your feeling edgy
+decorations = "None" # Change to None if your feeling edgy
 opacity = 0.95
 dimensions = {columns = 90, lines = 25}
 resize_increments = true

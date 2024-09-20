@@ -220,3 +220,7 @@ alias lsdd='ls -d */'
 alias v='nvim'
 source $HOME/.cargo/env
 tmux source ~/.tmux.conf
+
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+export LANG=C
