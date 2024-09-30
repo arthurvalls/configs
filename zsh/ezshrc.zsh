@@ -14,7 +14,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="sammy"
-ZSH_THEME="imajes"
+ZSH_THEME="sammy"
 POWERLEVEL9K_OS_ICON_BACKGROUND="white"
 POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
 POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
@@ -211,10 +211,6 @@ corona() {
     fi
 }
 
-
-alias sentinela="sudo docker start sentinela && sudo docker exec -it sentinela zsh"
-alias dev="sudo docker start dev && sudo docker exec -it dev zsh"
-alias dev_tc="sudo docker start dev_tc && sudo docker exec -it dev_tc zsh"
 alias empty='empty_file() { cat /dev/null > "$1"; }; empty_file'
 alias lsdd='ls -d */'
 alias v='nvim'
