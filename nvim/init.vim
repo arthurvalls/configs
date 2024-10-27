@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'sheerun/vim-polyglot' " Syntax highlighting
+Plug 'projekt0n/github-nvim-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto-completion
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -164,7 +165,7 @@ let g:airline_section_z = ''
 
 " let g:airline_theme='base16_atelier_plateau'
 " let g:airline_theme='luna'
-" let g:airline_theme='minimalist'
+let g:airline_theme='minimalist'
 
 " ale settings
 let g:ale_linters_explicit = 1
@@ -198,4 +199,4 @@ let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-colorscheme gruvbox
+colorscheme github_dark
