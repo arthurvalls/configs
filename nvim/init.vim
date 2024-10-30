@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 
 " List your plugins here
 Plug 'tpope/vim-sensible'
+Plug 'supermaven-inc/supermaven-nvim'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'sheerun/vim-polyglot' " Syntax highlighting
 Plug 'projekt0n/github-nvim-theme'
