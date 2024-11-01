@@ -1,3 +1,3 @@
 # Extensions
 
-Current gnome extensions being used are **Dash To Panel** and **Resource Monitor**.
+Current gnome extensions being used are **Dash To Panel**, **Resource Monitor** and **Rounded Window Corners**.
