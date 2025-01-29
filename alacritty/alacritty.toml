@@ -1,25 +1,21 @@
 import = [
-  "~/.config/alacritty/themes/github_dark_tritanopia.toml",
+  "~/.config/alacritty/themes/zenburn.toml",
 ]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 11.0
+size = 15.0
 
 
 [font.normal]
-family = "Jetbrains Mono"
-style = "Regular"
-
-[font.bold]
-style="Regular"
-
+family = "ZedMono NF"
+style = "Bold"
 
 [window]
-decorations = "None" # Change to None if your feeling edgy
-opacity = 0.95
+decorations = "Full"
+opacity = 0.99
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
