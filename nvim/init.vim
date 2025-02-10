@@ -47,6 +47,7 @@ Plug 'craftzdog/solarized-osaka.nvim'
 " Plug 'lambdalisue/vim-glyph-palette'
 " always load this as the last one
 Plug 'ryanoasis/vim-devicons'
+Plug 'xero/evangelion.nvim'
 call plug#end()
 
 " Enable syntax highlighting
@@ -199,5 +200,4 @@ let NERDTreeMinimalUI=1
 let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-
-colorscheme habamax
+set notermguicolors
