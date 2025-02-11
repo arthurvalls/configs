@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/full_white.toml",
+  "~/.config/alacritty/themes/taerminal.toml",
 ]
 
 [env]
@@ -11,7 +11,7 @@ size = 15.0
 
 [font.normal]
 family = "D2CodingLigature Nerd Font Mono"
-style = "Bold"
+style = "Regular"
 
 [window]
 decorations = "Full"
