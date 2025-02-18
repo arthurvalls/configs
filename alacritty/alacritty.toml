@@ -14,7 +14,7 @@ family = "Noto Sans Mono"
 style = "Regular"
 
 [window]
-decorations = "Full"
+decorations = "none"
 opacity = 0.99
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
