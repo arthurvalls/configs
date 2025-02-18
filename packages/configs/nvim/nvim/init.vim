@@ -10,22 +10,27 @@ set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 " slide
 nnoremap <C-w> :bnext<CR>
 " remap esc
-inoremap ;; <Esc>
-vnoremap ;; <Esc>
-cnoremap ;; <Esc>
-
+inoremap <C-C> <Esc>
+vnoremap <C-C> <Esc>
+cnoremap <C-C> <Esc>
 set timeoutlen=500
-
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
 " List your plugins here
 Plug 'tpope/vim-sensible'
+Plug 'supermaven-inc/supermaven-nvim'
+Plug 'Mofiqul/vscode.nvim'
 Plug 'sheerun/vim-polyglot' " Syntax highlighting
+Plug 'projekt0n/github-nvim-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto-completion
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+Plug 'rose-pine/neovim'
+Plug 'xiyaowong/transparent.nvim'
+Plug 'navarasu/onedark.nvim'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
 Plug 'fatih/vim-go'
 Plug 'charlespascoe/vim-go-syntax'
@@ -33,13 +38,16 @@ Plug 'vim-airline/vim-airline' " Status/tabline
 Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 Plug 'pangloss/vim-javascript' " JavaScript syntax highlighting
+Plug 'github/copilot.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'preservim/nerdcommenter'
+Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'craftzdog/solarized-osaka.nvim'
+" Plug 'lambdalisue/vim-glyph-palette'
 " always load this as the last one
 Plug 'ryanoasis/vim-devicons'
+Plug 'xero/evangelion.nvim'
 call plug#end()
 
 " Enable syntax highlighting
@@ -120,8 +128,8 @@ let g:fzf_vim = {}
 let g:fzf_layout = { 'down': '~40%' }
 
 " Disable auto-pairs mapping of keys
-let g:auto_pairs_map_keys = 0
-let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
+" let g:auto_pairs_map_keys = 0
+" let g:auto_pairs = {'(': ')', '{': '}', '[': ']'}
 
 " vim-visual-multi settings
 let g:VM_maps = {}
@@ -192,3 +200,4 @@ let NERDTreeMinimalUI=1
 let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+set notermguicolors

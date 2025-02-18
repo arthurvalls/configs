@@ -8,14 +8,12 @@ deb http://br.archive.ubuntu.com/ubuntu/ jammy-backports main restricted univers
 deb http://security.ubuntu.com/ubuntu jammy-security main restricted
 deb http://security.ubuntu.com/ubuntu jammy-security universe
 deb http://security.ubuntu.com/ubuntu jammy-security multiverse
-deb http://download.zerotier.com/debian/jammy jammy main
-deb https://ppa.launchpadcontent.net/ubuntuhandbook1/rhythmbox/ubuntu/ jammy main
 deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
+deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main
+deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+deb http://repository.spotify.com stable non-free
+deb https://ngrok-agent.s3.amazonaws.com buster main
 deb https://download.sublimetext.com/ apt/stable/
-deb https://ppa.launchpadcontent.net/ansible/ansible/ubuntu/ jammy main
-deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu   jammy stable
-deb https://ppa.launchpadcontent.net/atareao/telegram/ubuntu/ jammy main
-deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://nvidia.github.io/libnvidia-container/stable/deb/$(ARCH) /
-deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://nvidia.github.io/libnvidia-container/experimental/deb/$(ARCH) /
-deb [signed-by=/etc/apt/keyrings/github_git-lfs-archive-keyring.gpg] https://packagecloud.io/github/git-lfs/ubuntu/ jammy main
-deb-src [signed-by=/etc/apt/keyrings/github_git-lfs-archive-keyring.gpg] https://packagecloud.io/github/git-lfs/ubuntu/ jammy main
+deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main
+deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu   jammy stable
+deb http://deb.anydesk.com/ all main

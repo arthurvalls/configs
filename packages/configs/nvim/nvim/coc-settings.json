@@ -1,13 +1,26 @@
 {
   "python.formatting.provider": "black",
-  "coc.preferences.formatOnSaveFiletypes": [
-    "python",
-    "c",
-    "cpp",
-    "rust",
-    "julia"
-  ],
+  "javascript.format.enable": true,
+  "typescript.format.enable": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+  "coc.preferences.formatOnSave": true,
   "languageserver": {
+    "tsserver": {
+      "command": "typescript-language-server",
+      "args": [
+        "--stdio"
+      ],
+      "filetypes": [
+        "typescript",
+        "typescriptreact"
+      ],
+      "rootPatterns": [
+        "tsconfig.json",
+        "package.json"
+      ],
+      "trace": "verbose"
+    },
     "clangd": {
       "command": "clangd",
       "rootPatterns": [
@@ -24,8 +37,15 @@
     },
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ]
     },
     "rust-analyzer": {
       "command": "rust-analyzer",
@@ -57,7 +77,6 @@
       ]
     }
   },
-  "coc.preferences.formatOnSave": true,
   "clang-format.executable": "clang-format",
   "rust-analyzer.rustfmt.overrideCommand": [
     "rustfmt",
@@ -69,11 +88,33 @@
       "-e",
       "using JuliaFormatter; format_text(read(stdin, String))"
     ]
-  }
-  {,
+  },
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "javascriptreact": "javascript",
+    "typescriptreact": "typescript"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "class:\\s*`([^`]*)`",
+      1
+    ],
+    [
+      "class:\\s*\\[([^\\]]*)\\]",
+      1
+    ],
+    [
+      "className:\\s*`([^`]*)`",
+      1
+    ],
+    [
+      "className:\\s*\\[([^\\]]*)\\]",
+      1
+    ]
+  ],
   "suggest.noselect": true,
   "suggest.triggerAfterInsertEnter": true,
   "diagnostic.enable": true
-}
-
 }

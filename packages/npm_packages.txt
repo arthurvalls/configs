@@ -1,4 +1,7 @@
-/home/arthur/.nvm/versions/node/v21.1.0/lib
-├── corepack@0.22.0
-└── npm@10.2.0
+/usr/local/lib
++-- corepack@0.29.3
++-- n@10.0.0
++-- npm@10.9.0
++-- pnpm@9.13.2
+`-- typewritten@1.5.2
 
