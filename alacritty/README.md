@@ -25,3 +25,7 @@ also create this config file:
 # remember
 
 	tmux source ~/.tmux.conf
+
+# install eza
+
+    cargo install eza
