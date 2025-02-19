@@ -213,6 +213,7 @@ alias empty='empty_file() { cat /dev/null > "$1"; }; empty_file'
 alias lsdd='ls -d */'
 alias v='nvim'
 alias lz='lazygit'
+alias ez='eza'
 source $HOME/.cargo/env
 tmux source ~/.tmux.conf
 
