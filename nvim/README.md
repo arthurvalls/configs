@@ -22,3 +22,7 @@ follow the tutorial here:
 # install ripgrep (for faster line searching)
 
 	cargo install ripgrep
+
+# install xclip for systemwide pasting support
+
+    sudo apt install xclip
