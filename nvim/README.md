@@ -23,6 +23,6 @@ follow the tutorial here:
 
 	cargo install ripgrep
 
-# install xclip for systemwide pasting support
+# install xclip for system-wide pasting suppport
 
     sudo apt install xclip

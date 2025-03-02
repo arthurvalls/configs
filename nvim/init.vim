@@ -1,11 +1,11 @@
 " General settings
 set mouse=a
 set signcolumn=no
-set clipboard=unnamedplus
 let g:coc_disable_startup_warning = 1
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " set guicursor+=n:hor20-Cursor/lCursor
 set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
+
 
 " slide
 nnoremap <C-w> :bnext<CR>
@@ -13,7 +13,17 @@ nnoremap <C-w> :bnext<CR>
 inoremap <C-C> <Esc>
 vnoremap <C-C> <Esc>
 cnoremap <C-C> <Esc>
-set timeoutlen=500
+
+
+" Swap I and A in normal mode
+nnoremap I A
+nnoremap A I
+
+" Swap i and a in insert mode
+nnoremap i a
+nnoremap a i
+
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
