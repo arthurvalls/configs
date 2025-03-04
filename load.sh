@@ -44,4 +44,9 @@ else
     echo "Zsh configuration file does not exist: $ZshSrc"
 fi
 
+cp -r ./fonts /usr/share/fonts/
+
+sudo fc-cache -f -v
+
+
 echo "Configuration files have been copied successfully."
