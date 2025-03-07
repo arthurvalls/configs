@@ -6,9 +6,14 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " set guicursor+=n:hor20-Cursor/lCursor
 set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 
+" word
+map <C-W> viw
 
-" slide
-nnoremap <C-w> :bnext<CR>
+nnoremap c y
+vnoremap c y
+nnoremap q b
+vnoremap q b
+
 " remap esc
 inoremap <C-C> <Esc>
 vnoremap <C-C> <Esc>
