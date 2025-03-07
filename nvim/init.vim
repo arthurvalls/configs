@@ -11,6 +11,8 @@ map <C-W> viw
 
 nnoremap c y
 vnoremap c y
+nnoremap C Y
+vnoremap C Y
 nnoremap q b
 vnoremap q b
 
