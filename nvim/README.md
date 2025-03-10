@@ -26,3 +26,4 @@ follow the tutorial here:
 # install xclip for system-wide pasting suppport
 
     sudo apt install xclip
+# test opawdkopawdowkpa

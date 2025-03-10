@@ -38,6 +38,6 @@ bindings = [{key = "Q", mods = "Control", action = "None"}]
 
 [general]
 import = [
-  "~/.config/alacritty/gruvbox_dark.toml",
+  "~/.config/alacritty/codely_t3.toml",
 ]
 [terminal]

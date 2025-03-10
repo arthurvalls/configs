@@ -6,15 +6,12 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " set guicursor+=n:hor20-Cursor/lCursor
 set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 
-" word
-map <C-W> viw
-
 nnoremap c y
 vnoremap c y
 nnoremap C Y
 vnoremap C Y
 nnoremap q b
-vnoremap q b
+nnoremap q b
 
 " remap esc
 inoremap <C-C> <Esc>
@@ -218,3 +215,6 @@ let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 set notermguicolors
+
+set undofile
+set undodir=~/.config/nvim/undodir
