@@ -1,120 +1,54 @@
 {
+  "suggest.noselect": true,
+  "suggest.triggerAfterInsertEnter": true,
+  "diagnostic.enable": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnType": false,
+  "extensions.updateCheck": "daily",
+  "java.jdt.ls.vmargs": "-Dfile.encoding=UTF-8 -noverify -Xmx4G -XX:+UseG1GC -XX:+UseStringDeduplication",
+  "java.format.enabled": true,
+  "java.format.onType.enabled": false,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.completion.enabled": true,
+  "java.completion.guessMethodArguments": true,
+  "java.completion.importOrder": ["java", "javax", "com", "org"],
+  "java.maven.downloadSources": true,
+  "java.signatureHelp.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "/usr/lib/jvm/default-java/"
+    }
+  ],
   "python.formatting.provider": "black",
   "javascript.format.enable": true,
   "typescript.format.enable": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
-  "coc.preferences.formatOnSave": true,
   "languageserver": {
-    "tsserver": {
-      "command": "typescript-language-server",
-      "args": [
-        "--stdio"
-      ],
-      "filetypes": [
-        "typescript",
-        "typescriptreact"
-      ],
-      "rootPatterns": [
-        "tsconfig.json",
-        "package.json"
-      ],
-      "trace": "verbose"
-    },
     "clangd": {
       "command": "clangd",
-      "rootPatterns": [
-        "compile_flags.txt",
-        "compile_commands.json",
-        ".git/"
-      ],
-      "filetypes": [
-        "c",
-        "cpp",
-        "objc",
-        "objcpp"
-      ]
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/"],
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
     },
     "golang": {
       "command": "gopls",
-      "rootPatterns": [
-        "go.mod",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "filetypes": [
-        "go"
-      ]
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
     },
     "rust-analyzer": {
       "command": "rust-analyzer",
-      "filetypes": [
-        "rust"
-      ],
-      "rootPatterns": [
-        "Cargo.toml",
-        "rust-project.json"
-      ],
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml", "rust-project.json"],
       "settings": {
         "rust-analyzer": {}
       }
-    },
-    "julia": {
-      "command": "julia",
-      "args": [
-        "--startup-file=no",
-        "--history-file=no",
-        "-e",
-        "using LanguageServer; using Pkg; import StaticLint; import SymbolServer; env_path = dirname(Pkg.Types.Context().env.project_file); server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path); server.run()"
-      ],
-      "filetypes": [
-        "julia"
-      ],
-      "rootPatterns": [
-        "Project.toml",
-        "Manifest.toml"
-      ]
     }
-  },
-  "clang-format.executable": "clang-format",
-  "rust-analyzer.rustfmt.overrideCommand": [
-    "rustfmt",
-    "--emit=stdout"
-  ],
-  "juliaformatter": {
-    "executablePath": "julia",
-    "args": [
-      "-e",
-      "using JuliaFormatter; format_text(read(stdin, String))"
-    ]
-  },
-  "tailwindCSS.includeLanguages": {
-    "html": "html",
-    "javascript": "javascript",
-    "typescript": "typescript",
-    "javascriptreact": "javascript",
-    "typescriptreact": "typescript"
-  },
-  "tailwindCSS.experimental.classRegex": [
-    [
-      "class:\\s*`([^`]*)`",
-      1
-    ],
-    [
-      "class:\\s*\\[([^\\]]*)\\]",
-      1
-    ],
-    [
-      "className:\\s*`([^`]*)`",
-      1
-    ],
-    [
-      "className:\\s*\\[([^\\]]*)\\]",
-      1
-    ]
-  ],
-  "suggest.noselect": true,
-  "suggest.triggerAfterInsertEnter": true,
-  "diagnostic.enable": true
+  }
 }

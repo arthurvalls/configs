@@ -138,6 +138,8 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 [[ -s "$HOME/.config/ezsh/marker/marker.sh" ]] && source "$HOME/.config/ezsh/marker/marker.sh"
 
 autoload -U compinit && compinit -C -d ~/.cache/zsh/.zcompdump        # zsh-completions
+
+
 # autoload bashcompinit                 # bash completions
 # bashcompinit
 
@@ -220,3 +222,7 @@ tmux source ~/.tmux.conf
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export LANG=C
+
+
+export GEMINI_API_KEY="AIzaSyD6dAlMth9mCGtwdD0VrOYQ5B7QuU4vPzA"
+export PATH="$HOME/bin:$PATH"

@@ -2,17 +2,16 @@
 size = 11.0
 
 [font.normal]
-family = "Noto Sans Mono"
-
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
-decorations = "none"
+decorations = "None"
 dimensions = {columns = 90, lines = 25}
 resize_increments = true
-opacity = 0.94
 dynamic_padding = true
 blur = true
+
 [window.position]
 x = 400
 y = 200
@@ -40,4 +39,3 @@ bindings = [{key = "Q", mods = "Control", action = "None"}]
 import = [
   "~/.config/alacritty/codely_t3.toml",
 ]
-[terminal]
