@@ -224,5 +224,5 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export LANG=C
 
 
-export GEMINI_API_KEY="AIzaSyD6dAlMth9mCGtwdD0VrOYQ5B7QuU4vPzA"
+export GEMINI_API_KEY=
 export PATH="$HOME/bin:$PATH"
