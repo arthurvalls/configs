@@ -1,0 +1,30 @@
+[colors]
+primary = { background = "#181818", foreground = "#E0E0E0" }
+
+[colors.normal]
+black = "#282828"
+red = "#F07178"
+green = "#C2E812"
+yellow = "#FFB347"
+blue = "#89DDFF"
+magenta = "#D4A7E7"
+cyan = "#69E6E5"
+white = "#D0D0D0"
+
+[colors.bright]
+black = "#585858"
+red = "#FF8A91"
+green = "#D7FC79"
+yellow = "#FFC76F"
+blue = "#A4E3FF"
+magenta = "#E6BFF2"
+cyan = "#85F2F1"
+white = "#FFFFFF"
+
+[colors.cursor]
+text = "#181818"
+cursor = "#69E6E5"
+
+[colors.selection]
+text = "#181818"
+background = "#A4E3FF"

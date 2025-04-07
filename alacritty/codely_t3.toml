@@ -1,0 +1,27 @@
+[colors.primary]
+background = "#1e1e1e"          # CONSOLE_BACKGROUND_KEY
+foreground = "#ebdbb2"          # Default text color (e.g. CONSOLE_NORMAL_OUTPUT)
+
+[colors.selection]
+text       = "#ebdbb2"
+background = "#442b43"          # SELECTION_BACKGROUND
+
+[colors.normal]
+black   = "#3b3b3b"             # CONSOLE_BLACK_OUTPUT
+red     = "#f78d8c"             # CONSOLE_RED_OUTPUT
+green   = "#b8bb26"             # CONSOLE_GREEN_OUTPUT
+yellow  = "#fabd2f"             # CONSOLE_YELLOW_OUTPUT
+blue    = "#84a498"             # CONSOLE_BLUE_OUTPUT
+magenta = "#d3859a"             # CONSOLE_MAGENTA_OUTPUT
+cyan    = "#8ec07b"             # CONSOLE_CYAN_OUTPUT
+white   = "#ebdbb2"             # CONSOLE_NORMAL_OUTPUT
+
+[colors.bright]
+black   = "#6b6b6b"             # CONSOLE_DARKGRAY_OUTPUT
+red     = "#f28e82"             # CONSOLE_RED_BRIGHT_OUTPUT
+green   = "#b2b437"             # CONSOLE_GREEN_BRIGHT_OUTPUT
+yellow  = "#f1bf4a"             # CONSOLE_YELLOW_BRIGHT_OUTPUT
+blue    = "#95a19d"             # CONSOLE_BLUE_BRIGHT_OUTPUT
+magenta = "#cd98a6"             # CONSOLE_MAGENTA_BRIGHT_OUTPUT
+cyan    = "#9ebd93"             # CONSOLE_CYAN_BRIGHT_OUTPUT
+white   = "#ebdbb2"             # Using the same as normal white

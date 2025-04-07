@@ -1,0 +1,91 @@
+{
+	"suggest.noselect": true,
+	"suggest.triggerAfterInsertEnter": true,
+	"diagnostic.enable": true,
+	"diagnostic.checkCurrentLine": true,
+	"diagnostic.virtualText": true,
+	"diagnostic.virtualTextCurrentLineOnly": false,
+	"coc.preferences.formatOnSave": true,
+	"coc.preferences.formatOnType": false,
+	"coc.preferences.extensionUpdateCheck": "daily",
+	"java.home": "",
+	"java.jdt.ls.vmargs": "-Dfile.encoding=UTF-8 -noverify -Xmx4G -XX:+UseG1GC -XX:+UseStringDeduplication",
+	"java.format.enabled": true,
+	"java.format.onType.enabled": false,
+	"java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+	"java.format.settings.profile": "GoogleStyle",
+	"java.completion.enabled": true,
+	"java.completion.overwrite": true,
+	"java.completion.guessMethodArguments": true,
+	"java.completion.importOrder": [
+		"java",
+		"javax",
+		"com",
+		"org"
+	],
+	"java.maven.downloadSources": true,
+	"java.signatureHelp.enabled": true,
+	"java.implementationsCodeLens.enabled": true,
+	"java.referencesCodeLens.enabled": true,
+	"java.configuration.runtimes": [
+		{
+			"name": "JavaSE-17",
+			"path": "/path/to/jdk-17"
+		},
+		{
+			"name": "JavaSE-11",
+			"path": "/path/to/jdk-11",
+			"default": true
+		},
+		{
+			"name": "JavaSE-1.8",
+			"path": "/path/to/jdk-8"
+		}
+	],
+	"python.formatting.provider": "black",
+	"javascript.format.enable": true,
+	"typescript.format.enable": true,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+	"languageserver": {
+		"clangd": {
+			"command": "clangd",
+			"rootPatterns": [
+				"compile_flags.txt",
+				"compile_commands.json",
+				".git/"
+			],
+			"filetypes": [
+				"c",
+				"cpp",
+				"objc",
+				"objcpp"
+			]
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.mod",
+				".vim/",
+				".git/",
+				".hg/"
+			],
+			"filetypes": [
+				"go"
+			]
+		},
+		"rust-analyzer": {
+			"command": "rust-analyzer",
+			"filetypes": [
+				"rust"
+			],
+			"rootPatterns": [
+				"Cargo.toml",
+				"rust-project.json"
+			],
+			"settings": {
+				"rust-analyzer": {}
+			}
+		}
+	}
+}

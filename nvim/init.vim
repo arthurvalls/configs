@@ -23,6 +23,12 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, "p", 0700)
 endif
 
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
 " Cursor shape
 set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 
@@ -41,6 +47,9 @@ au FocusGained,BufEnter * :checktime
 " =============================================================================
 " Replace in visual mode
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+" Remove arrows movement
+
 
 " Remap q (overrides default macro recording start)
 nnoremap q b
@@ -91,6 +100,7 @@ Plug 'ryanoasis/vim-devicons' " File icons (Requires patched font)
 Plug 'lambdalisue/vim-glyph-palette' " Icon helper
 
 " Fuzzy Finding
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' } " Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Core fzf
 Plug 'junegunn/fzf.vim' " Vim integration for fzf
 
@@ -150,6 +160,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
 
 " Show documentation in preview window
 nnoremap <silent> K :call ShowDocumentation()<CR>
@@ -280,6 +291,12 @@ let NERDTreeMinimalUI = 1 " Use minimal UI
 let g:webdevicons_enable_nerdtree = 1 " Enable icons in NERDTree
 let g:NERDTreeDirArrowExpandable = '▸' " Use nice arrows (requires patched font)
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+" --- telescope ---
+nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 
 " --- Java Specific Commands ---
 " Common Java operations
