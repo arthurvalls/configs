@@ -12,7 +12,4 @@ cp -r ~/.tmux.conf /home/arthurvalls/configs/alacritty/.tmux.conf
 # Copy Zsh configuration file
 cp -r ~/.config/ezsh/ezshrc.zsh /home/arthurvalls/configs/zsh/
 
-# Copy fonts
-cp -r /usr/share/fonts/* ./fonts/
-
 echo "Configuration files have been copied successfully."
