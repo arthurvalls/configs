@@ -2,7 +2,7 @@
 size = 11.0
 
 [font.normal]
-family = "JuliaMono"
+family = "Iosevka Term"
 style = "Regular"
 
 [window]
@@ -37,5 +37,5 @@ bindings = [{key = "Q", mods = "Control", action = "None"}]
 
 [general]
 import = [
-  "~/.config/alacritty/themes/gruvbox_material_hard_dark.toml",
+  "~/.config/alacritty/black_metal.toml",
 ]

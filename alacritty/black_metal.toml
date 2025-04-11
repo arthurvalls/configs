@@ -1,0 +1,41 @@
+# Alacritty Configuration
+# Black Metal (Gorgoroth) Theme
+
+[colors]
+# Default colors
+[colors.primary]
+background = "0x000000" # Base 00 - Black
+foreground = "0xc1c1c1" # Base 05 - White
+
+# Cursor colors
+[colors.cursor]
+text = "0x000000"
+cursor = "0xc1c1c1"
+
+# Selection colors
+[colors.selection]
+text = "0xc1c1c1"
+background = "0x222222"
+
+# Normal colors
+[colors.normal]
+black   = "0x000000" # Base 00
+red     = "0x5f8787" # Base 08
+green   = "0x9b8d7f" # Base 0B
+yellow  = "0x8c7f70" # Base 0A
+blue    = "0x888888" # Base 0D
+magenta = "0x999999" # Base 0E
+cyan    = "0xaaaaaa" # Base 0C
+white   = "0xc1c1c1" # Base 05
+
+# Bright colors
+[colors.bright]
+black   = "0x333333" # Base 03
+red     = "0x5f8787" # Base 08
+green   = "0x9b8d7f" # Base 0B
+yellow  = "0x8c7f70" # Base 0A
+blue    = "0x888888" # Base 0D
+magenta = "0x999999" # Base 0E
+cyan    = "0xaaaaaa" # Base 0C
+white   = "0xc1c1c1" # Base 07
+

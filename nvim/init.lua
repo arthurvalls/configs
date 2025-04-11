@@ -60,8 +60,6 @@ Kickstart Guide:
     This will open up a help window with some basic information
     about reading, navigating and searching the builtin help documentation.
   
-    This should be the first place you go to look when you're stuck or confused
-    with something. It's one of my favorite Neovim features.
 
     MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
     which is very useful when you're not exactly sure of what you're looking for.
@@ -490,6 +488,7 @@ require('lazy').setup({
       { 'williamboman/mason.nvim', opts = {} },
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
+      'nvim-java/nvim-java',
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
@@ -681,6 +680,7 @@ require('lazy').setup({
         -- gopls = {},
         pyright = {},
         rust_analyzer = {},
+        jdtls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -742,6 +742,79 @@ require('lazy').setup({
     end,
   },
 
+  -- {
+  --   {
+  --     'nvimtools/none-ls.nvim',
+  --     config = function()
+  --       local nls = require 'null-ls'
+  --       local fmt = nls.builtins.formatting
+  --       local dgn = nls.builtins.diagnostics
+  --       local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+  --       nls.setup {
+  --         sources = {
+  --           -- # FORMATTING #
+  --           fmt.google_java_format.with { extra_args = { '--aosp' } },
+  --           -- # DIAGNOSTICS #
+  --           dgn.checkstyle.with {
+  --             extra_args = {
+  --               '-c',
+  --               vim.fn.expand '~/dotfiles/config/google_checks.xml',
+  --             },
+  --           },
+  --         },
+  --         on_attach = function(client, bufnr)
+  --           if client.supports_method 'textDocument/formatting' then
+  --             vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
+  --             vim.api.nvim_create_autocmd('BufWritePre', {
+  --               group = augroup,
+  --               buffer = bufnr,
+  --               callback = function()
+  --                 vim.lsp.buf.format { bufnr = bufnr }
+  --               end,
+  --             })
+  --           end
+  --         end,
+  --       }
+  --     end,
+  --   },
+  --   {
+  --     'jay-babu/mason-null-ls.nvim',
+  --     event = { 'BufReadPre', 'BufNewFile' },
+  --     dependencies = {
+  --       'williamboman/mason.nvim',
+  --       'nvimtools/none-ls.nvim',
+  --     },
+  --     opt = {
+  --       ensure_installed = {
+  --         'checkstyle',
+  --         'google-java-format',
+  --       },
+  --     },
+  --   },
+  -- },
+  {
+    -- DAP
+    'mfussenegger/nvim-dap',
+    -- DAP UI
+    {
+      'rcarriga/nvim-dap-ui',
+      lazy = true,
+      dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' },
+      config = function()
+        require('dapui').setup()
+      end,
+    },
+    -- DAP Virtual Text
+    {
+      'theHamsta/nvim-dap-virtual-text',
+      dependencies = { 'mfussenegger/nvim-dap', 'nvim-treesitter/nvim-treesitter' },
+      config = function()
+        require('nvim-dap-virtual-text').setup()
+      end,
+    },
+    'janko/vim-test',
+  },
+
   { -- Autoformat
     'stevearc/conform.nvim',
     event = { 'BufWritePre' },
@@ -762,7 +835,7 @@ require('lazy').setup({
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
+        local disable_filetypes = { c = true, cpp = true, java = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
         else
@@ -774,6 +847,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        java = {},
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -919,9 +993,11 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'retrobox'
+      vim.cmd.colorscheme 'base16-black-metal'
     end,
   },
+
+  { 'RRethy/base16-nvim' },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -998,12 +1074,12 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -1037,5 +1113,15 @@ require('lazy').setup({
   },
 })
 
+require('base16-colorscheme').with_config {
+  telescope = true,
+  indentblankline = true,
+  notify = true,
+  ts_rainbow = true,
+  cmp = true,
+  illuminate = true,
+  dapui = true,
+}
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
