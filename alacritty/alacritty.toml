@@ -37,5 +37,5 @@ bindings = [{key = "Q", mods = "Control", action = "None"}]
 
 [general]
 import = [
-  "~/.config/alacritty/black_metal.toml",
+  "~/.config/alacritty/themes/tokyo-night-storm.toml",
 ]
