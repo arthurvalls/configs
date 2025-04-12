@@ -993,18 +993,26 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'rose-pine'
+      vim.cmd.colorscheme 'base16-black-metal-mayhem'
     end,
   },
 
-  { 'RRethy/base16-nvim' },
-  { 'nvim-tree/nvim-web-devicons' },
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    config = function()
-      vim.cmd 'colorscheme rose-pine'
-    end,
+    'RRethy/base16-nvim',
+  },
+  { 'nvim-tree/nvim-web-devicons' },
+  -- {
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  --   config = function()
+  --     vim.cmd 'colorscheme rose-pine'
+  --   end,
+  -- },
+  {
+    'tribela/transparent.nvim',
+    event = 'VimEnter',
+    config = true,
+    auto = true,
   },
   {
     'folke/noice.nvim',
