@@ -993,12 +993,70 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'base16-black-metal-mayhem'
+      vim.cmd.colorscheme 'retrobox'
     end,
   },
 
   {
     'RRethy/base16-nvim',
+  },
+  {
+    'rcasia/neotest-java',
+    ft = 'java',
+    dependencies = {
+      'mfussenegger/nvim-jdtls',
+      'mfussenegger/nvim-dap', -- for the debugger
+      'rcarriga/nvim-dap-ui', -- recommended
+      'theHamsta/nvim-dap-virtual-text', -- recommended
+    },
+  },
+
+  {
+    'nvim-neotest/neotest',
+    dependencies = {
+      'nvim-neotest/nvim-nio',
+      'nvim-lua/plenary.nvim',
+      'antoinemadec/FixCursorHold.nvim',
+      'nvim-treesitter/nvim-treesitter',
+      'rcasia/neotest-java',
+    },
+    config = function()
+      require('neotest').setup {
+        adapters = {
+          require 'neotest-java',
+        },
+      }
+
+      -- Keymaps for Neotest
+      vim.keymap.set('n', '<leader>tt', function()
+        require('neotest').run.run()
+      end, { desc = 'Run nearest test' })
+
+      vim.keymap.set('n', '<leader>tf', function()
+        require('neotest').run.run(vim.fn.expand '%')
+      end, { desc = 'Run test file' })
+
+      vim.keymap.set('n', '<leader>td', function()
+        require('neotest').run.run { strategy = 'dap' }
+      end, { desc = 'Debug nearest test' })
+
+      vim.keymap.set('n', '<leader>ts', function()
+        require('neotest').summary.toggle()
+      end, { desc = 'Toggle test summary' })
+
+      vim.keymap.set('n', '<leader>to', function()
+        require('neotest').output.open { enter = true }
+      end, { desc = 'Open test output' })
+    end,
+  },
+  {
+    'stevearc/oil.nvim',
+    --@module oil
+    --@type oil.SetupOpts
+    enabled = false,
+    opts = { default_file_explorer = true },
+    dependencies = { 'echasnovski/nvim-web-devicons' },
+    lazy = false,
   },
   { 'nvim-tree/nvim-web-devicons' },
   -- {

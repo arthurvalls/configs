@@ -1,8 +1,8 @@
 [font]
-size = 12.0
+size = 11.0
 
 [font.normal]
-family = "ZedMono Nerd Font"
+family = "SFMono Nerd Font"
 style = "Regular"
 
 [window]
@@ -11,7 +11,7 @@ dimensions = {columns = 90, lines = 25}
 resize_increments = true
 dynamic_padding = true
 blur = true
-opacity = 0.9
+opacity = 0.95
 
 [window.position]
 x = 400
@@ -35,5 +35,5 @@ bindings = [{key = "Q", mods = "Control", action = "None"}]
 
 [general]
 import = [
-  "~/.config/alacritty/black_metal.toml",
+  "~/.config/alacritty/themes/gruvbox_material_hard_dark.toml",
 ]
