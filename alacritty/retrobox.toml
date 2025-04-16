@@ -1,7 +1,4 @@
-[colors]
-background = "#1c1c1c"
-foreground = "#ebdbb2"
-
+[ colors ]
 [colors.normal]
 black   = "#1c1c1c"
 red     = "#cc241d"

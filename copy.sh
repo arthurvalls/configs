@@ -12,4 +12,9 @@ cp -r ~/.tmux.conf /home/arthurvalls/configs/alacritty/.tmux.conf
 # Copy Zsh configuration file
 cp -r ~/.config/ezsh/ezshrc.zsh /home/arthurvalls/configs/zsh/
 
+# Copy kitty conf
+#
+cp -r ~/.config/kitty/kitty.conf /home/arthurvalls/configs/kitty
+
+
 echo "Configuration files have been copied successfully."

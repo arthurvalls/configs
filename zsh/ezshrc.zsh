@@ -1,4 +1,4 @@
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -217,12 +217,14 @@ alias v='nvim'
 alias lz='lazygit'
 alias ez='eza'
 source $HOME/.cargo/env
-tmux source ~/.tmux.conf
+
+if [[ "$TERM" != "xterm-kitty" ]]; then
+  tmux source ~/.tmux.conf
+fi
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export LANG=C
-
 
 export GEMINI_API_KEY="AIzaSyD6dAlMth9mCGtwdD0VrOYQ5B7QuU4vPzA"
 export PATH="$HOME/bin:$PATH"
