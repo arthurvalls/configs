@@ -14,7 +14,7 @@ cp -r ~/.config/ezsh/ezshrc.zsh /home/arthurvalls/configs/zsh/
 
 # Copy kitty conf
 #
-cp -r ~/.config/kitty/kitty.conf /home/arthurvalls/configs/kitty
+cp -r ~/.config/kitty/* /home/arthurvalls/configs/kitty
 
 
 echo "Configuration files have been copied successfully."
