@@ -13,8 +13,10 @@ cp -r ~/.tmux.conf /home/arthurvalls/configs/alacritty/.tmux.conf
 cp -r ~/.config/ezsh/ezshrc.zsh /home/arthurvalls/configs/zsh/
 
 # Copy kitty conf
-#
 cp -r ~/.config/kitty/* /home/arthurvalls/configs/kitty
+
+# Copy fish
+cp -r ~/.config/fish/* /home/arthurvalls/configs/fish/
 
 
 echo "Configuration files have been copied successfully."
