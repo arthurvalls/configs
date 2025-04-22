@@ -3,7 +3,7 @@ return {
   require 'config.plugins.dashboard',
   require 'config.plugins.autocomplete',
   require 'config.plugins.autoformat',
-  require 'config.plugins.cyberdream',
+  require 'config.plugins.rose-pine',
   require 'config.plugins.dap',
   require 'config.plugins.devicons',
   require 'config.plugins.gitsigns',

@@ -38,5 +38,3 @@ require('lazy').setup(require 'config.plugins', {
     },
   },
 })
-
-vim.cmd.colorscheme 'retrobox'
