@@ -39,4 +39,4 @@ require('lazy').setup(require 'config.plugins', {
   },
 })
 
-vim.cmd.colorscheme 'cyberdream'
+vim.cmd.colorscheme 'retrobox'
