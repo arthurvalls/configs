@@ -1,16 +1,16 @@
 # === Aliases from Zsh shell ===
 
-# Start the SSH agent if it's not already running
-if not set -q SSH_AUTH_SOCK or not ssh-add -l > /dev/null
-    ssh-agent -c | source
-end
-
-# Add your SSH key (replace ~/.ssh/id_ed25519 with your key path if different)
-# Only add the key if it's not already listed by ssh-add -l
-if not ssh-add -l | string match -q "*$(ssh-keygen -lf ~/.ssh/id_ed25519.pub | awk '{print $2}')*"
-    ssh-add ~/.ssh/id_ed25519
-    ssh-add ~/.ssh/github
-end
+# # Start the SSH agent if it's not already running
+# if not set -q SSH_AUTH_SOCK or not ssh-add -l > /dev/null
+#     ssh-agent -c | source
+# end
+#
+# # Add your SSH key (replace ~/.ssh/id_ed25519 with your key path if different)
+# # Only add the key if it's not already listed by ssh-add -l
+# if not ssh-add -l | string match -q "*$(ssh-keygen -lf ~/.ssh/id_ed25519.pub | awk '{print $2}')*"
+#     ssh-add ~/.ssh/id_ed25519
+#     ssh-add ~/.ssh/github
+# end
 
 starship init fish | source
 
