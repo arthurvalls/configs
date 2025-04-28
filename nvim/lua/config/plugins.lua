@@ -1,6 +1,8 @@
 -- lua/config/plugins.lua
 return {
+  require 'config.plugins.everforest',
   require 'config.plugins.copilot',
+  require 'config.plugins.leetcode',
   require 'config.plugins.dashboard',
   require 'config.plugins.autocomplete',
   require 'config.plugins.autoformat',

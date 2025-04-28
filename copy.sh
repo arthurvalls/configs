@@ -18,5 +18,7 @@ cp -r ~/.config/kitty/* /home/arthurvalls/configs/kitty
 # Copy fish
 cp -r ~/.config/fish/* /home/arthurvalls/configs/fish/
 
+cp -r ~/.config/git/* /home/arthurvalls/configs/git/
+
 
 echo "Configuration files have been copied successfully."
