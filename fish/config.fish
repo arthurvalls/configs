@@ -1,6 +1,6 @@
 # === Aliases from Zsh shell ===
 
-# # Start the SSH agent if it's not already running
+# Start the SSH agent if it's not already running
 # if not set -q SSH_AUTH_SOCK or not ssh-add -l > /dev/null
 #     ssh-agent -c | source
 # end

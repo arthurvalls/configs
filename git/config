@@ -1,9 +1,9 @@
 [user]
-    name = Arthur Valls
+    name = arthurvalls
     email = arthur.valls@supersim.com.br
 
 [commit]
-    gpgSign = true
+    gpgSign = false
     template = ~/.config/git/template
 
 [core]
@@ -38,10 +38,6 @@
     short = false
     showStash = true
     showUntrackedFiles = all  # show individual untracked files
-
-[pager]
-    branch = false  # no need to use pager for git branch
-    diff = diff-so-fancy | $PAGER  # diff-so-fancy as diff pager
 
 [push]
     autoSetupRemote = true  # easier to push new branches
@@ -78,10 +74,6 @@
 [interactive]
     diffFilter = diff-so-fancy --patch
     singlekey = true
-
-# Third-party: diff-so-fancy
-[diff-so-fancy]
-    markEmptyLines = false
 
 # URL shortcuts
 [url "git@github.com:"]
