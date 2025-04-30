@@ -12,7 +12,6 @@ if not ssh-add -l | string match -q "*$(ssh-keygen -lf ~/.ssh/id_ed25519.pub | a
     ssh-add ~/.ssh/github
 end
 
-starship init fish | source
 
 # Quickly show external IP address
 alias myip 'wget -qO- https://wtfismyip.com/text'
@@ -65,5 +64,5 @@ alias gs='git status --short'
 alias gu='git pull'
 
 
-
+starship init fish | source
 
