@@ -1,5 +1,6 @@
 -- lua/config/plugins.lua
 return {
+  require 'config.plugins.notify',
   require 'config.plugins.everforest',
   require 'config.plugins.copilot',
   require 'config.plugins.leetcode',
