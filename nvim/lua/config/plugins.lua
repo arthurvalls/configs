@@ -1,14 +1,11 @@
 -- lua/config/plugins.lua
 return {
-  require 'config.plugins.gruvbox',
   require 'config.plugins.notify',
-  require 'config.plugins.everforest',
-  require 'config.plugins.copilot',
+  --  require 'config.plugins.copilot',
   require 'config.plugins.leetcode',
   require 'config.plugins.dashboard',
   require 'config.plugins.autocomplete',
   require 'config.plugins.autoformat',
-  require 'config.plugins.rose-pine',
   require 'config.plugins.dap',
   require 'config.plugins.devicons',
   require 'config.plugins.gitsigns',

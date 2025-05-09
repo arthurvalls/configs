@@ -26,3 +26,5 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.confirm = true
+-- add column limitat
+vim.opt.colorcolumn = '80'
