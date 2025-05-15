@@ -1,6 +1,6 @@
 -- lua/config/plugins.lua
 return {
-  require 'config.plugins.black_metal',
+  require 'config.plugins.codely',
   require 'config.plugins.notify',
   --  require 'config.plugins.copilot',
   require 'config.plugins.leetcode',
