@@ -1,6 +1,6 @@
 -- lua/config/plugins.lua
 return {
-  require 'config.plugins.vscode',
+  -- require 'config.plugins.vscode',
   -- require 'config.plugins.codely',
   require 'config.plugins.notify',
   --  require 'config.plugins.copilot',

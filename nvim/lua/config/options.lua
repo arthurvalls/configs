@@ -28,3 +28,4 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 -- add column limitat
 vim.opt.colorcolumn = '80'
+vim.opt.termguicolors = false
