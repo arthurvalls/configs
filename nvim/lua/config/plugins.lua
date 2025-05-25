@@ -1,6 +1,7 @@
 -- lua/config/plugins.lua
 return {
-  require 'config.plugins.codely',
+  require 'config.plugins.vscode',
+  -- require 'config.plugins.codely',
   require 'config.plugins.notify',
   --  require 'config.plugins.copilot',
   require 'config.plugins.leetcode',
