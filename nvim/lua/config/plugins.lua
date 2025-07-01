@@ -1,6 +1,7 @@
 -- lua/config/plugins.lua
 return {
-  require 'config.plugins.catpuccin',
+  --  require 'config.plugins.gruvbox',
+  require 'config.plugins.tokyo',
   require 'config.plugins.notify',
   require 'config.plugins.leetcode',
   require 'config.plugins.dashboard',
