@@ -1,7 +1,8 @@
 -- lua/config/plugins.lua
 return {
-  --  require 'config.plugins.gruvbox',
-  require 'config.plugins.tokyo',
+  require 'config.plugins.gruvbox',
+  --  require 'config.plugins.tokyo',
+  -- require 'config.plugins.base16',
   require 'config.plugins.notify',
   require 'config.plugins.leetcode',
   require 'config.plugins.dashboard',
@@ -18,7 +19,7 @@ return {
   require 'config.plugins.noice',
   require 'config.plugins.telescope',
   require 'config.plugins.todo-comments',
-  require 'config.plugins.transparent',
+  --  require 'config.plugins.transparent',
   require 'config.plugins.treesitter',
   require 'config.plugins.vim-sleuth',
   require 'config.plugins.which-key',
