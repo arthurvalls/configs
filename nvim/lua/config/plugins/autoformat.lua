@@ -32,7 +32,7 @@ return { -- Autoformat
       lua = { 'stylua' },
       java = {},
       -- Conform can also run multiple formatters sequentially
-      python = { 'isort', 'black' },
+      python = { 'ruff' }, -- you can add isort and black
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
