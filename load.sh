@@ -5,16 +5,23 @@ NvimSrc="/home/arthur/configs/nvim"
 AlacrittySrc="/home/arthur/configs/alacritty"
 TmuxSrc="/home/arthur/configs/alacritty/.tmux.conf"
 ZshSrc="/home/arthur/configs/zsh/ezshrc.zsh"
+FishSrc="/home/arthurvalls/configs/fish"
+GitSrc="/home/arthurvalls/configs/git"
 
 NvimDest="$HOME/.config/nvim"
 AlacrittyDest="$HOME/.config/alacritty"
 TmuxDest="$HOME/.tmux.conf"
 ZshDest="$HOME/.config/ezsh"
-
+FishDest="$HOME/.config/fish"
+GitDest="$HOME/.config/git"
 # Create destination directories if they do not exist
+
 mkdir -p "$NvimDest"
 mkdir -p "$AlacrittyDest"
 mkdir -p "$ZshDest"
+mkdir -p "$FishDest"
+mkdir -p "$GitDest"
+
 
 # Copy Neovim configuration files
 if [ -d "$NvimSrc" ]; then
@@ -43,6 +50,24 @@ if [ -f "$ZshSrc" ]; then
 else
     echo "Zsh configuration file does not exist: $ZshSrc"
 fi
+
+# Copy Zsh configuration file
+if [ -f "$FishSrc" ]; then
+    cp "$FishSrc" "$FishDest/"
+else
+    echo "Zsh configuration file does not exist: $FishSrc"
+fi
+
+
+# Copy Zsh configuration file
+if [ -f "$GitSrc" ]; then
+    cp "$GitSrc" "$GitDest/"
+else
+    echo "Zsh configuration file does not exist: $GitDest"
+fi
+
+
+
 
 cp -r ./fonts /usr/share/fonts/
 
