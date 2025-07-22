@@ -5,3 +5,5 @@ Current gnome extensions being used are **Dash To Panel**, **Resource Monitor** 
 ## Must install
 
 [Starship](https://github.com/starship/starship)
+<br>
+[EZA](https://github.com/eza-community/eza)
