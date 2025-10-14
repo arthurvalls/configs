@@ -31,13 +31,16 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       java = {},
-      -- Conform can also run multiple formatters sequentially
-      python = { 'ruff' }, -- you can add isort and black
-      --
-      -- You can use 'stop_after_first' to run the first available formatter from the list
+      python = { 'black' }, -- you can add isort and ruff
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
-      json = { 'prettierd', 'prettier', 'jd', spot_after_first = true },
-      markdown = { 'prettierd', 'prettier', 'jd', spot_after_first = true },
+      typescript = { 'prettierd', 'prettier', stop_after_first = true },
+      -- javascriptreact = { 'prettierd', 'prettier', stop_after_first = true }, -- .jsx
+      -- typescriptreact = { 'prettierd', 'prettier', stop_after_first = true }, -- .tsx
+      -- if you want ESLint autofix before formatting:
+      javascriptreact = { 'eslint_d', 'prettierd', stop_after_first = false },
+      typescriptreact = { 'eslint_d', 'prettierd', stop_after_first = false },
+      json = { 'prettierd', 'prettier', 'jd', stop_after_first = true },
+      markdown = { 'prettierd', 'prettier', 'jd', stop_after_first = true },
     },
   },
 }
