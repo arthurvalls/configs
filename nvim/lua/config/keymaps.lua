@@ -6,8 +6,10 @@ vim.keymap.set('n', '<C-s>', '$', { desc = 'Go to end of line' })
 vim.keymap.set('v', '<C-a>', '0', { desc = 'Go to beginning of line' })
 vim.keymap.set('v', '<C-s>', '$', { desc = 'Go to end of line' })
 
-vim.keymap.set('n', 'q', 'b', { desc = 'Go backwards a word' })
-vim.keymap.set('v', 'q', 'b', { desc = 'Go backwards a word' })
+vim.keymap.set('n', 'Q', 'B', { desc = 'Go backwards a word' })
+vim.keymap.set('v', 'Q', 'B', { desc = 'Go backwards a word' })
+vim.keymap.set('n', 'q', 'q', { desc = 'Go backwards a word' })
+vim.keymap.set('v', 'q', 'q', { desc = 'Go backwards a word' })
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 

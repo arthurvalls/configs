@@ -14,6 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 -- vim options
 require 'config.options'
 
+vim.lsp.log.set_level(vim.log.levels.OFF)
+
 -- vim keymaps
 require 'config.keymaps'
 

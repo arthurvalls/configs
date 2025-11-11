@@ -3,6 +3,7 @@ return {
   require 'config.plugins.gruvbox',
   --  require 'config.plugins.tokyo',
   -- require 'config.plugins.base16',
+  --require 'config.plugins.darcula',
   require 'config.plugins.notify',
   require 'config.plugins.leetcode',
   require 'config.plugins.dashboard',

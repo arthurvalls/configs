@@ -23,7 +23,7 @@ SETUVAR _fisher_plugins:oh\x2dmy\x2dfish/theme\x2dbobthefish\x1eoh\x2dmy\x2dfish
 SETUVAR _fisher_sadanand_2D_singh_2F_fish_2D_sodope_files:\x7e/\x2econfig/fish/functions/sudope\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fish\x2dsodope_key_bindings\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:pwd\x1egit\x1enewline\x1echaracter
-SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1epython\x1erustc\x1ejava\x1ego\x1etime
+SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1epython\x1erustc\x1ejava\x1eruby\x1ego\x1etime
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
