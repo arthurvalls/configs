@@ -1,0 +1,93 @@
+" A double quote character starts a comment.
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+" ==============================
+" Keymaps for moving to beginning/end of line
+" ==============================
+
+" Insert mode
+" NOTE: <C-s> is usually taken by IntelliJ (Save All) and never reaches IdeaVim.
+" So here we use <C-e> for end-of-line (like Vim).
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+
+" Normal mode
+nnoremap <C-a> 0
+nnoremap <C-e> $
+
+" Visual mode
+vnoremap <C-a> 0
+vnoremap <C-e> $
+
+inoremap <C-s> <End>
+nnoremap <C-s> $
+vnoremap <C-s> $
+
+" ==============================
+" Word navigation
+" ==============================
+
+" Go backwards a word with Q
+nnoremap Q B
+vnoremap Q B
+nnoremap q b
+vnoremap q b
+
+" (Don't remap `q` – it breaks macro recording in Vim/IdeaVim.)
+
+" ==============================
+" Clear search highlighting
+" ==============================
+
+" Press Esc in normal mode to clear highlight
+" (Esc still exits insert mode because we don't touch insert-mode mappings here.)
+nnoremap <Esc> :nohlsearch<CR>
+
+" ==============================
+" Diagnostic quickfix placeholder
+" ==============================
+
+nnoremap <leader>q :echo "Diagnostics not supported in IdeaVim"<CR>
+
+" ==============================
+" Arrow keys warnings (force hjkl usage)
+" ==============================
+
+nnoremap <Left>  :echo "Use h to move!!"<CR>
+nnoremap <Right> :echo "Use l to move!!"<CR>
+nnoremap <Up>    :echo "Use k to move!!"<CR>
+nnoremap <Down>  :echo "Use j to move!!"<CR>
+
+" ==============================
+" Window navigation
+" ==============================
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+set clipboard+=unnamedplus
