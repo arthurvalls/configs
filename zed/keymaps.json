@@ -1,0 +1,115 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    // INSERT MODE: beginning/end of line
+    // inoremap <C-a> <Home>
+    // inoremap <C-e> <End>
+    // inoremap <C-s> <End>
+    //
+    // These send "home"/"end" keystrokes while staying in insert mode.
+    "context": "vim_mode == insert && !menu",
+    "bindings": {
+      "ctrl-a": ["workspace::SendKeystrokes", "home"],
+      "ctrl-e": ["workspace::SendKeystrokes", "end"],
+      "ctrl-s": ["workspace::SendKeystrokes", "end"]
+    }
+  },
+  {
+    // NORMAL + VISUAL: beginning/end of line with Ctrl-a / Ctrl-e / Ctrl-s
+    //
+    // nnoremap <C-a> 0
+    // nnoremap <C-e> $
+    // vnoremap <C-a> 0
+    // vnoremap <C-e> $
+    // nnoremap <C-s> $
+    // vnoremap <C-s> $
+    //
+    // (Note: this also overrides Zed's default Ctrl-S = Save, like your IdeaVim
+    // config tries to, even though IntelliJ grabs it.)
+    "context": "(vim_mode == normal || vim_mode == visual) && !menu",
+    "bindings": {
+      "ctrl-a": ["workspace::SendKeystrokes", "0"],
+      "ctrl-e": ["workspace::SendKeystrokes", "$"],
+      "ctrl-s": ["workspace::SendKeystrokes", "$"]
+    }
+  },
+  {
+    // WORD NAVIGATION:
+    //
+    // nnoremap Q B
+    // vnoremap Q B
+    // nnoremap q b
+    // vnoremap q b
+    //
+    // (This *will* steal `q` from macro recording in Zed too, just like in Vim.)
+    "context": "(vim_mode == normal || vim_mode == visual) && !menu",
+    "bindings": {
+      "Q": ["workspace::SendKeystrokes", "B"],
+      "q": ["workspace::SendKeystrokes", "b"]
+    }
+  },
+  {
+    // WINDOW NAVIGATION: Ctrl-h/j/k/l between panes
+    //
+    // nnoremap <C-h> <C-w>h
+    // nnoremap <C-j> <C-w>j
+    // nnoremap <C-k> <C-w>k
+    // nnoremap <C-l> <C-w>l
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // OPTIONAL / COMMENTED-OUT STUFF FROM YOUR .ideavimrc
+  // (Uncomment & tweak if you want them in Zed.)
+  // ---------------------------------------------------------------------------
+
+  // 1) Arrow-key “use hjkl” warnings:
+  //    In IdeaVim:
+  //      nnoremap <Left>  :echo "Use h to move!!"<CR>
+  //      nnoremap <Right> :echo "Use l to move!!"<CR>
+  //      nnoremap <Up>    :echo "Use k to move!!"<CR>
+  //      nnoremap <Down>  :echo "Use j to move!!"<CR>
+  //
+  // Zed doesn't document an `:echo`, but you *might* be able to approximate
+  // it by sending an ex command. If it doesn't work, you can instead map them
+  // to a no-op or just leave them unmapped.
+  /*
+  ,
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "left":  ["workspace::SendKeystrokes", ":echo 'Use h to move!!'\n"],
+      "right": ["workspace::SendKeystrokes", ":echo 'Use l to move!!'\n"],
+      "up":    ["workspace::SendKeystrokes", ":echo 'Use k to move!!'\n"],
+      "down":  ["workspace::SendKeystrokes", ":echo 'Use j to move!!'\n"]
+    }
+  }
+  */
+
+  // 2) <leader>q diagnostic placeholder from IdeaVim:
+  //    nnoremap <leader>q :echo "Diagnostics not supported in IdeaVim"<CR>
+  //
+  // Zed doesn't have a `<leader>` in the same way. If you want something
+  // similar, you can pick a chord (e.g. "space q") and map it:
+  /*
+  ,
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space q": ["workspace::SendKeystrokes", ":echo 'Diagnostics not wired up'\n"]
+    }
+  }
+  */
+]
