@@ -68,8 +68,7 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight"
     }
-  }
-
+  },
   // ---------------------------------------------------------------------------
   // OPTIONAL / COMMENTED-OUT STUFF FROM YOUR .ideavimrc
   // (Uncomment & tweak if you want them in Zed.)
@@ -112,4 +111,16 @@
     }
   }
   */
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "ctrl-f": "buffer_search::Deploy"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle"
+    }
+  }
 ]
