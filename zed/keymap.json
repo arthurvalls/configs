@@ -114,7 +114,8 @@
   {
     "context": "Editor && !menu",
     "bindings": {
-      "ctrl-f": "buffer_search::Deploy"
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-b": "editor::GoToDeclaration"
     }
   },
   {
@@ -124,9 +125,21 @@
     }
   },
   {
-    "context": "Editor && !menu",
+    "context": "Pane",
     "bindings": {
-      "ctrl-b": "editor::GoToDeclaration"
+      "ctrl-enter": "search::SelectNextMatch"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-shift-enter": "search::SelectPreviousMatch"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "ctrl-b": "editor::GoToDefinition"
     }
   }
 ]
