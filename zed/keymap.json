@@ -122,5 +122,11 @@
     "bindings": {
       "shift shift": "file_finder::Toggle"
     }
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "ctrl-b": "editor::GoToDeclaration"
+    }
   }
 ]
