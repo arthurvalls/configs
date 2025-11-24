@@ -22,5 +22,20 @@
     "mode": "dark",
     "light": "One Light",
     "dark": "Gruvbox Light"
+  },
+  "languages": {
+    "Java": {
+      "formatter": {
+        "external": {
+          "command": "google-java-format",
+          "arguments": [
+            "--assume-filename",
+            "{buffer_path}",
+            "-" // The dash tells google-java-format to read from stdin
+          ]
+          //        "stdin": true
+        }
+      }
+    }
   }
 }
