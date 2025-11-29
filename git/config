@@ -11,6 +11,7 @@
     compression = 9  # trade cpu for network
     fsync = none
     whitespace = error  # threat incorrect whitespace as errors
+	editor = nvim -f
 
 [advice]  # disable advices
     addEmptyPathspec = false
