@@ -1,6 +1,6 @@
 return {
-  'scottmckendry/cyberdream.nvim',
-  lazy = false,
-  priority = 1000,
-  transparent = true,
+	"scottmckendry/cyberdream.nvim",
+	lazy = false,
+	priority = 1000,
+	transparent = true,
 }

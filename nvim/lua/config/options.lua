@@ -28,5 +28,6 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 -- add column limitat
 vim.opt.colorcolumn = "80"
+-- vim.o.background = "light"
 
 vim.g.kitty_keyboard_protocol = 0
