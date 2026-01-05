@@ -3,6 +3,7 @@ return {
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.black_metal"),
 	require("config.plugins.stylua"),
+	require("config.plugins.multi"),
 	-- require("config.plugins.gruvbox"),
 	-- require("config.plugins.tokyo"),
 	-- require 'config.plugins.base16',

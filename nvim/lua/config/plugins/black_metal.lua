@@ -44,13 +44,13 @@ return {
 			-- The following table accepts values the same as the `gui` option for normal
 			-- highlights. For example, `bold`, `italic`, `underline`, `none`.
 			code_style = {
-				comments = "italic",
-				conditionals = "none",
+				comments = "bold",
+				conditionals = "italic",
 				functions = "none",
-				keywords = "none",
+				keywords = "italic",
 				headings = "bold", -- Markdown headings
 				operators = "none",
-				keyword_return = "none",
+				keyword_return = "italic",
 				strings = "none",
 				variables = "none",
 			},
