@@ -1,13 +1,14 @@
 -- lua/config/plugins.lua
 return {
+	require("config.plugins.tinted"),
 	require("config.plugins.smear-cursor"),
-	require("config.plugins.black_metal"),
+	-- require("config.plugins.black_metal"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),
 	-- require("config.plugins.gruvbox"),
 	-- require("config.plugins.tokyo"),
 	-- require 'config.plugins.base16',
-	--	require("config.plugins.darcula"),
+	-- require("config.plugins.darcula"),
 	require("config.plugins.notify"),
 	require("config.plugins.leetcode"),
 	require("config.plugins.dashboard"),
