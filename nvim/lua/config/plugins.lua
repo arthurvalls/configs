@@ -1,6 +1,7 @@
 -- lua/config/plugins.lua
 return {
-	require("config.plugins.tinted"),
+	require("config.plugins.iceberg"),
+	-- require("config.plugins.tinted"),
 	require("config.plugins.smear-cursor"),
 	-- require("config.plugins.black_metal"),
 	require("config.plugins.stylua"),
