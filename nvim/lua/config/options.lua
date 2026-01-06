@@ -31,3 +31,10 @@ vim.opt.colorcolumn = "80"
 -- vim.o.background = "light"
 
 vim.g.kitty_keyboard_protocol = 0
+
+-- Indentation Settings
+vim.opt.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for
+vim.opt.shiftwidth = 4 -- Size of an indent
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.softtabstop = 4 -- Number of spaces that a <Tab> counts for while performing editing operations
+vim.opt.smartindent = true -- Insert indents automatically
