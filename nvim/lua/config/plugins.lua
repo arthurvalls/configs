@@ -1,5 +1,6 @@
 -- lua/config/plugins.lua
 return {
+	-- require('config.plugins.e-ink'),
 	require("config.plugins.iceberg"),
 	-- require("config.plugins.tinted"),
 	require("config.plugins.smear-cursor"),
@@ -13,6 +14,7 @@ return {
 	require("config.plugins.notify"),
 	require("config.plugins.leetcode"),
 	require("config.plugins.dashboard"),
+	require("config.plugins.dadbod"),
 	require("config.plugins.autocomplete"),
 	require("config.plugins.autoformat"),
 	require("config.plugins.dap"),

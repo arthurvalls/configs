@@ -107,12 +107,26 @@ return { -- Autocompletion
 					-- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
 					group_index = 0,
 				},
+				{ name = "vim-dadbod-completion" }, -- Database completion
 				{ name = "copilot" },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "path" },
 				{ name = "nvim_lsp_signature_help" },
 			},
+		})
+
+		-- Setup dadbod completion for SQL filetypes
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = { "sql", "mysql", "plsql" },
+			callback = function()
+				cmp.setup.buffer({
+					sources = {
+						{ name = "vim-dadbod-completion" },
+						{ name = "buffer" },
+					},
+				})
+			end,
 		})
 	end,
 }

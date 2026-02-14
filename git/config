@@ -41,7 +41,7 @@
     showUntrackedFiles = all  # show individual untracked files
 
 [push]
-    autoSetupRemote = true  # easier to push new branches
+	autoSetupRemote = true
     default = current  # push only current branch by default
     followTags = true  # push also tags
     gpgSign = false  # my remotes doesn't support sign pushes
@@ -82,3 +82,29 @@
 
 [url "ssh://git@git.qrator.net:2202/radar/"]
     insteadOf = "radar:"
+[safe]
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs

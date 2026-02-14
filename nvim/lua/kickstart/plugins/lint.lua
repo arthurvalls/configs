@@ -7,6 +7,10 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        typescript = { 'eslint_d' },
+        javascript = { 'eslint_d' },
+        typescriptreact = { 'eslint_d' },
+        javascriptreact = { 'eslint_d' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -50,9 +54,24 @@ return {
           -- Only run the linter in buffers that you can modify in order to
           -- avoid superfluous noise, notably within the handy LSP pop-ups that
           -- describe the hovered symbol using Markdown.
-          if vim.opt_local.modifiable:get() then
-            lint.try_lint()
+          if not vim.opt_local.modifiable:get() then
+            return
           end
+
+          -- For eslint_d, only lint if there's an ESLint config in the project tree
+          local ft = vim.bo.filetype
+          local eslint_fts = { typescript = true, javascript = true, typescriptreact = true, javascriptreact = true }
+          if eslint_fts[ft] then
+            local eslint_root = vim.fs.root(0, {
+              '.eslintrc', '.eslintrc.js', '.eslintrc.cjs', '.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml',
+              'eslint.config.js', 'eslint.config.mjs', 'eslint.config.cjs', 'eslint.config.ts',
+            })
+            if not eslint_root then
+              return
+            end
+          end
+
+          lint.try_lint()
         end,
       })
     end,

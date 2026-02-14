@@ -25,6 +25,8 @@ alias lsdd 'ls -d */'
 # Alias for nvim
 alias v 'nvim'
 
+set -gx EDITOR nvim
+
 # Alias for lazygit
 alias lz 'lazygit'
 

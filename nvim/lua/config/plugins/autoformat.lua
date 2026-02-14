@@ -34,11 +34,8 @@ return { -- Autoformat
 			python = { "black" }, -- you can add isort and ruff
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			typescript = { "prettierd", "prettier", stop_after_first = true },
-			-- javascriptreact = { 'prettierd', 'prettier', stop_after_first = true }, -- .jsx
-			-- typescriptreact = { 'prettierd', 'prettier', stop_after_first = true }, -- .tsx
-			-- if you want ESLint autofix before formatting:
-			javascriptreact = { "eslint_d", "prettierd", stop_after_first = false },
-			typescriptreact = { "eslint_d", "prettierd", stop_after_first = false },
+			javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+			typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 			json = { "prettierd", "prettier", "jd", stop_after_first = true },
 			markdown = { "prettierd", "prettier", "jd", stop_after_first = true },
 		},
