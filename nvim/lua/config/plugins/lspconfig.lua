@@ -217,7 +217,28 @@ return {
 			--    https://github.com/pmizio/typescript-tools.nvim
 			--
 			-- But for many setups, the LSP (`ts_ls`) will work just fine
-			ts_ls = {},
+			-- ts_ls and denols both handle TS/JS files, so use root_dir to avoid conflicts
+			ts_ls = {
+				root_dir = function(bufnr, on_dir)
+					-- Don't start ts_ls in Deno projects
+					local deno_root = vim.fs.root(bufnr, { "deno.json", "deno.jsonc" })
+					if deno_root then
+						return
+					end
+					local root = vim.fs.root(bufnr, { "tsconfig.json", "jsconfig.json", "package.json" })
+					if root then
+						on_dir(root)
+					end
+				end,
+			},
+			denols = {
+				root_dir = function(bufnr, on_dir)
+					local root = vim.fs.root(bufnr, { "deno.json", "deno.jsonc" })
+					if root then
+						on_dir(root)
+					end
+				end,
+			},
 			--
 
 			lua_ls = {
