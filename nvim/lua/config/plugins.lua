@@ -1,7 +1,9 @@
 -- lua/config/plugins.lua
 return {
 	-- require('config.plugins.e-ink'),
-	require("config.plugins.iceberg"),
+	-- require("config.plugins.iceberg"),
+	-- require("config.plugins.cyberpunk"),
+	require("config.plugins.blueberry-peach"),
 	-- require("config.plugins.tinted"),
 	require("config.plugins.smear-cursor"),
 	-- require("config.plugins.black_metal"),
