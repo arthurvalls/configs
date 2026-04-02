@@ -2,6 +2,9 @@ return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	opts = {
+		cmdline = { enabled = false },
+		messages = { enabled = false },
+		notify = { enabled = false },
 		lsp = {
 			override = {
 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -24,7 +27,7 @@ return {
 		},
 		presets = {
 			bottom_search = true,
-			command_palette = true,
+			command_palette = false,
 			long_message_to_split = true,
 		},
 	},

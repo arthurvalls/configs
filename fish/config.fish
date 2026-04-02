@@ -54,6 +54,13 @@ alias gs='git status --short'
 alias gu='git pull'
 
 
+# Alias for claude
+alias cc 'claude'
+alias ccc 'claude --continue'
+alias ccd 'claude --dangerously-skip-permissions'
+alias ccdc 'claude --dangerously-skip-permissions --continue'
+alias ccr 'claude --resume'
+
 starship init fish | source
 
 

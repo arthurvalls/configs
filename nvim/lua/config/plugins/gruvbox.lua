@@ -1,6 +1,7 @@
 return {
 	"ellisonleao/gruvbox.nvim",
 	lazy = false, -- load during startup so the colorscheme is ready ASAP
+	enabled = false,
 	priority = 1000, -- make sure it happens before anything else that might set colors
 	opts = {
 		terminal_colors = true,
