@@ -13,5 +13,6 @@ fi
 git diff
 
 # Commit and push changes
+git add .
 git commit -am "$1"
 git push
