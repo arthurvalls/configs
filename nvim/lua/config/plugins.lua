@@ -14,11 +14,11 @@ return {
 	-- require("config.plugins.tokyo"),
 	-- require 'config.plugins.base16',
 	-- require("config.plugins.darcula"),
-	require("config.plugins.notify"),
+	-- require("config.plugins.notify"), -- replaced by snacks.notifier
 	require("config.plugins.leetcode"),
 	require("config.plugins.dashboard"),
 	require("config.plugins.dadbod"),
-	require("config.plugins.autocomplete"),
+	-- require("config.plugins.autocomplete"), -- replaced by blink.cmp
 	require("config.plugins.autoformat"),
 	require("config.plugins.dap"),
 	require("config.plugins.devicons"),
@@ -40,5 +40,20 @@ return {
 	require("kickstart.plugins.gitsigns"),
 	require("kickstart.plugins.lint"),
 	require("kickstart.plugins.debug"),
-	require("kickstart.plugins.indent_line"),
+	-- require("kickstart.plugins.indent_line"), -- replaced by snacks.indent
+
+	-- New plugins
+	require("config.plugins.snacks"),
+	require("config.plugins.blink"),
+	require("config.plugins.flash"),
+	require("config.plugins.bufferline"),
+	require("config.plugins.dropbar"),
+	require("config.plugins.trouble"),
+	require("config.plugins.lualine"),
+	require("config.plugins.undotree"),
+	require("config.plugins.oil"),
+	require("config.plugins.persistence"),
+	require("config.plugins.neoscroll"),
+	require("config.plugins.rainbow-delimiters"),
+	require("config.plugins.highlight-colors"),
 }
