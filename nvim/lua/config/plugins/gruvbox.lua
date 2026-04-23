@@ -1,7 +1,6 @@
 return {
 	"ellisonleao/gruvbox.nvim",
 	lazy = false, -- load during startup so the colorscheme is ready ASAP
-	enabled = false,
 	priority = 1000, -- make sure it happens before anything else that might set colors
 	opts = {
 		terminal_colors = true,
@@ -28,6 +27,7 @@ return {
 	},
 	config = function(_, opts)
 		require("gruvbox").setup(opts)
+		vim.o.background = "light"
 		vim.cmd.colorscheme("gruvbox")
 	end,
 }

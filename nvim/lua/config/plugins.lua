@@ -4,7 +4,10 @@ return {
 	-- require("config.plugins.iceberg"),
 	-- require("config.plugins.cyberpunk"),
 	-- require("config.plugins.blueberry-peach"),
-	require("config.plugins.colorscheme"),
+	-- require("config.plugins.colorscheme"), -- nerv dark theme (inactive)
+	-- require("config.plugins.melange"), -- melange light (inactive)
+	-- require("config.plugins.selenized"), -- selenized light (inactive)
+	-- require("config.plugins.solarized"), -- solarized light (inactive)
 	-- require("config.plugins.tinted"),
 	require("config.plugins.smear-cursor"),
 	-- require("config.plugins.black_metal"),
@@ -12,6 +15,7 @@ return {
 	require("config.plugins.multi"),
 	-- require("config.plugins.gruvbox"),
 	-- require("config.plugins.tokyo"),
+	require("config.plugins.nightfox"),
 	-- require 'config.plugins.base16',
 	-- require("config.plugins.darcula"),
 	-- require("config.plugins.notify"), -- replaced by snacks.notifier
