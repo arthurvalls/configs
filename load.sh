@@ -73,5 +73,8 @@ cp -r ./fonts /usr/share/fonts/
 
 sudo fc-cache -f -v
 
+# Install IosevkaTerm Nerd Font per-user (see install-iosevka-term.sh).
+./install-iosevka-term.sh
+
 
 echo "Configuration files have been copied successfully."

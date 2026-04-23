@@ -16,6 +16,7 @@ return {
 	-- require("config.plugins.gruvbox"),
 	-- require("config.plugins.tokyo"),
 	require("config.plugins.nightfox"),
+	require("config.plugins.solarized-osaka"),
 	-- require 'config.plugins.base16',
 	-- require("config.plugins.darcula"),
 	-- require("config.plugins.notify"), -- replaced by snacks.notifier
