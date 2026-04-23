@@ -1,80 +1,42 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Restore configs from this repo into $HOME. Safe on a fresh machine.
+set -euo pipefail
 
-# Define source and destination directories
-NvimSrc="/home/arthur/configs/nvim"
-AlacrittySrc="/home/arthur/configs/alacritty"
-TmuxSrc="/home/arthur/configs/alacritty/.tmux.conf"
-ZshSrc="/home/arthur/configs/zsh/ezshrc.zsh"
-FishSrc="/home/arthurvalls/configs/fish"
-GitSrc="/home/arthurvalls/configs/git"
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}"
 
-NvimDest="$HOME/.config/nvim"
-AlacrittyDest="$HOME/.config/alacritty"
-TmuxDest="$HOME/.tmux.conf"
-ZshDest="$HOME/.config/ezsh"
-FishDest="$HOME/.config/fish"
-GitDest="$HOME/.config/git"
-# Create destination directories if they do not exist
+load_dir() {
+  local src="$1" dst="$2"
+  [[ -d "$src" ]] || { echo "skip: $src (missing)"; return; }
+  mkdir -p "$dst"
+  cp -r "$src"/. "$dst"/
+}
 
-mkdir -p "$NvimDest"
-mkdir -p "$AlacrittyDest"
-mkdir -p "$ZshDest"
-mkdir -p "$FishDest"
-mkdir -p "$GitDest"
+load_file() {
+  local src="$1" dst="$2"
+  [[ -e "$src" ]] || { echo "skip: $src (missing)"; return; }
+  mkdir -p "$(dirname "$dst")"
+  cp "$src" "$dst"
+}
 
+load_dir  "$REPO/nvim"               "$CONFIG/nvim"
+load_dir  "$REPO/kitty"              "$CONFIG/kitty"
+load_dir  "$REPO/alacritty"          "$CONFIG/alacritty"
+load_dir  "$REPO/fish"               "$CONFIG/fish"
+load_dir  "$REPO/git"                "$CONFIG/git"
+load_file "$REPO/zsh/ezshrc.zsh"     "$CONFIG/ezsh/ezshrc.zsh"
 
-# Copy Neovim configuration files
-if [ -d "$NvimSrc" ]; then
-    cp "$NvimSrc"/* "$NvimDest/"
-else
-    echo "Neovim source directory does not exist: $NvimSrc"
+load_file "$REPO/alacritty/.tmux.conf" "$HOME/.tmux.conf"
+load_file "$REPO/bash/.bashrc"         "$HOME/.bashrc"
+load_file "$REPO/bash/.profile"        "$HOME/.profile"
+load_file "$REPO/ideavim/.ideavimrc"   "$HOME/.ideavimrc"
+
+# Install IosevkaTerm Nerd Font (per-user, idempotent).
+if [[ -x "$REPO/install-iosevka-term.sh" ]]; then
+  "$REPO/install-iosevka-term.sh"
 fi
 
-# Copy Alacritty configuration files
-if [ -d "$AlacrittySrc" ]; then
-    cp -r "$AlacrittySrc"/* "$AlacrittyDest/"
-else
-    echo "Alacritty source directory does not exist: $AlacrittySrc"
-fi
+# Refresh font cache for the user fonts dir.
+fc-cache -f "$HOME/.local/share/fonts" >/dev/null 2>&1 || true
 
-# Copy tmux configuration file
-if [ -f "$TmuxSrc" ]; then
-    cp "$TmuxSrc" "$TmuxDest"
-else
-    echo "tmux configuration file does not exist: $TmuxSrc"
-fi
-
-# Copy Zsh configuration file
-if [ -f "$ZshSrc" ]; then
-    cp "$ZshSrc" "$ZshDest/"
-else
-    echo "Zsh configuration file does not exist: $ZshSrc"
-fi
-
-# Copy Zsh configuration file
-if [ -f "$FishSrc" ]; then
-    cp "$FishSrc" "$FishDest/"
-else
-    echo "Zsh configuration file does not exist: $FishSrc"
-fi
-
-
-# Copy Zsh configuration file
-if [ -f "$GitSrc" ]; then
-    cp "$GitSrc" "$GitDest/"
-else
-    echo "Zsh configuration file does not exist: $GitDest"
-fi
-
-
-
-
-cp -r ./fonts /usr/share/fonts/
-
-sudo fc-cache -f -v
-
-# Install IosevkaTerm Nerd Font per-user (see install-iosevka-term.sh).
-./install-iosevka-term.sh
-
-
-echo "Configuration files have been copied successfully."
+echo "Configs loaded into $HOME"

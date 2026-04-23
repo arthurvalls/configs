@@ -1,18 +1,24 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Stage live configs into the repo, then commit and push.
+# Usage: ./push.sh "commit message"
+set -euo pipefail
 
-# Check if a commit message is provided
-if [ -z "$1" ]; then
-  echo "Usage: $0 <commit_message>"
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $0 <commit message>" >&2
   exit 1
 fi
 
-# Run the copy.sh script
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$REPO"
+
 ./copy.sh
 
-# Display git differences
-git diff
+if git diff --quiet && git diff --cached --quiet && [[ -z "$(git status --porcelain)" ]]; then
+  echo "Nothing to commit."
+  exit 0
+fi
 
-# Commit and push changes
-git add .
-git commit -am "$1"
+git add -A
+git status --short
+git commit -m "$1"
 git push

@@ -1,0 +1,6 @@
+# Environment variables with sensitive credentials
+.env
+.env.local
+
+# Neovim runtime files
+lazy-lock.json

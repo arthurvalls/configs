@@ -1,2 +1,27 @@
-undodir/*
-fonts/*
+# nvim caches / runtime state
+nvim/undodir/
+nvim/.claude/
+nvim/.env
+nvim/lazy-lock.json.bak
+nvim/session/
+nvim/spell/
+
+# kitty runtime / scratch
+kitty/.claude/
+kitty/kitty.conf.bak
+kitty/*.bak
+
+# fonts (re-fetched by install-iosevka-term.sh)
+fonts/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# secrets
+.env
+.env.*
+*.secret

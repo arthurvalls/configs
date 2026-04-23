@@ -1,24 +1,35 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Copy live configs from $HOME into this repo.
+# Idempotent. Run before committing, or use ./push.sh to do it in one step.
+set -euo pipefail
 
-# Copy Neovim configuration files
-cp -r ~/.config/nvim/* /home/arthur/configs/nvim/
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}"
 
-# Copy Alacritty configuration files
-cp -r ~/.config/alacritty/* /home/arthur/configs/alacritty/
+copy_dir() {
+  local src="$1" dst="$2"
+  [[ -d "$src" ]] || { echo "skip: $src (missing)"; return; }
+  mkdir -p "$dst"
+  cp -r "$src"/. "$dst"/
+}
 
-# Copy tmux configuration file to Alacritty directory
-cp -r ~/.tmux.conf /home/arthur/configs/alacritty/.tmux.conf
+copy_file() {
+  local src="$1" dst="$2"
+  [[ -e "$src" ]] || { echo "skip: $src (missing)"; return; }
+  mkdir -p "$(dirname "$dst")"
+  cp "$src" "$dst"
+}
 
-# Copy Zsh configuration file
-cp -r ~/.config/ezsh/ezshrc.zsh /home/arthur/configs/zsh/
+copy_dir  "$CONFIG/nvim"       "$REPO/nvim"
+copy_dir  "$CONFIG/kitty"      "$REPO/kitty"
+copy_dir  "$CONFIG/alacritty"  "$REPO/alacritty"
+copy_dir  "$CONFIG/fish"       "$REPO/fish"
+copy_dir  "$CONFIG/git"        "$REPO/git"
+copy_file "$CONFIG/ezsh/ezshrc.zsh" "$REPO/zsh/ezshrc.zsh"
 
-# Copy kitty conf
-cp -r ~/.config/kitty/* /home/arthur/configs/kitty
+copy_file "$HOME/.tmux.conf"   "$REPO/alacritty/.tmux.conf"
+copy_file "$HOME/.bashrc"      "$REPO/bash/.bashrc"
+copy_file "$HOME/.profile"     "$REPO/bash/.profile"
+copy_file "$HOME/.ideavimrc"   "$REPO/ideavim/.ideavimrc"
 
-# Copy fish
-cp -r ~/.config/fish/* /home/arthur/configs/fish/
-
-cp -r ~/.config/git/* /home/arthur/configs/git/
-
-
-echo "Configuration files have been copied successfully."
+echo "Configs copied to $REPO"
