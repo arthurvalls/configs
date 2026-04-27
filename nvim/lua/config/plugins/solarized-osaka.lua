@@ -1,10 +1,11 @@
--- Solarized Osaka (craftzdog) — the startup colorscheme.
--- The nvim -> kitty sync lives in config/plugins/nightfox.lua; it routes this
--- colorscheme to ~/.config/kitty/solarized-osaka-kitty.conf.
+-- Solarized Osaka (craftzdog) — preserved colorscheme. Startup is now zenbones
+-- (see config/plugins/zenbones.lua). To switch back: `:colorscheme solarized-osaka`.
+-- The nvim -> kitty sync (config/plugins/nightfox.lua) routes this colorscheme
+-- to ~/.config/kitty/solarized-osaka-kitty.conf.
 return {
   "craftzdog/solarized-osaka.nvim",
   lazy = false,
-  priority = 1000,
+  priority = 900,
   opts = {
     transparent = false,
     styles = {
@@ -24,8 +25,5 @@ return {
   },
   config = function(_, opts)
     require("solarized-osaka").setup(opts)
-    if not pcall(vim.cmd, "colorscheme solarized-osaka") then
-      pcall(vim.cmd, "colorscheme carbonfox")
-    end
   end,
 }

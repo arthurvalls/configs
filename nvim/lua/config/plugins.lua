@@ -1,5 +1,6 @@
 -- lua/config/plugins.lua
 return {
+	require("config.plugins.zenbones"),
 	-- require('config.plugins.e-ink'),
 	-- require("config.plugins.iceberg"),
 	-- require("config.plugins.cyberpunk"),

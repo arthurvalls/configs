@@ -20,10 +20,17 @@ local sources = {
 	terafox = nightfox_extra("terafox"),
 	carbonfox = nightfox_extra("carbonfox"),
 	["solarized-osaka"] = vim.fn.expand("~/.config/kitty/solarized-osaka-kitty.conf"),
+	zenbones = function()
+		local variant = vim.o.background == "light" and "zenbones_light" or "zenbones_dark"
+		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
+	end,
 }
 
 local function sync_kitty(name)
 	local source = sources[name]
+	if type(source) == "function" then
+		source = source()
+	end
 	if not source or vim.fn.filereadable(source) == 0 then
 		return
 	end
