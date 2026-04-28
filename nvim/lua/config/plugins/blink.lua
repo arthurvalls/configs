@@ -40,6 +40,7 @@ return {
 			},
 		},
 		completion = {
+			list = { selection = { preselect = false, auto_insert = false } },
 			accept = { auto_brackets = { enabled = true } },
 			documentation = {
 				auto_show = true,

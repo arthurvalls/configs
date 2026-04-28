@@ -1,7 +1,9 @@
 -- lua/config/plugins.lua
 return {
-	require("config.plugins.zenbones"),
-	-- require('config.plugins.e-ink'),
+	require("config.plugins.mfd"),
+	-- Backup of previously-active theme:
+	-- require("config.plugins.eink"),
+	-- require("config.plugins.zenbones"),
 	-- require("config.plugins.iceberg"),
 	-- require("config.plugins.cyberpunk"),
 	-- require("config.plugins.blueberry-peach"),
@@ -16,15 +18,14 @@ return {
 	require("config.plugins.multi"),
 	-- require("config.plugins.gruvbox"),
 	-- require("config.plugins.tokyo"),
-	require("config.plugins.nightfox"),
-	require("config.plugins.solarized-osaka"),
+	-- require("config.plugins.nightfox"),
+	-- require("config.plugins.solarized-osaka"),
 	-- require 'config.plugins.base16',
 	-- require("config.plugins.darcula"),
 	-- require("config.plugins.notify"), -- replaced by snacks.notifier
 	require("config.plugins.leetcode"),
 	require("config.plugins.dashboard"),
 	require("config.plugins.dadbod"),
-	-- require("config.plugins.autocomplete"), -- replaced by blink.cmp
 	require("config.plugins.autoformat"),
 	require("config.plugins.dap"),
 	require("config.plugins.devicons"),

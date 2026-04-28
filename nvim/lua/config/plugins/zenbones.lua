@@ -1,8 +1,7 @@
--- Zenbones (mcchrish/zenbones-theme) — startup colorscheme.
--- The nvim -> kitty sync lives in config/plugins/nightfox.lua; it routes
--- zenbones (dark) and zenbones_light to the matching kitty .conf files in
--- ~/.config/kitty/. Solarized Osaka is preserved in config/plugins/solarized-osaka.lua
--- and can be re-activated via :colorscheme solarized-osaka.
+-- Zenbones (mcchrish/zenbones-theme) — preserved colorscheme. Startup is now e-ink
+-- (see config/plugins/eink.lua). Switch back via `:colorscheme zenbones`.
+-- The Normal-bg pin autocmd is registered up-front; it only fires when zenbones
+-- is the active colorscheme, so it's safe to leave installed.
 return {
   {
     "rktjmp/lush.nvim",
@@ -12,17 +11,10 @@ return {
     "zenbones-theme/zenbones.nvim",
     dependencies = { "rktjmp/lush.nvim" },
     lazy = false,
-    priority = 1000,
+    priority = 900,
     config = function()
-      vim.opt.termguicolors = true
-      vim.opt.background = "light"
-      if not pcall(vim.cmd, "colorscheme zenbones") then
-        pcall(vim.cmd, "colorscheme solarized-osaka")
-        return
-      end
       -- Pin Normal-family bg to the exact hex used by ~/.config/kitty/zenbones_light.conf
-      -- so nvim's editor pane is pixel-identical to kitty's window bg. Lush's HSLuv->sRGB
-      -- drifts a few units from shipwright's, which makes nvim read as slightly whiter.
+      -- so nvim's editor pane is pixel-identical to kitty's window bg.
       local bg, fg = "#F0EDEC", "#2C363C"
       local function pin(group, opts)
         vim.api.nvim_set_hl(0, group, opts)
@@ -38,7 +30,6 @@ return {
           pin("EndOfBuffer", { fg = bg, bg = bg })
         end,
       })
-      vim.cmd.colorscheme("zenbones") -- re-trigger so the autocmd above runs
     end,
   },
 }

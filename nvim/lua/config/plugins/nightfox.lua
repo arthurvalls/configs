@@ -24,6 +24,10 @@ local sources = {
 		local variant = vim.o.background == "light" and "zenbones_light" or "zenbones_dark"
 		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
 	end,
+	["e-ink"] = function()
+		local variant = vim.o.background == "light" and "eink_light" or "eink_dark"
+		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
+	end,
 }
 
 local function sync_kitty(name)
