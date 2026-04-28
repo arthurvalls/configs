@@ -1,7 +1,8 @@
 -- lua/config/plugins.lua
 return {
-	require("config.plugins.mfd"),
-	-- Backup of previously-active theme:
+	require("config.plugins.ayu"),
+	-- Backup of previously-active themes:
+	-- require("config.plugins.mfd"),
 	-- require("config.plugins.eink"),
 	-- require("config.plugins.zenbones"),
 	-- require("config.plugins.iceberg"),
