@@ -67,3 +67,7 @@ starship init fish | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Java (required by Zed's eclipse.jdt.ls extension)
+set -gx JAVA_HOME /usr/lib/jvm/java-21-openjdk-amd64
+set -gx PATH $JAVA_HOME/bin $PATH
