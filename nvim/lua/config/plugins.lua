@@ -1,7 +1,8 @@
 -- lua/config/plugins.lua
 return {
-	require("config.plugins.vague"),
+	require("config.plugins.vscode"),
 	-- Backup of previously-active themes:
+	-- require("config.plugins.vague"),
 	-- require("config.plugins.sonokai"),
 	-- require("config.plugins.catpuccin"),
 	-- require("config.plugins.mfd"),

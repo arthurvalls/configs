@@ -29,6 +29,7 @@ local sources = {
 	carbonfox = nightfox_extra("carbonfox"),
 	sonokai = vim.fn.expand("~/.config/kitty/sonokai.conf"),
 	vague = vim.fn.expand("~/.config/kitty/vague.conf"),
+	vscode = vim.fn.expand("~/.config/kitty/vscode.conf"),
 	["solarized-osaka"] = vim.fn.expand("~/.config/kitty/solarized-osaka-kitty.conf"),
 	zenbones = function()
 		local variant = vim.o.background == "light" and "zenbones_light" or "zenbones_dark"
