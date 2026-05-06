@@ -22,6 +22,8 @@ copy_file() {
 
 copy_dir  "$CONFIG/nvim"       "$REPO/nvim"
 copy_dir  "$CONFIG/kitty"      "$REPO/kitty"
+copy_dir  "$CONFIG/ghostty"    "$REPO/ghostty"
+copy_dir  "$CONFIG/wezterm"    "$REPO/wezterm"
 copy_dir  "$CONFIG/alacritty"  "$REPO/alacritty"
 copy_dir  "$CONFIG/fish"       "$REPO/fish"
 copy_dir  "$CONFIG/git"        "$REPO/git"

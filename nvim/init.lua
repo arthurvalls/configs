@@ -19,6 +19,11 @@ vim.lsp.log.set_level(vim.log.levels.OFF)
 -- vim keymaps
 require 'config.keymaps'
 
+-- Terminal colorscheme sync (kitty + ghostty + wezterm). Registers a
+-- ColorScheme autocmd, so it must load BEFORE lazy.setup runs the active
+-- colorscheme plugin's `vim.cmd.colorscheme(...)`.
+require 'config.terminal-sync'
+
 -- Load plugins
 require('lazy').setup(require 'config.plugins', {
   ui = {

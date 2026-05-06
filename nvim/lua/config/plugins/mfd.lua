@@ -9,7 +9,7 @@ return {
 				no_italic = false,
 			})
 
-			vim.cmd.colorscheme("mfd-mono")
+			vim.cmd.colorscheme("mfd-amber")
 
 			vim.opt.guicursor = {
 				"n:block-CursorNormal",

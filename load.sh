@@ -21,6 +21,8 @@ load_file() {
 
 load_dir  "$REPO/nvim"               "$CONFIG/nvim"
 load_dir  "$REPO/kitty"              "$CONFIG/kitty"
+load_dir  "$REPO/ghostty"            "$CONFIG/ghostty"
+load_dir  "$REPO/wezterm"            "$CONFIG/wezterm"
 load_dir  "$REPO/alacritty"          "$CONFIG/alacritty"
 load_dir  "$REPO/fish"               "$CONFIG/fish"
 load_dir  "$REPO/git"                "$CONFIG/git"

@@ -1,8 +1,11 @@
 -- lua/config/plugins.lua
 return {
-	require("config.plugins.ayu"),
+	require("config.plugins.vague"),
 	-- Backup of previously-active themes:
+	-- require("config.plugins.sonokai"),
+	-- require("config.plugins.catpuccin"),
 	-- require("config.plugins.mfd"),
+	-- require("config.plugins.ayu"),
 	-- require("config.plugins.eink"),
 	-- require("config.plugins.zenbones"),
 	-- require("config.plugins.iceberg"),

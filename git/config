@@ -86,5 +86,6 @@
 	directory = /home/arthur/personal/migs
 	directory = /home/arthur/personal/migs
 	directory = /home/arthur/personal/migs
+	directory = /home/arthur/personal/migs
 [credential]
 	helper = store

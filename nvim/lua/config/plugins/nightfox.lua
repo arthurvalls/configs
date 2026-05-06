@@ -1,47 +1,5 @@
--- Colorscheme → Kitty sync. Mapping from nvim `:colorscheme <name>` to a
--- kitty palette file on disk. Target is always ~/.config/kitty/current-theme.conf
--- (kitty.conf includes it, so new windows persist); we also `kitty @ set-colors`
--- to live-update the active window.
---
--- Requires in kitty.conf: `allow_remote_control yes` and
--- `include current-theme.conf` inside the BEGIN_KITTY_THEME block.
-
-local function nightfox_extra(name)
-	return vim.fn.stdpath("data") .. "/lazy/nightfox.nvim/extra/" .. name .. "/kitty.conf"
-end
-
--- Maps colorscheme name → kitty .conf source path.
-local sources = {
-	nightfox = nightfox_extra("nightfox"),
-	dayfox = nightfox_extra("dayfox"),
-	dawnfox = nightfox_extra("dawnfox"),
-	duskfox = nightfox_extra("duskfox"),
-	nordfox = nightfox_extra("nordfox"),
-	terafox = nightfox_extra("terafox"),
-	carbonfox = nightfox_extra("carbonfox"),
-	["solarized-osaka"] = vim.fn.expand("~/.config/kitty/solarized-osaka-kitty.conf"),
-	zenbones = function()
-		local variant = vim.o.background == "light" and "zenbones_light" or "zenbones_dark"
-		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
-	end,
-	["e-ink"] = function()
-		local variant = vim.o.background == "light" and "eink_light" or "eink_dark"
-		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
-	end,
-}
-
-local function sync_kitty(name)
-	local source = sources[name]
-	if type(source) == "function" then
-		source = source()
-	end
-	if not source or vim.fn.filereadable(source) == 0 then
-		return
-	end
-	local target = vim.fn.expand("~/.config/kitty/current-theme.conf")
-	vim.fn.system({ "cp", source, target })
-	vim.fn.jobstart({ "kitty", "@", "set-colors", "-c", target }, { detach = true })
-end
+-- Nightfox plugin spec. Theme-sync logic lives in lua/config/terminal-sync.lua
+-- (always loaded from init.lua, independent of which colorscheme plugin is active).
 
 return {
 	"EdenEast/nightfox.nvim",
@@ -56,13 +14,6 @@ return {
 					keywords = "bold",
 				},
 			},
-		})
-
-		vim.api.nvim_create_autocmd("ColorScheme", {
-			group = vim.api.nvim_create_augroup("KittyColorschemeSync", { clear = true }),
-			callback = function(args)
-				sync_kitty(args.match)
-			end,
 		})
 	end,
 }
