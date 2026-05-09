@@ -1,7 +1,13 @@
 -- lua/config/plugins.lua
 return {
-	require("config.plugins.vscode"),
+	-- Active colorscheme: verdigris.
 	-- Backup of previously-active themes:
+	require("config.plugins.verdigris"),
+	require("config.plugins.bistre"),
+	-- require("config.plugins.atomic"),
+	-- require("config.plugins.poimandres"),
+	-- require("config.plugins.melange"),
+	-- require("config.plugins.vscode"),
 	-- require("config.plugins.vague"),
 	-- require("config.plugins.sonokai"),
 	-- require("config.plugins.catpuccin"),
@@ -13,7 +19,6 @@ return {
 	-- require("config.plugins.cyberpunk"),
 	-- require("config.plugins.blueberry-peach"),
 	-- require("config.plugins.colorscheme"), -- nerv dark theme (inactive)
-	-- require("config.plugins.melange"), -- melange light (inactive)
 	-- require("config.plugins.selenized"), -- selenized light (inactive)
 	-- require("config.plugins.solarized"), -- solarized light (inactive)
 	-- require("config.plugins.tinted"),
@@ -66,6 +71,6 @@ return {
 	require("config.plugins.oil"),
 	require("config.plugins.persistence"),
 	require("config.plugins.neoscroll"),
-	require("config.plugins.rainbow-delimiters"),
+	-- require("config.plugins.rainbow-delimiters"),
 	require("config.plugins.highlight-colors"),
 }

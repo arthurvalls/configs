@@ -35,6 +35,10 @@ local sources = {
 		local variant = vim.o.background == "light" and "zenbones_light" or "zenbones_dark"
 		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
 	end,
+	melange = function()
+		local variant = vim.o.background == "light" and "melange_light" or "melange_dark"
+		return vim.fn.stdpath("data") .. "/lazy/melange-nvim/term/kitty/" .. variant .. ".conf"
+	end,
 	["e-ink"] = function()
 		local variant = vim.o.background == "light" and "eink_light" or "eink_dark"
 		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
@@ -113,8 +117,9 @@ local function write_ghostty(colors, scheme)
 		selection_background = "selection-background",
 	}
 	for src, dst in pairs(map) do
-		if colors[src] then
-			table.insert(lines, dst .. " = " .. colors[src])
+		local v = colors[src]
+		if v and v:lower() ~= "none" then
+			table.insert(lines, dst .. " = " .. v)
 		end
 	end
 	for i = 0, 15 do

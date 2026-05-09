@@ -1,23 +1,35 @@
+-- smear-cursor.nvim — kitty `cursor_trail`-like effect inside nvim, works in
+-- any terminal with truecolor + unicode (kitty, ghostty, wezterm).
 return {
 	"sphamba/smear-cursor.nvim",
 
 	opts = {
-		-- Smear cursor when switching buffers or windows.
+		-- When to draw the trail.
 		smear_between_buffers = true,
-
-		-- Smear cursor when moving within line or to neighbor lines.
-		-- Use `min_horizontal_distance_smear` and `min_vertical_distance_smear` for finer control
 		smear_between_neighbor_lines = true,
-
-		-- Draw the smear in buffer space instead of screen space when scrolling
 		scroll_buffer_space = true,
+		smear_insert_mode = true,
 
-		-- Set to `true` if your font supports legacy computing symbols (block unicode symbols).
-		-- Smears and particles will look a lot less blocky.
+		-- NRK Mono doesn't ship the legacy computing symbol block, so keep this
+		-- off — flipping it on with an unsupported font produces empty boxes.
 		legacy_computing_symbols_support = false,
 
-		-- Smear cursor in insert mode.
-		-- See also `vertical_bar_cursor_insert_mode` and `distance_stop_animating_vertical_bar`.
-		smear_insert_mode = true,
+		-- Trail physics. Lower stiffness/damping = longer, more visible drag.
+		-- These values give a noticeable "1.0s" kitty cursor_trail feel without
+		-- becoming distracting on fast cursor movement.
+		stiffness = 0.5,
+		trailing_stiffness = 0.35,
+		trailing_exponent = 1.2,
+		damping = 0.65,
+		matrix_pixel_threshold = 0.4,
+		distance_stop_animating = 0.3,
+
+		-- Visual.
+		gamma = 2.2,
+		cursor_color = "none", -- "none" = use Cursor highlight (theme-driven)
+
+		-- Hides the target glyph until the smear arrives — eliminates a brief
+		-- flicker on long jumps in ghostty/wezterm.
+		hide_target_hack = true,
 	},
 }

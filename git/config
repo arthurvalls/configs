@@ -2,6 +2,10 @@
     name = arthurvalls
     email = arthur.valls@supersim.com.br
 
+# Personal projects under ~/personal/ use the GitHub identity
+[includeIf "gitdir:~/personal/"]
+    path = ~/.config/git/config-personal
+
 [commit]
     gpgSign = false
     template = ~/.config/git/template
@@ -83,9 +87,6 @@
 [url "ssh://git@git.qrator.net:2202/radar/"]
     insteadOf = "radar:"
 [safe]
-	directory = /home/arthur/personal/migs
-	directory = /home/arthur/personal/migs
-	directory = /home/arthur/personal/migs
 	directory = /home/arthur/personal/migs
 [credential]
 	helper = store
