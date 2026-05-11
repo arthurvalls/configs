@@ -1,9 +1,9 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: verdigris.
+	-- Active colorscheme: gumshoe.
 	-- Backup of previously-active themes:
-	require("config.plugins.verdigris"),
-	require("config.plugins.bistre"),
+	require("config.plugins.gumshoe"),
+	-- require("config.plugins.voltaic"),
 	-- require("config.plugins.atomic"),
 	-- require("config.plugins.poimandres"),
 	-- require("config.plugins.melange"),
