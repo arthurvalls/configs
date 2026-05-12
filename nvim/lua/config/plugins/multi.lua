@@ -2,6 +2,7 @@ return {
 	{
 		"mg979/vim-visual-multi",
 		branch = "master",
+		keys = { { "<C-d>", mode = { "n", "x" } }, { "<C-n>", mode = { "n", "x" } } },
 		init = function()
 			-- Define the keymaps for vim-visual-multi
 			vim.g.VM_maps = {

@@ -1,0 +1,26 @@
+# crucible · kintsugi variant — lacquer-and-gold theme for Ghostty
+# Drop in ~/.config/ghostty/themes/kintsugi and set: theme = kintsugi
+
+palette = 0=#0f1813
+palette = 1=#c83838
+palette = 2=#6fc098
+palette = 3=#e8c460
+palette = 4=#8aa0b0
+palette = 5=#c878c0
+palette = 6=#6fc8a8
+palette = 7=#d8d0c0
+palette = 8=#3e3d34
+palette = 9=#dc5050
+palette = 10=#8edab2
+palette = 11=#f0d488
+palette = 12=#a8b8c5
+palette = 13=#dc94d4
+palette = 14=#88dcc0
+palette = 15=#e8dccc
+
+background = #08100c
+foreground = #d8d0c0
+cursor-color = #ffa44c
+cursor-text = #08100c
+selection-background = #1f2e25
+selection-foreground = #d8d0c0

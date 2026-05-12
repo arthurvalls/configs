@@ -2,6 +2,7 @@
 -- any terminal with truecolor + unicode (kitty, ghostty, wezterm).
 return {
 	"sphamba/smear-cursor.nvim",
+	event = "VeryLazy",
 
 	opts = {
 		-- When to draw the trail.

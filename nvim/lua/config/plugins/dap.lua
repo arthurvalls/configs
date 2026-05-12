@@ -1,7 +1,6 @@
 return {
-	-- DAP
-	"mfussenegger/nvim-dap",
-	-- DAP UI
+	-- nvim-dap itself loads via keys in kickstart/plugins/debug.lua.
+	-- DAP UI — pulled in on demand by neotest or debug keymaps.
 	{
 		"rcarriga/nvim-dap-ui",
 		lazy = true,
@@ -10,13 +9,18 @@ return {
 			require("dapui").setup()
 		end,
 	},
-	-- DAP Virtual Text
+	-- DAP Virtual Text — only matters once a session is running.
 	{
 		"theHamsta/nvim-dap-virtual-text",
+		lazy = true,
 		dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("nvim-dap-virtual-text").setup()
 		end,
 	},
-	"janko/vim-test",
+	-- vim-test only matters when actually running a test.
+	{
+		"janko/vim-test",
+		cmd = { "TestNearest", "TestFile", "TestSuite", "TestLast", "TestVisit" },
+	},
 }

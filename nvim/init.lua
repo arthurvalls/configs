@@ -24,8 +24,26 @@ require("config.keymaps")
 -- colorscheme plugin's `vim.cmd.colorscheme(...)`.
 require("config.terminal-sync")
 
+-- Disable unused providers (silences :checkhealth provider warnings)
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_python3_provider = 0
+
+-- Disable built-in plugins we don't use (saves ~5ms on startup).
+vim.g.loaded_matchit = 1
+vim.g.loaded_matchparen = 1
+vim.g.loaded_netrwPlugin = 1 -- oil.nvim replaces netrw
+vim.g.loaded_tarPlugin = 1
+vim.g.loaded_tar = 1
+vim.g.loaded_zipPlugin = 1
+vim.g.loaded_zip = 1
+vim.g.loaded_gzip = 1
+vim.g.loaded_2html_plugin = 1
+
 -- Load plugins
 require("lazy").setup(require("config.plugins"), {
+	rocks = { hererocks = false },
 	ui = {
 		icons = vim.g.have_nerd_font and {} or {
 			cmd = "⌘",
@@ -45,8 +63,9 @@ require("lazy").setup(require("config.plugins"), {
 	},
 })
 
--- No active colorscheme plugin — use the built-in `vim` scheme, which inherits
--- the terminal's ANSI palette (matches ghostty's "Builtin Dark" / xterm look).
+-- No active colorscheme plugin here — the active scheme is set by the
+-- individual plugin spec (see lua/config/plugins/crucible.lua), which uses
+-- a VimEnter autocmd so it wins the race against the other theme plugins.
 -- Alternatives: `habamax`, `industry`, `quiet`, `default`.
 -- vim.cmd.colorscheme("industry")
 

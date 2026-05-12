@@ -129,8 +129,7 @@ local function write_ghostty(colors, scheme)
 		end
 	end
 	write_file(vim.fn.expand("~/.config/ghostty/current-theme"), table.concat(lines, "\n") .. "\n")
-	-- SIGUSR2 → config reload (Ghostty ≥ 1.0.1).
-	vim.fn.jobstart({ "pkill", "-USR2", "ghostty" }, { detach = true })
+	-- Ghostty reload disabled — reload manually after changes.
 end
 
 local function write_wezterm(colors, scheme)

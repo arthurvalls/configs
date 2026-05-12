@@ -1,39 +1,13 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: gumshoe.
+	-- Active colorscheme: crucible.
 	-- Backup of previously-active themes:
-	require("config.plugins.gumshoe"),
-	-- require("config.plugins.voltaic"),
-	-- require("config.plugins.atomic"),
-	-- require("config.plugins.poimandres"),
-	-- require("config.plugins.melange"),
-	-- require("config.plugins.vscode"),
-	-- require("config.plugins.vague"),
-	-- require("config.plugins.sonokai"),
-	-- require("config.plugins.catpuccin"),
-	-- require("config.plugins.mfd"),
-	-- require("config.plugins.ayu"),
-	-- require("config.plugins.eink"),
-	-- require("config.plugins.zenbones"),
-	-- require("config.plugins.iceberg"),
-	-- require("config.plugins.cyberpunk"),
-	-- require("config.plugins.blueberry-peach"),
-	-- require("config.plugins.colorscheme"), -- nerv dark theme (inactive)
-	-- require("config.plugins.selenized"), -- selenized light (inactive)
-	-- require("config.plugins.solarized"), -- solarized light (inactive)
-	-- require("config.plugins.tinted"),
+	require("config.plugins.crucible"),
 	require("config.plugins.smear-cursor"),
 	-- require("config.plugins.black_metal"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),
-	-- require("config.plugins.gruvbox"),
-	-- require("config.plugins.tokyo"),
-	-- require("config.plugins.nightfox"),
-	-- require("config.plugins.solarized-osaka"),
-	-- require 'config.plugins.base16',
-	-- require("config.plugins.darcula"),
 	-- require("config.plugins.notify"), -- replaced by snacks.notifier
-	require("config.plugins.leetcode"),
 	require("config.plugins.dashboard"),
 	require("config.plugins.dadbod"),
 	require("config.plugins.autoformat"),
@@ -73,4 +47,6 @@ return {
 	require("config.plugins.neoscroll"),
 	-- require("config.plugins.rainbow-delimiters"),
 	require("config.plugins.highlight-colors"),
+	require("config.plugins.render-markdown"),
+	require("config.plugins.grug-far"),
 }

@@ -7,6 +7,7 @@ return {
 		quickfile = { enabled = true },
 		notifier = { enabled = true },
 		indent = { enabled = true },
+		input = { enabled = true },
 		words = { enabled = true },
 		gitbrowse = { enabled = true },
 		zen = { enabled = true },

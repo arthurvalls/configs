@@ -19,6 +19,14 @@ function M.setup()
   -- Create the workspace directory if it doesn't exist
   os.execute("mkdir -p " .. workspace_folder)
 
+  -- Load java-debug-adapter + vscode-java-test bundles so DAP and neotest-java work.
+  local bundles = {}
+  local mason_path = vim.fn.stdpath("data") .. "/mason/packages"
+  local debug_jars = vim.fn.glob(mason_path .. "/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar", true, true)
+  vim.list_extend(bundles, debug_jars)
+  local test_jars = vim.split(vim.fn.glob(mason_path .. "/java-test/extension/server/*.jar", true), "\n", { trimempty = true })
+  vim.list_extend(bundles, test_jars)
+
   local config = {
     cmd = {
       "java",
@@ -28,6 +36,9 @@ function M.setup()
       "-Dlog.protocol=true",
       "-Dlog.level=ALL",
       "-Xms1g",
+      "-Xmx4g",
+      "-XX:+UseG1GC",
+      "-XX:+UseStringDeduplication",
       "--add-modules=ALL-SYSTEM",
       "--add-opens", "java.base/java.util=ALL-UNNAMED",
       "--add-opens", "java.base/java.lang=ALL-UNNAMED",
@@ -77,7 +88,7 @@ function M.setup()
       },
     },
     init_options = {
-      bundles = {},
+      bundles = bundles,
     },
   }
 

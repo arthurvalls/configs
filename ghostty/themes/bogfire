@@ -1,0 +1,26 @@
+# crucible · bogfire variant — peat-bog will-o'-the-wisp theme for Ghostty
+# Drop in ~/.config/ghostty/themes/bogfire and set: theme = bogfire
+
+palette = 0=#0c1510
+palette = 1=#d85a5a
+palette = 2=#6fc098
+palette = 3=#e8c060
+palette = 4=#8aa0b0
+palette = 5=#c878c0
+palette = 6=#8cc9c0
+palette = 7=#d4d0bc
+palette = 8=#3a3e34
+palette = 9=#ec7878
+palette = 10=#8edab2
+palette = 11=#f0d488
+palette = 12=#a8b8c5
+palette = 13=#dc94d4
+palette = 14=#b0dcd0
+palette = 15=#e8e0c4
+
+background = #060b08
+foreground = #d4d0bc
+cursor-color = #ffa55c
+cursor-text = #060b08
+selection-background = #1f2e24
+selection-foreground = #d4d0bc

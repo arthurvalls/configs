@@ -1,6 +1,7 @@
 return {
 	-- Main LSP Configuration
 	"neovim/nvim-lspconfig",
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
 		-- Mason must be loaded before its dependents so we need to set it up here.
@@ -8,7 +9,8 @@ return {
 		{ "williamboman/mason.nvim", opts = {} },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		"nvim-java/nvim-java",
+		{ "nvim-java/nvim-java", ft = "java" },
+		{ "b0o/SchemaStore.nvim", lazy = true },
 
 		-- Useful status updates for LSP.
 		{ "j-hui/fidget.nvim", opts = {} },
@@ -208,6 +210,26 @@ return {
 			pyright = {},
 			rust_analyzer = {},
 			jdtls = {},
+			dockerls = {},
+			bashls = {},
+			yamlls = {
+				settings = {
+					yaml = {
+						schemaStore = { enable = false, url = "" },
+						schemas = require("schemastore").yaml.schemas(),
+						validate = true,
+						format = { enable = true },
+					},
+				},
+			},
+			jsonls = {
+				settings = {
+					json = {
+						schemas = require("schemastore").json.schemas(),
+						validate = { enable = true },
+					},
+				},
+			},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
 			-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -272,6 +294,8 @@ return {
 			"stylua", -- Used to format Lua code
 			"eslint_d", -- Used to lint JavaScript/TypeScript
 			"prettierd", -- Used to format JavaScript/TypeScript/JSON/Markdown
+			"java-debug-adapter", -- DAP for Java
+			"java-test", -- vscode-java-test bundle for neotest-java
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
