@@ -43,6 +43,11 @@ local sources = {
 		local variant = vim.o.background == "light" and "eink_light" or "eink_dark"
 		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
 	end,
+	crucible = function()
+		local ok, cfg = pcall(require, "crucible.config")
+		local variant = (ok and cfg.options and cfg.options.variant) or "crucible"
+		return vim.fn.stdpath("data") .. "/lazy/crucible.nvim/extras/kitty/" .. variant .. ".conf"
+	end,
 }
 
 local function resolve_source(name)
