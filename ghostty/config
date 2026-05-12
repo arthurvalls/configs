@@ -1,7 +1,7 @@
 # Mirrors ~/.config/kitty/kitty.conf (font, padding, cursor, scrollback, keys).
 # Theme is driven by nvim terminal-sync.lua → writes current-theme on :colorscheme.
 
-font-family = NRK Mono
+font-family = Ioskeley Mono
 font-synthetic-style = bold,italic,bold-italic
 font-size = 10
 
