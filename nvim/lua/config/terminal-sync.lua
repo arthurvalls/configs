@@ -13,36 +13,10 @@
 
 local M = {}
 
-local function nightfox_extra(name)
-	return vim.fn.stdpath("data") .. "/lazy/nightfox.nvim/extra/" .. name .. "/kitty.conf"
-end
-
 -- Explicit colorscheme → kitty .conf source map. Anything not listed falls
--- back to ~/.config/kitty/<name>.conf if that file exists.
+-- back to ~/.config/kitty/<name>.conf if that file exists (this is how
+-- gruvbox-material is wired — see ~/.config/kitty/gruvbox-material.conf).
 local sources = {
-	nightfox = nightfox_extra("nightfox"),
-	dayfox = nightfox_extra("dayfox"),
-	dawnfox = nightfox_extra("dawnfox"),
-	duskfox = nightfox_extra("duskfox"),
-	nordfox = nightfox_extra("nordfox"),
-	terafox = nightfox_extra("terafox"),
-	carbonfox = nightfox_extra("carbonfox"),
-	sonokai = vim.fn.expand("~/.config/kitty/sonokai.conf"),
-	vague = vim.fn.expand("~/.config/kitty/vague.conf"),
-	vscode = vim.fn.expand("~/.config/kitty/vscode.conf"),
-	["solarized-osaka"] = vim.fn.expand("~/.config/kitty/solarized-osaka-kitty.conf"),
-	zenbones = function()
-		local variant = vim.o.background == "light" and "zenbones_light" or "zenbones_dark"
-		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
-	end,
-	melange = function()
-		local variant = vim.o.background == "light" and "melange_light" or "melange_dark"
-		return vim.fn.stdpath("data") .. "/lazy/melange-nvim/term/kitty/" .. variant .. ".conf"
-	end,
-	["e-ink"] = function()
-		local variant = vim.o.background == "light" and "eink_light" or "eink_dark"
-		return vim.fn.expand("~/.config/kitty/" .. variant .. ".conf")
-	end,
 	crucible = function()
 		local ok, cfg = pcall(require, "crucible.config")
 		local variant = (ok and cfg.options and cfg.options.variant) or "crucible"

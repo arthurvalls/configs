@@ -1,10 +1,10 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: crucible.
-	-- Backup of previously-active themes:
-	require("config.plugins.crucible"),
+	-- Active colorscheme: gruvbox-material (sainnhe, dark hard).
+	-- Alternate kept on disk: crucible (switch via `:colorscheme crucible`).
+	require("config.plugins.gruvbox-material"),
+	-- require("config.plugins.crucible"),
 	require("config.plugins.smear-cursor"),
-	-- require("config.plugins.black_metal"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),
 	-- require("config.plugins.notify"), -- replaced by snacks.notifier
@@ -47,6 +47,6 @@ return {
 	require("config.plugins.neoscroll"),
 	-- require("config.plugins.rainbow-delimiters"),
 	require("config.plugins.highlight-colors"),
-	require("config.plugins.render-markdown"),
+	-- require("config.plugins.render-markdown"), -- disabled: yields-across-C-boundary on nvim 0.12-dev, update plugin then re-enable
 	require("config.plugins.grug-far"),
 }
