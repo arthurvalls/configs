@@ -1,8 +1,9 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: gruvbox-material (sainnhe, dark hard).
+	-- Active colorscheme: tokyonight (folke), style "night" (darkest variant).
 	-- Alternate kept on disk: crucible (switch via `:colorscheme crucible`).
-	require("config.plugins.gruvbox-material"),
+	-- Backup of previous theme: tokyodark.lua.bak (rename to .lua and re-require to restore).
+	require("config.plugins.tokyonight"),
 	-- require("config.plugins.crucible"),
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.stylua"),
