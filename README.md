@@ -6,13 +6,12 @@ My personal dotfiles. A snapshot of the tools I run daily on Linux.
 
 | Path                       | What it holds                                                         |
 | -------------------------- | --------------------------------------------------------------------- |
-| `nvim/`                    | Neovim config — lazy.nvim, LSP, themes (nightfox, solarized-osaka)    |
-| `kitty/`                   | Kitty terminal — `kitty.conf`, theme palettes, `current-theme.conf`   |
+| `nvim/`                    | Neovim config — lazy.nvim, LSP, tokyodark theme                       |
+| `kitty/`                   | Kitty terminal — `kitty.conf`, `tokyodark.conf`, `current-theme.conf` |
 | `alacritty/`               | Alacritty config (+ `.tmux.conf`)                                     |
 | `fish/`, `zsh/`, `bash/`   | Shell configs                                                         |
 | `git/`                     | Global git config                                                     |
 | `firefox/`, `zed/`, `java/`, `qtcreator/`, `ideavim/` | App configs                           |
-| `themes/`                  | Colorscheme experiments                                               |
 | `packages/`                | Package lists (apt / pacman) for fresh installs                       |
 | `install-iosevka-term.sh`  | Installs IosevkaTerm Nerd Font per-user (idempotent)                  |
 | `copy.sh`                  | Live `$HOME` → repo (stage local changes)                             |
@@ -39,7 +38,7 @@ cd ~/configs
 
 ## Highlights
 
-- **Theme**: [solarized-osaka](https://github.com/craftzdog/solarized-osaka.nvim) in nvim, mirrored to kitty via a custom palette file. On `:colorscheme <name>` inside nvim, a `ColorScheme` autocmd copies the matching kitty palette to `~/.config/kitty/current-theme.conf` and calls `kitty @ set-colors` to live-update the active window. Covers all nightfox variants and solarized-osaka — see `nvim/lua/config/plugins/nightfox.lua`.
+- **Theme**: [tokyodark](https://github.com/tiagovla/tokyodark.nvim) in nvim, mirrored to kitty via `kitty/tokyodark.conf`. On `:colorscheme <name>` inside nvim, a `ColorScheme` autocmd (see `nvim/lua/config/terminal-sync.lua`) copies the matching kitty palette to `~/.config/kitty/current-theme.conf` and calls `kitty @ set-colors` to live-update the active window. The nvim plugin runs with `transparent_background = true` so kitty's blurred background image (`kitty/b-367-blurred.jpg`) shows through.
 - **Font**: IosevkaTerm Nerd Font Mono, installed by `install-iosevka-term.sh`.
 - **Plugin manager**: [lazy.nvim](https://github.com/folke/lazy.nvim), with a single `lua/config/plugins.lua` aggregating per-plugin spec files.
 
