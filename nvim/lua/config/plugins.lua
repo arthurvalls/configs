@@ -1,9 +1,11 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: tokyonight (folke), style "night" (darkest variant).
-	-- Alternate kept on disk: crucible (switch via `:colorscheme crucible`).
-	-- Backup of previous theme: tokyodark.lua.bak (rename to .lua and re-require to restore).
-	require("config.plugins.tokyonight"),
+	-- Active colorscheme: tokyodark (tiagovla/tokyodark.nvim).
+	-- Backups on disk:
+	--   yorumi.lua.bak     / yorumi.conf.bak              (yorumicolors)
+	--   tokyonight.lua.bak / tokyonight-night.conf.bak    (folke, night)
+	-- Alternate kept on disk: crucible.lua (switch via `:colorscheme crucible`).
+	require("config.plugins.tokyodark"),
 	-- require("config.plugins.crucible"),
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.stylua"),

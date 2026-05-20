@@ -1,0 +1,19 @@
+-- yorumi (yorumicolors/yorumi.nvim). Default dark variant: "abyss".
+-- Kitty palette synced via lua/config/terminal-sync.lua → ~/.config/kitty/yorumi.conf
+-- (resolved by filename fallback, no entry in the sources map).
+--
+-- Variants on `colors/`: `yorumi` (default, abyss/dark) and `yorumi-abyss`.
+-- The plugin reads `require("yorumi").config.background[vim.o.background]` —
+-- with `background = "dark"`, theme resolves to "abyss".
+-- A `mist` (light) variant is listed as coming soon (README, 2026).
+
+return {
+	"yorumicolors/yorumi.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.o.background = "dark"
+		vim.o.termguicolors = true
+		vim.cmd.colorscheme("yorumi")
+	end,
+}

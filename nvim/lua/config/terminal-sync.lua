@@ -2,11 +2,17 @@
 --
 -- On every `:colorscheme <name>`:
 --   1. The matching kitty palette file (from `sources` below, or any `.conf`
---      in ~/.config/kitty/<name>.conf) is copied to current-theme.conf and
---      pushed live via `kitty @ set-colors`.
---   2. The palette is parsed into a flat color map and translated into
---      ~/.config/ghostty/current-theme + ~/.config/wezterm/current-theme.lua.
---   3. Ghostty is signalled (SIGUSR2 → config reload). WezTerm auto-reloads.
+--      in ~/.config/kitty/<name>.conf) is copied to current-theme.conf as a
+--      baseline.
+--   2. nvim's runtime Normal/Cursor/Visual highlights and any
+--      `vim.g.terminal_color_0..15` are overlaid onto that file — so kitty's
+--      background/foreground/cursor/selection (and ANSI, when the theme sets
+--      it) mirror EXACTLY what the active colorscheme renders inside nvim.
+--      This catches themes that ship no kitty extras (yorumi) or themes whose
+--      bundled extras drift from the live highlights.
+--   3. `kitty @ set-colors` pushes the patched file live.
+--   4. The patched palette is parsed and translated into the Ghostty +
+--      WezTerm config files.
 --
 -- Requires in kitty.conf: `allow_remote_control yes` and
 -- `include current-theme.conf` inside the BEGIN_KITTY_THEME block.
@@ -152,19 +158,95 @@ return {
 	write_file(vim.fn.expand("~/.config/wezterm/current-theme.lua"), body)
 end
 
+-- Convert nvim_get_hl numeric color to "#rrggbb".
+local function hex(rgb)
+	if type(rgb) ~= "number" then
+		return nil
+	end
+	return string.format("#%06x", rgb)
+end
+
+-- Pull the values kitty cares about from the live colorscheme.
+-- Returns a map keyed by kitty conf keys (foreground/background/cursor/
+-- cursor_text_color/selection_foreground/selection_background/color0..15).
+-- ANSI keys are only set if the colorscheme exported `vim.g.terminal_color_*`.
+local function read_runtime_colors()
+	local function get_hl(name)
+		local ok, h = pcall(vim.api.nvim_get_hl, 0, { name = name, link = false })
+		return (ok and h) or {}
+	end
+	local normal = get_hl("Normal")
+	local cursor = get_hl("Cursor")
+	local visual = get_hl("Visual")
+	local out = {
+		foreground = hex(normal.fg),
+		background = hex(normal.bg),
+		cursor = hex(cursor.bg) or hex(normal.fg),
+		cursor_text_color = hex(cursor.fg) or hex(normal.bg),
+		selection_foreground = hex(visual.fg) or hex(normal.fg),
+		selection_background = hex(visual.bg),
+	}
+	for i = 0, 15 do
+		local v = vim.g["terminal_color_" .. i]
+		if type(v) == "string" and v:match("^#%x%x%x%x%x%x$") then
+			out["color" .. i] = v
+		end
+	end
+	return out
+end
+
+-- In-place patch: for each key in `overrides` with a non-nil value, replace
+-- the first matching `key  value` line in the kitty conf, or append it.
+local function patch_kitty_conf(path, overrides)
+	local f = io.open(path, "r")
+	if not f then
+		return
+	end
+	local body = f:read("*a")
+	f:close()
+	if not body:match("\n$") then
+		body = body .. "\n"
+	end
+	for key, val in pairs(overrides) do
+		if val then
+			local esc = key:gsub("([%-%.%+%[%]%(%)%$%^%%%?%*])", "%%%1")
+			local replaced
+			body, replaced = body:gsub("(\n" .. esc .. "%s+)[^\n]+", "%1" .. val, 1)
+			if replaced == 0 then
+				body, replaced = body:gsub("^(" .. esc .. "%s+)[^\n]+", "%1" .. val, 1)
+			end
+			if replaced == 0 then
+				body = body .. key .. " " .. val .. "\n"
+			end
+		end
+	end
+	local out = io.open(path, "w")
+	if out then
+		out:write(body)
+		out:close()
+	end
+end
+
 local function sync(name)
 	local source = resolve_source(name)
 	if not source then
 		return
 	end
-	-- Kitty.
+	-- Stage 1 (sync, before highlights are guaranteed applied):
+	-- copy the static baseline so we don't lose ANSI for themes that don't
+	-- export terminal_color_*.
 	local target = vim.fn.expand("~/.config/kitty/current-theme.conf")
 	vim.fn.system({ "cp", source, target })
-	vim.fn.jobstart({ "kitty", "@", "set-colors", "-c", target }, { detach = true })
-	-- Ghostty + WezTerm derived from the same palette.
-	local colors = parse_kitty_conf(source)
-	write_ghostty(colors, name)
-	write_wezterm(colors, name)
+	-- Stage 2 (deferred until the colorscheme has finished applying):
+	-- overlay nvim's live highlights, push to kitty, and regenerate the
+	-- ghostty/wezterm files from the patched palette.
+	vim.schedule(function()
+		patch_kitty_conf(target, read_runtime_colors())
+		vim.fn.jobstart({ "kitty", "@", "set-colors", "-c", target }, { detach = true })
+		local colors = parse_kitty_conf(target)
+		write_ghostty(colors, name)
+		write_wezterm(colors, name)
+	end)
 end
 
 M.sync = sync

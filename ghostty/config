@@ -67,3 +67,9 @@ keybind = ctrl+shift+right=next_tab
 # To resume nvim sync instead, comment `theme` and uncomment `config-file`.
 theme = rose-pine
 # config-file = current-theme
+
+# Shaders (hackr-sh/ghostty-shaders, via catskull.net). Multiple values stack
+# in declaration order. `custom-shader-animation = always` animates idle
+# windows too — leave default to only animate the focused window.
+custom-shader = ./shaders/bettercrt.glsl
+# custom-shader-animation = always
