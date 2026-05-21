@@ -1,7 +1,9 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: tokyodark (tiagovla/tokyodark.nvim).
+	-- Active colorscheme: tokyodark (tiagovla/tokyodark.nvim), transparent
+	-- background so kitty's grid-dark.png shows through.
 	-- Backups on disk:
+	--   paper.lua.bak      / paper.conf.bak               (vim-paper)
 	--   yorumi.lua.bak     / yorumi.conf.bak              (yorumicolors)
 	--   tokyonight.lua.bak / tokyonight-night.conf.bak    (folke, night)
 	-- Alternate kept on disk: crucible.lua (switch via `:colorscheme crucible`).

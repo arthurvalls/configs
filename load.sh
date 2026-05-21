@@ -33,9 +33,10 @@ load_file "$REPO/bash/.bashrc"         "$HOME/.bashrc"
 load_file "$REPO/bash/.profile"        "$HOME/.profile"
 load_file "$REPO/ideavim/.ideavimrc"   "$HOME/.ideavimrc"
 
-# Install IosevkaTerm Nerd Font (per-user, idempotent).
-if [[ -x "$REPO/install-iosevka-term.sh" ]]; then
-  "$REPO/install-iosevka-term.sh"
+# Install IosevkaCustom fonts (per-user, idempotent).
+if [[ -d "$REPO/iosevka-custom" ]]; then
+  mkdir -p "$HOME/.local/share/fonts/IosevkaCustom"
+  cp -f "$REPO"/iosevka-custom/*.ttf "$HOME/.local/share/fonts/IosevkaCustom/"
 fi
 
 # Refresh font cache for the user fonts dir.

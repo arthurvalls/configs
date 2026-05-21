@@ -1,0 +1,51 @@
+-- vim-paper (yorickpeterse). Light "paper notebook" theme.
+-- Sets `vim.g.terminal_color_*`, so terminal-sync.lua's runtime overlay
+-- will mirror its ANSI into kitty automatically.
+--
+-- After loading, we clear Normal/structural bg so kitty's `background_image`
+-- (grid-paper.png) shows THROUGH nvim — without this, vim-paper's solid
+-- #f2eede bg would cover the grid inside the editor area.
+
+return {
+	"yorickpeterse/vim-paper",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.o.background = "light"
+		vim.cmd.colorscheme("paper")
+
+		-- Groups whose bg we strip so the kitty grid image shows through.
+		-- CursorLine/Visual/Search etc. are intentionally NOT cleared — we
+		-- want those highlights to remain visible.
+		local transparent_groups = {
+			"Normal",
+			"NormalNC",
+			"NormalFloat",
+			"FloatBorder",
+			"FloatTitle",
+			"FloatFooter",
+			"SignColumn",
+			"EndOfBuffer",
+			"LineNr",
+			"CursorLineNr",
+			"StatusLine",
+			"StatusLineNC",
+			"TabLine",
+			"TabLineFill",
+			"WinBar",
+			"WinBarNC",
+			"MsgArea",
+			"MsgSeparator",
+			"VertSplit",
+			"WinSeparator",
+			"FoldColumn",
+		}
+		for _, group in ipairs(transparent_groups) do
+			local ok, current = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+			local hl = (ok and current) or {}
+			hl.bg = "NONE"
+			hl.ctermbg = "NONE"
+			vim.api.nvim_set_hl(0, group, hl)
+		end
+	end,
+}
