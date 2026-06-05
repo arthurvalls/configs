@@ -22,13 +22,7 @@ local M = {}
 -- Explicit colorscheme → kitty .conf source map. Anything not listed falls
 -- back to ~/.config/kitty/<name>.conf if that file exists (this is how
 -- gruvbox-material is wired — see ~/.config/kitty/gruvbox-material.conf).
-local sources = {
-	crucible = function()
-		local ok, cfg = pcall(require, "crucible.config")
-		local variant = (ok and cfg.options and cfg.options.variant) or "crucible"
-		return vim.fn.stdpath("data") .. "/lazy/crucible.nvim/extras/kitty/" .. variant .. ".conf"
-	end,
-}
+local sources = {}
 
 local function resolve_source(name)
 	local source = sources[name]

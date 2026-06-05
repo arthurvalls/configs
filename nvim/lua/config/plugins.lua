@@ -1,14 +1,8 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: tokyodark (tiagovla/tokyodark.nvim), transparent
-	-- background so kitty's grid-dark.png shows through.
-	-- Backups on disk:
-	--   paper.lua.bak      / paper.conf.bak               (vim-paper)
-	--   yorumi.lua.bak     / yorumi.conf.bak              (yorumicolors)
-	--   tokyonight.lua.bak / tokyonight-night.conf.bak    (folke, night)
-	-- Alternate kept on disk: crucible.lua (switch via `:colorscheme crucible`).
-	require("config.plugins.tokyodark"),
-	-- require("config.plugins.crucible"),
+	-- Active (and only) colorscheme: vague (vague-theme/vague.nvim).
+	-- Kitty palette mirrored at ~/.config/kitty/vague.conf via terminal-sync.lua.
+	require("config.plugins.vague"),
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),
