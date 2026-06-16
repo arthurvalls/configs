@@ -1,0 +1,3 @@
+# Crates installed via `cargo install`. Installed by install/30-rust.sh.
+stylua          # lua formatter (nvim)
+tinty           # tinted-theming / base16 theme switcher

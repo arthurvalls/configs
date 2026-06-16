@@ -7,9 +7,11 @@ return {
 	opts = {
 		-- When to draw the trail.
 		smear_between_buffers = true,
-		smear_between_neighbor_lines = true,
+		-- Disabled: these fire the trail per-keystroke / on single-line moves —
+		-- the main editing-lag source. Trail still plays on larger jumps.
+		smear_between_neighbor_lines = false,
 		scroll_buffer_space = true,
-		smear_insert_mode = true,
+		smear_insert_mode = false,
 
 		-- NRK Mono doesn't ship the legacy computing symbol block, so keep this
 		-- off — flipping it on with an unsupported font produces empty boxes.

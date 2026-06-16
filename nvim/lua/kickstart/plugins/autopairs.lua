@@ -4,7 +4,8 @@
 return {
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
-  dependencies = { 'hrsh7th/nvim-cmp' },
+  -- No nvim-cmp dependency: blink.cmp is the completion engine; autopairs
+  -- works standalone via check_ts. (Was installing an unused nvim-cmp.)
   config = function()
     require('nvim-autopairs').setup {
       check_ts = true,

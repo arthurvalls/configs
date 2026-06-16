@@ -2,18 +2,6 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 return {
-  -- If you want neo-tree's file operations to work with LSP (updating imports, etc.), you can use a plugin like
-  -- https://github.com/antosha417/nvim-lsp-file-operations:
-  {
-    'antosha417/nvim-lsp-file-operations',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-neo-tree/neo-tree.nvim',
-    },
-    config = function()
-      require('lsp-file-operations').setup()
-    end,
-  },
   {
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v3.x',
@@ -41,8 +29,21 @@ return {
           }
         end,
       },
+      {
+        -- Updates imports/refs via LSP on file rename/move in neo-tree. Nested
+        -- here so it loads WITH neo-tree (as a standalone spec it had no lazy
+        -- trigger and was forcing neo-tree to load eagerly at startup).
+        'antosha417/nvim-lsp-file-operations',
+        config = function()
+          require('lsp-file-operations').setup()
+        end,
+      },
     },
-    lazy = false,
+    -- Lazy-load on first use instead of at startup (pulls 4 transitive deps).
+    cmd = 'Neotree',
+    keys = {
+      { '<leader>e', '<Cmd>Neotree reveal<CR>', desc = 'Neo-tree reveal' },
+    },
     -----Instead of using `config`, you can use `opts` instead, if you'd like:
     -----@module "neo-tree"
     -----@type neotree.Config

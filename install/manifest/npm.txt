@@ -1,0 +1,9 @@
+# Global npm packages. Installed by install/40-node.sh (after node via nvm).
+
+# nvim tooling (formatter / linter):
+@fsouza/prettierd
+markdownlint-cli
+
+# Optional AI CLIs (uncomment to install):
+#@google/gemini-cli
+#@openai/codex

@@ -1,1 +1,1 @@
-return { "ckipp01/stylua-nvim" }
+return { "ckipp01/stylua-nvim", ft = "lua" }

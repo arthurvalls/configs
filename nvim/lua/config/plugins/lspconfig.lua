@@ -9,7 +9,9 @@ return {
 		{ "williamboman/mason.nvim", opts = {} },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		{ "nvim-java/nvim-java", ft = "java" },
+		-- Java LSP is driven by nvim-jdtls via ftplugin/java.lua + lua/jdtls_setup.lua,
+		-- NOT by lspconfig/mason-lspconfig. (See removed `jdtls = {}` below.)
+		{ "mfussenegger/nvim-jdtls", ft = "java" },
 		{ "b0o/SchemaStore.nvim", lazy = true },
 
 		-- Useful status updates for LSP.
@@ -124,7 +126,9 @@ return {
 					)
 				then
 					local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
-					vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+					-- CursorHoldI dropped: don't fire LSP document-highlight
+					-- requests on every insert-mode pause (request/redraw churn).
+					vim.api.nvim_create_autocmd({ "CursorHold" }, {
 						buffer = event.buf,
 						group = highlight_augroup,
 						callback = vim.lsp.buf.document_highlight,
@@ -209,7 +213,10 @@ return {
 			-- gopls = {},
 			pyright = {},
 			rust_analyzer = {},
-			jdtls = {},
+			-- NOTE: jdtls is intentionally NOT here. lspconfig's jdtls is weak for
+			-- multi-module Maven and would start a second, bare default client.
+			-- nvim-jdtls owns Java (ftplugin/java.lua). Mason still installs the
+			-- jdtls binary via mason-tool-installer below.
 			dockerls = {},
 			bashls = {},
 			yamlls = {
@@ -294,6 +301,7 @@ return {
 			"stylua", -- Used to format Lua code
 			"eslint_d", -- Used to lint JavaScript/TypeScript
 			"prettierd", -- Used to format JavaScript/TypeScript/JSON/Markdown
+			"jdtls", -- Java LSP server (owned by nvim-jdtls, not mason-lspconfig)
 			"java-debug-adapter", -- DAP for Java
 			"java-test", -- vscode-java-test bundle for neotest-java
 		})
@@ -302,6 +310,10 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
 			automatic_installation = false,
+			-- mason-lspconfig v2 auto-enables EVERY installed server. jdtls is
+			-- installed via Mason but must be owned by nvim-jdtls, so exclude it
+			-- here to prevent a second, bare default Java client from starting.
+			automatic_enable = { exclude = { "jdtls" } },
 			handlers = {
 				function(server_name)
 					local server = servers[server_name] or {}
@@ -311,6 +323,8 @@ return {
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 					require("lspconfig")[server_name].setup(server)
 				end,
+				-- Belt-and-suspenders: never let lspconfig start jdtls.
+				jdtls = function() end,
 			},
 		})
 	end,

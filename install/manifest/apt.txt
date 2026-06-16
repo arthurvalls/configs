@@ -1,0 +1,35 @@
+# apt packages for the terminal environment (Ubuntu main/universe + the 3rd-party
+# repos that 10-apt.sh configures). One entry per line; '#' starts a comment.
+# Dev-toolchain apt packages (jdk, maven, docker) live in 50-langtools.sh.
+
+# --- core / build (also ensured in 00-preflight) ---
+build-essential
+pkg-config
+ca-certificates
+gnupg
+git
+curl
+wget
+unzip
+fontconfig
+
+# --- shell & terminal CLI utilities ---
+fish
+fzf
+ripgrep
+fd-find
+eza
+btop
+htop
+jq
+tree
+
+# --- needs a 3rd-party repo (added by 10-apt.sh) ---
+neovim          # ppa:neovim-ppa/unstable  (0.11+/0.12)
+wezterm         # apt.fury.io/wez
+gh              # cli.github.com
+
+# --- not currently installed; uncomment to add ---
+#bat
+#tmux
+#yq

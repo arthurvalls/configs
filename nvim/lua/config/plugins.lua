@@ -28,7 +28,7 @@ return {
 	require("config.plugins.which-key"),
 	require("kickstart.plugins.autopairs"),
 	require("kickstart.plugins.neo-tree"),
-	require("kickstart.plugins.gitsigns"),
+	-- gitsigns consolidated into config/plugins/gitsigns.lua (signs + keymaps)
 	require("kickstart.plugins.lint"),
 	require("kickstart.plugins.debug"),
 	-- require("kickstart.plugins.indent_line"), -- replaced by snacks.indent

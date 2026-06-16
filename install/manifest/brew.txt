@@ -1,0 +1,5 @@
+# Homebrew (Linuxbrew) formulae. Installed by install/20-brew.sh.
+# These are the tools currently pulled from brew on this machine.
+lazygit
+glow
+glab

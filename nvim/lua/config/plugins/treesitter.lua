@@ -1,5 +1,7 @@
 return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
+	-- Lazy-load on buffer read so parser/highlight init doesn't run at startup.
+	event = { "BufReadPost", "BufNewFile" },
 	build = ":TSUpdate",
 	main = "nvim-treesitter.configs", -- Sets main module to use for opts
 	-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
@@ -41,7 +43,9 @@ return { -- Highlight, edit, and navigate code
 			--  the list of additional_vim_regex_highlighting and disabled languages for indent.
 			additional_vim_regex_highlighting = { "ruby" },
 		},
-		indent = { enable = true, disable = { "ruby" } },
+		-- `java` disabled: the TS Java indent module is slow and re-runs on every
+		-- edit (typing lag in large files); jdtls/vim handle Java indentation.
+		indent = { enable = true, disable = { "ruby", "java" } },
 	},
 
 	-- There are additional nvim-treesitter modules that you can use to interact

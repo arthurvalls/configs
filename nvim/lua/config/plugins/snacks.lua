@@ -13,11 +13,11 @@ return {
 		zen = { enabled = true },
 		scratch = { enabled = true },
 		terminal = { enabled = true },
-		dim = { enabled = true },
+		dim = { enabled = false }, -- per-redraw focus dimming; off unless needed
 		statuscolumn = { enabled = true },
 		toggle = { enabled = true },
 		lazygit = { enabled = true },
-		profiler = { enabled = true },
+		profiler = { enabled = false }, -- debug-only; enable on demand to profile
 		scope = { enabled = true },
 	},
   -- stylua: ignore
