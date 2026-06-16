@@ -1,8 +1,9 @@
 -- lua/config/plugins.lua
 return {
-	-- Active (and only) colorscheme: vague (vague-theme/vague.nvim).
-	-- Kitty palette mirrored at ~/.config/kitty/vague.conf via terminal-sync.lua.
-	require("config.plugins.vague"),
+	-- Active (and only) colorscheme: gruvbox (ellisonleao/gruvbox.nvim),
+	-- hard contrast with a vantablack-like (#0a0a0a) background override.
+	-- Kitty palette mirrored at ~/.config/kitty/gruvbox.conf via terminal-sync.lua.
+	require("config.plugins.gruvbox"),
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),
