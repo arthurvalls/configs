@@ -28,6 +28,7 @@ copy_dir  "$CONFIG/alacritty"  "$REPO/alacritty"
 copy_dir  "$CONFIG/fish"       "$REPO/fish"
 copy_dir  "$CONFIG/git"        "$REPO/git"
 copy_file "$CONFIG/ezsh/ezshrc.zsh" "$REPO/zsh/ezshrc.zsh"
+copy_file "$CONFIG/starship.toml"   "$REPO/starship/starship.toml"
 
 copy_file "$HOME/.tmux.conf"   "$REPO/alacritty/.tmux.conf"
 copy_file "$HOME/.bashrc"      "$REPO/bash/.bashrc"

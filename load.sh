@@ -27,6 +27,7 @@ load_dir  "$REPO/alacritty"          "$CONFIG/alacritty"
 load_dir  "$REPO/fish"               "$CONFIG/fish"
 load_dir  "$REPO/git"                "$CONFIG/git"
 load_file "$REPO/zsh/ezshrc.zsh"     "$CONFIG/ezsh/ezshrc.zsh"
+load_file "$REPO/starship/starship.toml" "$CONFIG/starship.toml"
 
 load_file "$REPO/alacritty/.tmux.conf" "$HOME/.tmux.conf"
 load_file "$REPO/bash/.bashrc"         "$HOME/.bashrc"

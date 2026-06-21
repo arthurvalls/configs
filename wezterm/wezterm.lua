@@ -22,7 +22,8 @@ config.selection_word_boundary = " \t\n{}[]()\"'`,;:"
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
-config.color_scheme = "OneDark (base16)"
+config.color_scheme = "Gruber (base16)"
+
 -- Disabled while using a built-in scheme. Re-enable to resume nvim sync.
 -- local ok, theme = pcall(dofile, wezterm.config_dir .. "/current-theme.lua")
 -- if ok and theme then

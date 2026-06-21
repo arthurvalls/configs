@@ -11,6 +11,7 @@ setup on a fresh **Ubuntu/Debian** machine.
 | `kitty/`, `ghostty/`, `wezterm/`, `alacritty/` | Terminal emulator configs                                  |
 | `fish/`, `zsh/`, `bash/`            | Shell configs (fish is the daily driver)                              |
 | `git/`                              | Global git config                                                     |
+| `starship/`                         | Starship prompt config (`starship.toml`)                              |
 | `firefox/`, `zed/`, `java/`, `qtcreator/`, `ideavim/` | App configs                              |
 | `iosevka-custom/`, `fonts/`         | Bundled fonts (Iosevka Custom + patched fallbacks)                    |
 | `bootstrap.sh`                      | **Fresh-machine installer** — installs tools, then loads the dotfiles |

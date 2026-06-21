@@ -4,6 +4,10 @@ vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
 
+-- 24-bit truecolor (required for the vanta colorscheme's exact hexes; was
+-- previously enabled implicitly by gruvbox.nvim's loader).
+vim.opt.termguicolors = true
+
 vim.opt.number = true
 -- vim.opt.relativenumber = true
 vim.opt.mouse = "a"
