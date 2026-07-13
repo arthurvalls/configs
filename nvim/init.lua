@@ -70,3 +70,5 @@ require("lazy").setup(require("config.plugins"), {
 -- vim.cmd.colorscheme("industry")
 
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "NONE" })
+vim.opt.guicursor = "i:hor20"
+vim.keymap.set("x", "p", '"_dP', { desc = "Paste without losing register" })

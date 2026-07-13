@@ -3,7 +3,6 @@
 # Minimal single-line prompt.
 # Colors use named ANSI values, so they follow the active terminal theme
 # (Gruber Darker in kitty today, anything you switch to later).
-
 format = """
 $git_branch\
 $git_status\
@@ -48,65 +47,69 @@ disabled = false
 time_format = "%R"
 style = "bright-black"
 format = '[$time]($style)'
-
 [character]
-success_symbol = "[λ](bold green)"
-error_symbol = "[λ](bold red)"
-vimcmd_symbol = "[λ](bold yellow)"
+# success_symbol = "[λ](bold green)" # λ
+# error_symbol = "[λ](bold red)"
+# vimcmd_symbol = "[λ](bold yellow)"
+success_symbol = "[::](bold green)" # λ
+error_symbol = "[::](bold red)"
+vimcmd_symbol = "[::](bold yellow)"
 
-# --- Language versions (green, shown only inside a matching project) ---
+
+# --- Language indicators (green, symbol only — no version, shown inside a matching project) ---
+
 
 [nodejs]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [c]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [cpp]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [rust]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [golang]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [php]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [java]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [kotlin]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [haskell]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [lua]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'
 
 [python]
 symbol = " "
 style = "green"
-format = '[$symbol($version) ]($style)'
+format = '[$symbol]($style)'

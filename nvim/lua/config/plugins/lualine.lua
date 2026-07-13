@@ -2,13 +2,13 @@
 -- scheme ships a matching lualine table (config/vanta-lualine, config/yorha-lualine).
 -- A ColorScheme autocmd re-runs setup so the statusline swaps live with the theme.
 local function theme_for(name)
-	if name == "gruvbox-ish" then
-		return require("config.gruvbox-ish-lualine")
-	end
 	if name == "yorha" then
 		return require("config.yorha-lualine")
 	end
-	return require("config.vanta-lualine")
+	if name == "vanta" then
+		return require("config.vanta-lualine")
+	end
+	return "gruvbox"
 end
 
 return {

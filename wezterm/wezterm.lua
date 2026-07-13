@@ -5,7 +5,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.font = wezterm.font("Hasklug Nerd Font")
+config.font = wezterm.font("JetbrainsMono Nerd Font")
 config.font_size = 14.0
 
 config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
@@ -22,7 +22,7 @@ config.selection_word_boundary = " \t\n{}[]()\"'`,;:"
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
-config.color_scheme = "Gruber (base16)"
+config.color_scheme = "Vs Code Dark+ (Gogh)"
 
 -- Disabled while using a built-in scheme. Re-enable to resume nvim sync.
 -- local ok, theme = pcall(dofile, wezterm.config_dir .. "/current-theme.lua")

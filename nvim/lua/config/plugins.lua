@@ -1,12 +1,8 @@
 -- lua/config/plugins.lua
 return {
-	-- Active colorscheme: vanta (standalone, ~/.config/nvim/colors/vanta.lua) —
-	-- monochrome grey+black+white + neon turquoise accent, transparent over the
-	-- kitty circuit wallpaper. Kitty palette mirrored at ~/.config/kitty/vanta.conf
-	-- via terminal-sync.lua. gruvbox.nvim stays installed (via this spec) as a
-	-- fallback; the gruvbox-vantablack build is preserved at plugins/gruvbox.lua.
-	require("config.plugins.gruber"),
-	-- require("config.plugins.vanta"),
+	-- Active colorscheme: gruvbox (ellisonleao/gruvbox.nvim), see plugins/gruvbox.lua.
+	-- require("config.plugins.tokyodark"),
+	require("config.plugins.gruvbox"),
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),

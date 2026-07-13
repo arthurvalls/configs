@@ -1,0 +1,49 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# A cozy little prompt 🌱
+# Colours use named ANSI values, so they follow the kitty Totoro theme.
+# Left side:  🌱 folder  branch  status  ♥
+# Right side: how long the last command took, then the time.
+
+add_newline = true
+
+format = """
+[🌱 ](green)\
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+right_format = """$cmd_duration$time"""
+
+[directory]
+style = "bold green"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " "
+read_only_style = "red"
+
+[git_branch]
+symbol = " "
+style = "purple"
+format = "[$symbol$branch ]($style)"
+
+[git_status]
+style = "yellow"
+format = "([$all_status$ahead_behind]($style) )"
+
+[character]
+success_symbol = "[♥](bold green)"
+error_symbol = "[♥](bold red)"
+
+[cmd_duration]
+min_time = 2000          # only appears when a command takes longer than 2s
+style = "yellow"
+format = "[took $duration ]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bright-black"
+format = "[ $time]($style)"

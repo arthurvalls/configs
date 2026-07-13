@@ -1,28 +1,10 @@
--- tokyodark (tiagovla). Dark theme.
--- Kitty palette synced via lua/config/terminal-sync.lua → ~/.config/kitty/tokyodark.conf
--- (resolved by filename fallback, no entry in the sources map).
-
 return {
 	"tiagovla/tokyodark.nvim",
-	lazy = false,
-	priority = 1000,
 	opts = {
-		transparent_background = true, -- let kitty's background_image show through
-		gamma = 1.00,
-		styles = {
-			comments = { italic = true },
-			keywords = { italic = true },
-			identifiers = { italic = true },
-			functions = {},
-			variables = {},
-		},
-		custom_highlights = {},
-		custom_palette = {},
-		terminal_colors = true,
+		-- custom options here
 	},
 	config = function(_, opts)
-		require("tokyodark").setup(opts)
-		vim.o.background = "dark"
-		vim.cmd.colorscheme("tokyodark")
+		require("tokyodark").setup(opts) -- calling setup is optional
+		vim.cmd([[colorscheme tokyodark]])
 	end,
 }
