@@ -2,7 +2,8 @@
 return {
 	-- Active colorscheme: gruvbox (ellisonleao/gruvbox.nvim), see plugins/gruvbox.lua.
 	-- require("config.plugins.tokyodark"),
-	require("config.plugins.gruvbox"),
+	-- require("config.plugins.gruvbox"),
+	require("config.plugins.nord"),
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),

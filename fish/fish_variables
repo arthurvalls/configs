@@ -6,6 +6,7 @@ SETUVAR FZF_LEGACY_KEYBINDINGS:1
 SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR --export SUPERSIM_DB_PASSWORD:S\x40murair21
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_acomagu_2F_fish_2D_async_2D_prompt_files:\x7e/\x2econfig/fish/conf\x2ed/__async_prompt\x2efish
