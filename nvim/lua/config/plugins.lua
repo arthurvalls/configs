@@ -4,6 +4,7 @@ return {
 	-- require("config.plugins.tokyodark"),
 	-- require("config.plugins.gruvbox"),
 	require("config.plugins.nord"),
+	-- require("config.plugins.monokai"),
 	require("config.plugins.smear-cursor"),
 	require("config.plugins.stylua"),
 	require("config.plugins.multi"),

@@ -5,7 +5,6 @@ return {
 	config = function()
 		local opts = {
 			options = {
-				theme = theme_for(vim.g.colors_name),
 				globalstatus = true,
 				disabled_filetypes = { statusline = { "dashboard" } },
 			},
